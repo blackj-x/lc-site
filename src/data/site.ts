@@ -18,7 +18,7 @@ export const SITE = {
   adsenseClient: 'ca-pub-1501729431443241',
   // AdSense 广告单元 slot ID —— ⚠ 必须为本站新建单元，留空时显示占位块
   adSlots: {
-    top: '',
-    side: '',
+    top: '2560256325',
+    side: '7521928644',
   },
 };
