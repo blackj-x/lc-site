@@ -1,0 +1,188 @@
+---
+import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { getEntity, entityName, categoryName } from '../../data/entities';
+
+const title = '致命公司 v80 更新解读：三只新怪物、工具栏位与 March 重做 - 致命公司攻略社';
+const description =
+  '致命公司（Lethal Company）v80「The Blooming Update」更新解读：Backwater Gunkfish、Feiopar、Cadaver Bloom 三只新怪物与回归的 Kidnapper Fox，工具栏位（utility slot）、March 沼泽化重做、画质与无障碍设置全解析，新怪均已收录本站图鉴。';
+
+// 与 entities.json 交叉：本次更新涉及的实体（数据字段直接渲染，不手抄数值）
+const newEntities = [
+  { slug: 'backwater-gunkfish', note: '室内新实体，黄貂鱼形态，会留下黏液阻碍通行（官方公告称三只新怪原生于森林卫星，其中两只也会在其他卫星出现）。' },
+  { slug: 'feiopar', note: '室外新实体，大型猫科生物，社区俗称“Hide-Behind”——灵感来自美国民间传说中永远躲在你身后的怪物。' },
+  { slug: 'cadaver-bloom', note: '室内新实体，更新副标题“The Blooming”即来自它：感染相关的植物系怪物。' },
+  { slug: 'cadaver-growth', note: '与 Cadaver Bloom 配套登场的室内增殖体，会在设施内蔓延并感染玩家（感染机制在 v81 补丁中多次调参，见 v81 解读）。' },
+  { slug: 'kidnapper-fox', note: '回归实体。重做后更不愿离开自己的领地、能更准确判断领地范围，且不会在一天刚开始时刷新。' },
+].map((x) => ({ ...x, e: getEntity(x.slug) })).filter((x) => x.e);
+
+const redPill = getEntity('red-pill');
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Article', headline: title, description, datePublished: '2026-06-07', inLanguage: 'zh-CN' },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '首页', item: new URL('/', Astro.site).href },
+        { '@type': 'ListItem', position: 2, name: '版本解读' },
+        { '@type': 'ListItem', position: 3, name: 'v80' },
+      ],
+    },
+  ],
+};
+
+const SRC_STEAM = 'https://store.steampowered.com/news/app/1966720/view/516365152240535509';
+const SRC_WIKI = 'https://lethal.miraheze.org/wiki/Version_81';
+const SRC_FANDOM = 'https://lethal-company.fandom.com/wiki/Version_80';
+---
+<Base title={title} description={description} jsonLd={jsonLd} active="updates">
+  <div class="wrap detail">
+    <div class="crumb"><a href="/">首页</a> / 版本解读 / v80</div>
+    <h1>v80 更新解读：<span class="em">The Blooming Update</span></h1>
+    <p class="lead">2026 年 4 月 5 日，《致命公司》结束近一年的沉寂，推出 v80 大版本：3 只新怪物 + 1 只回归怪物、专属工具栏位、March 全图重做。这是一次「机制翻新优先于堆内容」的更新，但对跑刮卫星的日常打法影响不小。</p>
+
+    <AdSlot variant="top" />
+
+    <div class="detail-layout">
+      <main>
+        <section class="sec">
+          <h2>📋 版本概览</h2>
+          <ul class="kv">
+            <li><strong>正式发布</strong>：2026-04-05（Steam 官方公告，3 月 29 日先行开放公测分支）</li>
+            <li><strong>更新主题</strong>：聚焦森林卫星（对应 v70 聚焦雪地卫星），偏「系统翻新 + 修复」而非堆内容</li>
+            <li><strong>核心内容</strong>：3 新怪 + 1 回归怪、utility slot 工具栏位、March 重做、工厂新房间、画质/无障碍设置、大量性能优化</li>
+            <li><strong>开发者预告</strong>：公告中提到下一个内容向大版本（Version 85）会「更聚焦内容」</li>
+          </ul>
+          <p class="srcline">来源：<a href={SRC_STEAM} rel="noopener" target="_blank">Steam 官方公告「Version 80 - The Blooming Update」</a></p>
+        </section>
+
+        <section class="sec">
+          <h2>👾 新增 / 回归实体（图鉴已收录）</h2>
+          <p class="hint">以下属性数值取自本站图鉴数据库，与图鉴页同源。</p>
+          <ul class="ent-list">
+            {newEntities.map(({ e, note }) => (
+              <li class="ent-row">
+                <div class="ent-head">
+                  <a class="ent-name" href={`/monsters/${e!.slug}`}>{entityName(e!)}</a>
+                  <span class="ent-en">{e!.nameZh ? e!.nameEn : ''}</span>
+                  <span class={`badge ${e!.category}`}>{categoryName[e!.category]}</span>
+                  <span class="indexed">图鉴已收录 →</span>
+                </div>
+                <p class="ent-note">{note}</p>
+                <div class="ent-stats">
+                  {e!.powerLevel != null && <span class="tag">危险等级 {e!.powerLevel}</span>}
+                  {e!.hp && <span class="tag">HP {e!.hp}</span>}
+                  {e!.maxCount != null && e!.maxCount > 0 && <span class="tag">单日上限 {e!.maxCount}</span>}
+                  {e!.immortal === true && <span class="tag">无法击杀</span>}
+                </div>
+              </li>
+            ))}
+          </ul>
+          {redPill && (
+            <p class="aside-note">
+              另：本站图鉴中的 <a href={`/monsters/${redPill.slug}`}>{entityName(redPill)}</a> 为同期数据中出现的<strong>测试实体</strong>（自然刷新上限为 {redPill.maxCount}，即正常游戏不会遇到，只能靠 mod 召唤），不属于 v80 公告的正式新增内容。
+            </p>
+          )}
+          <p>此外本次还新增了工厂内饰的 3 个新房间/走廊，矿井内饰生成更多洞穴口袋，并加入新的 Sigurd 日志「Work」（可在 March 找到）。</p>
+        </section>
+
+        <section class="sec">
+          <h2>⚙️ 机制变化</h2>
+          <ul class="tips">
+            <li><strong>工具栏位（utility slot）</strong>：新增一个只能放（大部分）商店购买道具的专属栏位，铲子除外。开发者原话：保留「工具占背包」的取舍虽然有策略性，但导致多数玩家干脆不带道具。</li>
+            <li><strong>March 全图重做</strong>：外景彻底翻新为沼泽风格，有浅水与深水区；据社区 wiki 记录，地图尺寸缩小、Flooded（洪水）天气被移除。</li>
+            <li><strong>Vow / Adamance 植被更新</strong>：森林卫星加入真正的植被；Adamance 的洪水改为「低水位缓慢上涨」，与其他卫星一致。</li>
+            <li><strong>队友碰撞</strong>：奔跑撞向队友会把对方推开；蹲下或搬重物时更难被挤开。卡门口堵路从此有了物理后果。</li>
+            <li><strong>夜视范围略降</strong>：没有光源时黑暗更危险。</li>
+            <li><strong>溺水时间延长约 1 秒</strong>：配合 March 的深水区设计。</li>
+            <li><strong>物种多样性上限（diversity meter）</strong>：部分卫星单日可刷新的独特物种数量受限，为后续加入更多怪物铺路，也降低新人压力。</li>
+            <li><strong>Savescum 惩罚</strong>：落地后退出重开（刷保存）会让 Vain Shroud 杂草提前在当前卫星生长。</li>
+            <li><strong>Forest Keeper 视觉判定调整</strong>：远距离下蹲、站立不动或步行更不易被发现，超过某个距离完全看不到你。</li>
+            <li><strong>画质 / 无障碍设置</strong>：可降低像素分辨率、关闭室内间接光照、关闭跑跳晃头、开启切换式冲刺等。</li>
+            <li><strong>性能优化</strong>：主着色器改为单 pass 渲染、室内距离剔除、落地时异步加载内饰（不再卡一大下）、怪物 AI 共享内存池等。</li>
+            <li><strong>Mod 检测</strong>：客户端运行 mod loader 时，服务器列表会向其他玩家标示（不代表官方支持 mod）。</li>
+          </ul>
+          <p class="srcline">来源：<a href={SRC_STEAM} rel="noopener" target="_blank">Steam 官方公告</a> / <a href={SRC_WIKI} rel="noopener" target="_blank">Lethal Company Wiki（官方 patch log 存档）</a> / <a href={SRC_FANDOM} rel="noopener" target="_blank">Fandom Version 80</a></p>
+        </section>
+
+        <section class="sec">
+          <h2>🧭 对玩家的影响解读</h2>
+          <ul class="tips">
+            <li><strong>森林卫星风险结构变了</strong>：Vow / March / Adamance 同时迎来 3 只新怪 + 真植被遮挡视线，老的「贴边跑图」安全路线需要重新评估，尤其是室外多了会躲视线的 Feiopar。</li>
+            <li><strong>带工具的成本大幅下降</strong>：utility slot 让手电、对讲机、扫描仪不再挤占废品位。结论很直接——以前嫌占格子不买工具的队伍，现在没有理由裸跑了。</li>
+            <li><strong>March 需要重学</strong>：全图重做 + 深水溺水机制，旧点位记忆基本作废；好消息是洪水天气移除后，March 的天气池更可控。</li>
+            <li><strong>感染系玩法登场</strong>：Cadaver Bloom / Growth 引入「感染—发病」的全新威胁类型，具体数值在 v81 补丁中连续调参，建议搭配 <a href="/updates/v81">v81 补丁解读</a> 一起看。</li>
+            <li><strong>新人门槛降低</strong>：物种多样性上限、无障碍选项、异步加载，都是冲着「更适合新玩家」去的——拉新朋友入坑的好时机。</li>
+            <li><strong>刷保存玩法被针对</strong>：savescum 会招来杂草惩罚，靠反复重开刷开局的思路要收一收。</li>
+          </ul>
+        </section>
+
+        <section class="sec next">
+          <h2>👉 下一步</h2>
+          <p>新怪物的详细数值与应对策略见 <a href="/monsters">怪物图鉴</a>；v80 发布后官方连发多个补丁、感染机制大改，见 <a href="/updates/v81">v81 补丁解读</a>。</p>
+        </section>
+
+        <section class="sec meta">
+          <p>本文基于 Steam 官方公告 + 社区实测整理，更新于 2026-06-07。引用来源：
+            <a href={SRC_STEAM} rel="noopener" target="_blank">Steam 官方公告</a> ·
+            <a href={SRC_WIKI} rel="noopener" target="_blank">lethal.miraheze.org/wiki/Version_81</a> ·
+            <a href={SRC_FANDOM} rel="noopener" target="_blank">lethal-company.fandom.com/wiki/Version_80</a>。
+            实体属性数值与本站图鉴数据库同源；公告未明确的细节不做推断。</p>
+        </section>
+      </main>
+
+      <aside>
+        <AdSlot variant="side" />
+      </aside>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .detail{padding-top:24px}
+  h1{font-size:38px;font-weight:900;letter-spacing:-.5px;margin-top:6px}
+  h1 .em{background:linear-gradient(120deg,var(--outdoor),var(--daytime) 50%,var(--indoor));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lead{color:var(--txt-dim);font-size:16.5px;margin:14px 0 4px;max-width:720px}
+  .detail-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;margin-bottom:40px}
+  .sec{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:18px}
+  .sec h2{font-size:18px;color:var(--accent);margin-bottom:12px}
+  .sec p{font-size:15.5px;color:var(--txt)}
+  .hint{font-size:13px;color:var(--txt-dim);margin-bottom:14px!important}
+  .kv{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .kv li{font-size:15px;color:var(--txt-dim);padding-left:18px;position:relative}
+  .kv li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+  .kv strong{color:var(--txt)}
+  .srcline{font-size:12.5px!important;color:var(--txt-dim)!important;margin-top:14px}
+  .srcline a{color:var(--outdoor)}
+  .srcline a:hover{text-decoration:underline}
+  .ent-list{list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:14px}
+  .ent-row{padding:14px 0;border-bottom:1px solid var(--line)}
+  .ent-row:last-child{border:0}
+  .ent-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .ent-name{font-size:16.5px;font-weight:700;color:var(--txt)}
+  .ent-name:hover{color:var(--accent)}
+  .ent-en{font-size:12.5px;color:var(--txt-dim)}
+  .indexed{margin-left:auto;font-size:12px;color:var(--daytime)}
+  .ent-note{font-size:14px;color:var(--txt-dim)!important;margin-bottom:8px}
+  .ent-stats{display:flex;gap:6px;flex-wrap:wrap}
+  .aside-note{font-size:13.5px;color:var(--txt-dim)!important;border-left:3px solid var(--indoor);padding-left:14px;margin-bottom:14px}
+  .aside-note strong{color:var(--txt)}
+  .aside-note a{color:var(--outdoor)}
+  .tips{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .tips li{font-size:15px;color:var(--txt-dim);padding-left:20px;position:relative}
+  .tips li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+  .tips strong{color:var(--txt)}
+  .tips a{color:var(--outdoor)}
+  .tips a:hover{text-decoration:underline}
+  .next p{color:var(--txt-dim)}
+  .next a{color:var(--accent)}
+  .meta{background:var(--bg-elev)}
+  .meta p{font-size:12.5px;color:var(--txt-dim)}
+  .meta a{color:var(--outdoor)}
+  @media(max-width:920px){
+    .detail-layout{grid-template-columns:1fr}
+    h1{font-size:28px}
+  }
+</style>

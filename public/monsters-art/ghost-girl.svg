@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="sans-serif" role="img" aria-label="幽灵小女孩 抽象示意图">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14161a"/>
+      <stop offset="1" stop-color="#1c2026"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="12" fill="url(#bg)"/>
+  <rect x="0" y="0" width="320" height="6" rx="3" fill="#ff5470" opacity="0.9"/>
+  <rect x="0.75" y="0.75" width="318.5" height="198.5" rx="11" fill="none" stroke="#ff5470" stroke-width="1.5" opacity="0.7"/>
+  <path d="M0 60 L320 60 M0 130 L320 130" stroke="#ff5470" stroke-width="0.5" opacity="0.08"/>
+  <circle cx="20" cy="22" r="4" fill="#ff5470"/>
+  <text x="32" y="26" fill="#ff5470" font-size="10" letter-spacing="2">INDOOR</text>
+
+<circle cx="125" cy="62" r="14" fill="#ff5470" opacity="0.35"/>
+<path d="M108 78 L94 150 L156 150 L142 78 Z" fill="#ff5470" opacity="0.25"/>
+<path d="M94 150 L88 160 M110 150 L108 162 M140 150 L142 162 M156 150 L162 160" stroke="#ff5470" stroke-width="2.5" opacity="0.3"/>
+<circle cx="119" cy="60" r="2.5" fill="#ff5470" opacity="0.9"/>
+<circle cx="131" cy="60" r="2.5" fill="#ff5470" opacity="0.9"/>
+<path d="M105 50 C108 38 142 38 145 50" stroke="#ff5470" stroke-width="2" fill="none" opacity="0.4"/>
+  <circle cx="22" cy="182" r="3.6" fill="#ff5470" opacity="1"/><circle cx="34" cy="182" r="3.6" fill="#ff5470" opacity="1"/>
+  <text x="302" y="170" text-anchor="end" fill="#e8e8ec" font-size="17" font-weight="700">幽灵小女孩</text>
+  <text x="302" y="186" text-anchor="end" fill="#8b92a0" font-size="10" font-family="sans-serif">Ghost Girl</text>
+</svg>

@@ -1,0 +1,322 @@
+{
+  "version": "miraheze v81 (harvested 2026-06-07)",
+  "updatedAt": "2026-06-07",
+  "sources": [
+    "lethal.miraheze.org Ship 页 §Terminal(指令表逐条对照)"
+  ],
+  "categories": {
+    "navigation": {
+      "name": "航行",
+      "icon": "🧭"
+    },
+    "store": {
+      "name": "商店",
+      "icon": "🛒"
+    },
+    "bestiary": {
+      "name": "图鉴",
+      "icon": "📖"
+    },
+    "radar": {
+      "name": "雷达与通讯",
+      "icon": "📡"
+    },
+    "utilities": {
+      "name": "实用",
+      "icon": "🔧"
+    },
+    "misc": {
+      "name": "其他",
+      "icon": "🧩"
+    }
+  },
+  "commands": [
+    {
+      "slug": "help",
+      "command": "HELP",
+      "category": "utilities",
+      "usage": "help",
+      "effect": "显示第一页指令列表。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "other",
+      "command": "OTHER",
+      "category": "utilities",
+      "usage": "other",
+      "effect": "显示第二页指令列表。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "moons",
+      "command": "MOONS",
+      "category": "navigation",
+      "usage": "moons",
+      "effect": "查看全部卫星及当日天气,选择要降落的卫星。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "卫星名",
+      "command": "[卫星名]",
+      "category": "navigation",
+      "usage": "220 / ass / titan",
+      "effect": "输入卫星名(前 3 个字母即可识别,如 ada=Adamance)规划航线,再输 confirm 确认。付费卫星需扣相应信用点。",
+      "note": "指令不区分大小写",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "confirm",
+      "command": "CONFIRM",
+      "category": "navigation",
+      "usage": "confirm",
+      "effect": "确认当前待确认操作(航线/购买)。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "deny",
+      "command": "DENY",
+      "category": "navigation",
+      "usage": "deny",
+      "effect": "取消当前待确认操作。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "store",
+      "command": "STORE",
+      "category": "store",
+      "usage": "store",
+      "effect": "打开商店,查看可购装备与价格。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "buy-物品名",
+      "command": "BUY [物品名]",
+      "category": "store",
+      "usage": "buy flashlight / buy walkie 2",
+      "effect": "购买装备,可带数量;同样支持前缀缩写,再输 confirm 确认。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "storage",
+      "command": "STORAGE",
+      "category": "store",
+      "usage": "storage",
+      "effect": "查看并取回存入仓库的物品(家具等)。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "bestiary",
+      "command": "BESTIARY",
+      "category": "bestiary",
+      "usage": "bestiary",
+      "effect": "打开生物图鉴,查看已扫描过的怪物条目。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "sigurd",
+      "command": "SIGURD",
+      "category": "bestiary",
+      "usage": "sigurd",
+      "effect": "打开 Sigurd 的日志(剧情文本)。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "scan",
+      "command": "SCAN",
+      "category": "utilities",
+      "usage": "scan",
+      "effect": "返回当前卫星剩余物品数量(及总价值)。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "view-monitor",
+      "command": "VIEW MONITOR",
+      "category": "radar",
+      "usage": "view monitor",
+      "effect": "开关主显示器的地图摄像头。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "switch-玩家名",
+      "command": "SWITCH [玩家名]",
+      "category": "radar",
+      "usage": "switch / switch Player1",
+      "effect": "切换地图摄像头到指定玩家;不带参数则按顺序切换。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "ping-增幅器名",
+      "command": "PING [增幅器名]",
+      "category": "radar",
+      "usage": "ping",
+      "effect": "让指定雷达增幅器发出声音(吸引/确认位置)。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "flash-增幅器名",
+      "command": "FLASH [增幅器名]",
+      "category": "radar",
+      "usage": "flash",
+      "effect": "让指定雷达增幅器闪光,可眩晕看向它的怪物。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "transmit-消息",
+      "command": "TRANSMIT [消息]",
+      "category": "radar",
+      "usage": "transmit run",
+      "effect": "向所有人屏幕发送消息(需先购买信号翻译器)。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "eject",
+      "command": "EJECT",
+      "category": "misc",
+      "usage": "eject",
+      "effect": "弹射全员、重置本局(仅房主可用)。",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    },
+    {
+      "slug": "门/道具代码",
+      "command": "[门/道具代码]",
+      "category": "misc",
+      "usage": "b1 / e5",
+      "effect": "输入地图上标注的两位代码,远程开关安全门、解除地雷与炮塔(短暂时间)。",
+      "note": "代码显示在地图摄像头上",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ship",
+          "revid": 55541,
+          "timestamp": "2026-06-07T01:41:21Z"
+        }
+      ]
+    }
+  ]
+}

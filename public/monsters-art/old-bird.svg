@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="sans-serif" role="img" aria-label="老鸟 抽象示意图">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14161a"/>
+      <stop offset="1" stop-color="#1c2026"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="12" fill="url(#bg)"/>
+  <rect x="0" y="0" width="320" height="6" rx="3" fill="#3ba9ff" opacity="0.9"/>
+  <rect x="0.75" y="0.75" width="318.5" height="198.5" rx="11" fill="none" stroke="#3ba9ff" stroke-width="1.5" opacity="0.7"/>
+  <path d="M0 60 L320 60 M0 130 L320 130" stroke="#3ba9ff" stroke-width="0.5" opacity="0.08"/>
+  <circle cx="20" cy="22" r="4" fill="#3ba9ff"/>
+  <text x="32" y="26" fill="#3ba9ff" font-size="10" letter-spacing="2">OUTDOOR</text>
+
+<rect x="100" y="56" width="50" height="44" rx="6" fill="#3ba9ff" opacity="0.6"/>
+<circle cx="125" cy="74" r="9" fill="#ff3344" opacity="0.9"/>
+<path d="M125 74 L196 38 L196 110 Z" fill="#ff3344" opacity="0.12"/>
+<path d="M104 100 L88 162 M146 100 L162 162" stroke="#3ba9ff" stroke-width="8" stroke-linecap="round"/>
+<path d="M80 162 L96 162 M154 162 L170 162" stroke="#3ba9ff" stroke-width="6" stroke-linecap="round"/>
+<path d="M100 64 L82 52 M150 64 L168 52" stroke="#3ba9ff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="22" cy="182" r="3.6" fill="#3ba9ff" opacity="1"/><circle cx="34" cy="182" r="3.6" fill="#3ba9ff" opacity="1"/><circle cx="46" cy="182" r="3.6" fill="#3ba9ff" opacity="1"/>
+  <text x="302" y="170" text-anchor="end" fill="#e8e8ec" font-size="17" font-weight="700">老鸟</text>
+  <text x="302" y="186" text-anchor="end" fill="#8b92a0" font-size="10" font-family="sans-serif">Old Bird</text>
+</svg>

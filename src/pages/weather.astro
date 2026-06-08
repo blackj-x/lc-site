@@ -1,0 +1,135 @@
+---
+import Base from '../layouts/Base.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { weathers, dataUpdatedAt } from '../data/weather';
+import { items } from '../data/items';
+
+const title = '致命公司天气效果一览:雷暴/迷雾/日蚀机制';
+const description = `致命公司(Lethal Company)全 ${weathers.length} 种天气机制速查:每种天气的影响与应对,附 Stormy(雷暴)天导电物品完整清单,出门前先查再落地。`;
+
+const sorted = [...weathers].sort((a, b) => a.enumIndex - b.enumIndex);
+const display = (w: (typeof weathers)[number]) => w.nameZh || w.nameEn;
+
+// 装饰图标(仅 UI,不属于数据)
+const icons: Record<string, string> = {
+  clear: '☀️', rainy: '🌧️', stormy: '⛈️', foggy: '🌫️', flooded: '🌊', eclipsed: '🌑',
+};
+
+// 真实数据交叉:items.json 里 conductive=true 的物品 → 雷暴注意清单
+const conductiveItems = items
+  .filter((i) => i.conductive === true)
+  .sort((a, b) => a.nameEn.localeCompare(b.nameEn));
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Article', headline: title, description, dateModified: dataUpdatedAt },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '首页', item: new URL('/', Astro.site).href },
+        { '@type': 'ListItem', position: 2, name: '天气效果' },
+      ],
+    },
+  ],
+};
+---
+<Base title={title} description={description} jsonLd={jsonLd} active="weather">
+  <div class="wrap detail">
+    <div class="crumb"><a href="/">首页</a> / 天气效果</div>
+    <h1>天气<span class="em">效果一览</span></h1>
+    <p class="lead">每颗卫星每天会随机一种天气,直接决定当天的风险和收益。出发前在终端输 <code>moons</code> 查当日天气,再决定去哪。共 {sorted.length} 种天气,数据更新于 {dataUpdatedAt}。</p>
+
+    <AdSlot variant="top" />
+
+    <div class="detail-layout">
+      <main>
+        <section class="sec">
+          <h2>🌤️ 全部天气</h2>
+          <div class="weather-grid">
+            {sorted.map((w) => (
+              <div class="w-card" id={w.slug}>
+                <div class="w-head">
+                  <span class="w-icon">{icons[w.slug] ?? '🌐'}</span>
+                  <div>
+                    <h3>{display(w)}</h3>
+                    {w.nameZh && <span class="w-en">{w.nameEn}</span>}
+                  </div>
+                </div>
+                <p class={`w-effect${w.effect ? '' : ' pending'}`}>{w.effect || '待补充'}</p>
+                {w.danger && <p class="w-danger">⚠ {w.danger}</p>}
+                {w.counter.length > 0 && (
+                  <ul class="w-counter">
+                    {w.counter.map((c) => <li>{c}</li>)}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section class="sec storm">
+          <h2>⚡ 雷暴(Stormy)注意清单:这 {conductiveItems.length} 件物品导电</h2>
+          <p class="storm-intro">雷暴天身上带着导电物品会引雷。以下清单来自物品数据库中标记为「导电」的全部 {conductiveItems.length} 件物品(共 {items.length} 件),完整售价见<a href="/items">物品价值表</a>。</p>
+          <div class="chips">
+            {conductiveItems.map((i) => (
+              <span class="chip">
+                <strong>{i.nameZh || i.nameEn}</strong>
+                {i.nameZh && <em>{i.nameEn}</em>}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section class="sec next">
+          <h2>👉 下一步</h2>
+          <p>查完天气,去 <a href="/moons">卫星情报</a> 看每颗卫星的天气池与废料价值,或回 <a href="/terminal">终端指令</a> 复习 <code>moons</code> 的用法。</p>
+        </section>
+      </main>
+
+      <aside>
+        <AdSlot variant="side" />
+      </aside>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .detail{padding-top:24px}
+  h1{font-size:38px;font-weight:900;letter-spacing:-.5px;margin-top:6px}
+  h1 .em{background:linear-gradient(120deg,var(--outdoor),var(--daytime) 50%,var(--indoor));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lead{color:var(--txt-dim);font-size:16.5px;margin:14px 0 4px;max-width:720px}
+  .detail-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;margin-bottom:40px}
+  .sec{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:18px}
+  .sec h2{font-size:18px;color:var(--accent);margin-bottom:14px}
+  code{font-family:'SF Mono',Menlo,Consolas,monospace;background:var(--bg-elev);border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:13px;color:var(--daytime)}
+
+  .weather-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+  .w-card{background:var(--bg-elev);border:1px solid var(--line);border-radius:13px;padding:16px;transition:.18s}
+  .w-card:hover{transform:translateY(-3px);border-color:var(--txt-dim)}
+  .w-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .w-icon{width:44px;height:44px;border-radius:11px;background:var(--bg-card);display:grid;place-items:center;font-size:24px;flex:none}
+  .w-head h3{font-size:16.5px;font-weight:700}
+  .w-en{font-size:11.5px;color:var(--txt-dim)}
+  .w-effect{font-size:13.5px;color:var(--txt-dim)}
+  .w-effect.pending{font-style:italic;opacity:.7}
+  .w-danger{font-size:13px;color:var(--indoor);margin-top:8px}
+  .w-counter{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:5px}
+  .w-counter li{font-size:13px;color:var(--txt-dim);padding-left:16px;position:relative}
+  .w-counter li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+
+  .storm-intro{font-size:14.5px;color:var(--txt-dim);margin-bottom:16px}
+  .storm-intro a{color:var(--accent)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:rgba(255,216,78,.08);border:1px solid rgba(255,216,78,.3);border-radius:8px;padding:5px 11px;font-size:13px;line-height:1.4}
+  .chip strong{color:var(--daytime);font-weight:700}
+  .chip em{font-style:normal;color:var(--txt-dim);font-size:11px;margin-left:6px}
+
+  .next p{color:var(--txt-dim)}
+  .next a{color:var(--accent)}
+
+  @media(max-width:920px){
+    .detail-layout{grid-template-columns:1fr}
+    h1{font-size:28px}
+  }
+</style>

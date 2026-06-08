@@ -1,0 +1,101 @@
+---
+import '../styles/global.css';
+import { SITE } from '../data/site';
+
+export interface Props {
+  title: string;
+  description: string;
+  /** 结构化数据 JSON-LD，可选 */
+  jsonLd?: object;
+  /** 当前导航高亮 */
+  active?: string;
+  /** 社交分享图，可覆盖默认 */
+  ogImage?: string;
+}
+
+const { title, description, jsonLd, active, ogImage } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImageUrl = new URL(ogImage ?? SITE.defaultOgImage, Astro.site).href;
+const isHome = Astro.url.pathname === '/';
+
+// 网站级结构化数据（仅首页输出，避免重复）
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: new URL('/', Astro.site).href,
+  inLanguage: 'zh-CN',
+};
+
+const links = [
+  { href: '/monsters', label: '怪物图鉴', key: 'monsters' },
+  { href: '/moons', label: '卫星', key: 'moons' },
+  { href: '/items', label: '物品价值', key: 'items' },
+  { href: '/terminal', label: '终端指令', key: 'terminal' },
+  { href: '/weather', label: '天气', key: 'weather' },
+  { href: '/guide', label: '新手指南', key: 'guide' },
+];
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content={SITE.themeColor} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <!-- Open Graph -->
+  <meta property="og:type" content={isHome ? 'website' : 'article'} />
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:locale" content={SITE.locale} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImageUrl} />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageUrl} />
+  {SITE.googleSiteVerification && <meta name="google-site-verification" content={SITE.googleSiteVerification} />}
+  {SITE.adsenseClient && <meta name="google-adsense-account" content={SITE.adsenseClient} />}
+  {isHome && <script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />}
+  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  {SITE.adsenseClient && (
+    <script
+      is:inline
+      async
+      src={`https://pagead2.googleapis.com/pagead/js/adsbygoogle.js?client=${SITE.adsenseClient}`}
+      crossorigin="anonymous"
+    />
+  )}
+  {SITE.cfBeaconToken && (
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={`{"token": "${SITE.cfBeaconToken}"}`}
+    />
+  )}
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="/" class="logo"><span class="mark">🛰</span>致命公司攻略社</a>
+      <div class="nav-links">
+        {links.map((l) => (
+          <a href={l.href} class={active === l.key ? 'on' : ''}>{l.label}</a>
+        ))}
+      </div>
+    </nav>
+  </header>
+  <slot />
+  <footer>
+    致命公司攻略社 · 数据随版本持续更新 · 本站为玩家攻略站，与游戏官方无关
+    <br />
+    <a href="https://metaup.pro" rel="noopener">metaup.pro</a>
+    · 同站群：<a href="https://gooseduck.metaup.pro" rel="noopener">鹅鸭攻略社</a>
+  </footer>
+</body>
+</html>

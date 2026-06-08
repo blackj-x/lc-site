@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="sans-serif" role="img" aria-label="四翼鸟 抽象示意图">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14161a"/>
+      <stop offset="1" stop-color="#1c2026"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="12" fill="url(#bg)"/>
+  <rect x="0" y="0" width="320" height="6" rx="3" fill="#ffd84e" opacity="0.9"/>
+  <rect x="0.75" y="0.75" width="318.5" height="198.5" rx="11" fill="none" stroke="#ffd84e" stroke-width="1.5" opacity="0.7"/>
+  <path d="M0 60 L320 60 M0 130 L320 130" stroke="#ffd84e" stroke-width="0.5" opacity="0.08"/>
+  <circle cx="20" cy="22" r="4" fill="#ffd84e"/>
+  <text x="32" y="26" fill="#ffd84e" font-size="10" letter-spacing="2">DAYTIME</text>
+
+<ellipse cx="125" cy="105" rx="18" ry="26" fill="#ffd84e" opacity="0.55"/>
+<circle cx="125" cy="72" r="9" fill="#ffd84e" opacity="0.85"/>
+<path d="M110 92 L52 70 L92 104 Z" fill="#ffd84e" opacity="0.6"/>
+<path d="M140 92 L198 70 L158 104 Z" fill="#ffd84e" opacity="0.6"/>
+<path d="M112 116 L62 134 L98 124 Z" fill="#ffd84e" opacity="0.45"/>
+<path d="M138 116 L188 134 L152 124 Z" fill="#ffd84e" opacity="0.45"/>
+<path d="M125 130 L118 152 M125 130 L132 152" stroke="#ffd84e" stroke-width="3"/>
+  <circle cx="22" cy="182" r="3.6" fill="#ffd84e" opacity="1"/>
+  <text x="302" y="170" text-anchor="end" fill="#e8e8ec" font-size="17" font-weight="700">四翼鸟</text>
+  <text x="302" y="186" text-anchor="end" fill="#8b92a0" font-size="10" font-family="sans-serif">Manticoil</text>
+</svg>

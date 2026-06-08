@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1438"/>
+      <stop offset="1" stop-color="#151229"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="85%" cy="0%" r="60%">
+      <stop offset="0" stop-color="#3ba9ff" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#3ba9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0%" cy="100%" r="55%">
+      <stop offset="0" stop-color="#ff5470" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#ff5470" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="10%" cy="5%" r="45%">
+      <stop offset="0" stop-color="#b06bff" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#b06bff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ba9ff"/>
+      <stop offset="0.5" stop-color="#b06bff"/>
+      <stop offset="1" stop-color="#ff5470"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+  <rect width="1200" height="630" fill="url(#g3)"/>
+
+  <!-- logo 标记 -->
+  <rect x="100" y="120" width="92" height="92" rx="24" fill="url(#title)"/>
+  <text x="146" y="186" font-size="52" text-anchor="middle">🦢</text>
+
+  <!-- 主标题 -->
+  <text x="100" y="330" font-size="96" font-weight="900" fill="url(#title)">鹅鸭攻略社</text>
+  <text x="104" y="408" font-size="40" font-weight="700" fill="#f3f0ff">Goose Goose Duck 中文攻略</text>
+
+  <!-- 副标题 -->
+  <text x="104" y="468" font-size="30" fill="#a99fd6">全角色图鉴 · 地图点位 · 新手入门 · 进阶话术</text>
+
+  <!-- 阵营色点缀 -->
+  <g transform="translate(104,520)">
+    <rect x="0" y="0" width="140" height="48" rx="12" fill="rgba(59,169,255,0.16)"/>
+    <text x="70" y="32" font-size="24" font-weight="700" fill="#3ba9ff" text-anchor="middle">🦢 鹅</text>
+    <rect x="156" y="0" width="140" height="48" rx="12" fill="rgba(255,84,112,0.16)"/>
+    <text x="226" y="32" font-size="24" font-weight="700" fill="#ff5470" text-anchor="middle">🦆 鸭</text>
+    <rect x="312" y="0" width="140" height="48" rx="12" fill="rgba(176,107,255,0.16)"/>
+    <text x="382" y="32" font-size="24" font-weight="700" fill="#b06bff" text-anchor="middle">🎭 中立</text>
+  </g>
+</svg>

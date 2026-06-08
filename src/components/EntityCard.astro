@@ -1,0 +1,20 @@
+---
+import { categories, entityName, type Entity } from '../data/entities';
+export interface Props { entity: Entity }
+const { entity } = Astro.props;
+const cat = categories[entity.category];
+---
+<a class="card" data-category={entity.category} data-aliases={entity.aliases.join(' ')} href={`/monsters/${entity.slug}`}>
+  <div class="card-top">
+    <div class="avatar">{cat.icon}</div>
+    <span class={`badge ${entity.category}`} style={`color:${cat.color}`}>{cat.name}</span>
+  </div>
+  <h3>{entityName(entity)}</h3>
+  <div class="role-en">{entity.nameEn}</div>
+  <p class="desc">{entity.behavior}</p>
+  <div class="card-foot">
+    {entity.hp !== null && <span class="tag">HP {entity.hp}</span>}
+    {entity.immortal && <span class="tag">无法击杀</span>}
+    {entity.powerLevel !== null && <span class="diff" title="危险度(Power Level)">危险度 {entity.powerLevel}</span>}
+  </div>
+</a>

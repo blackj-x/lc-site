@@ -1,0 +1,104 @@
+---
+import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import MoonCard from '../../components/MoonCard.astro';
+import { moons, moonTitle } from '../../data/moons';
+
+const title = '全卫星攻略 - 致命公司攻略社';
+const description = `致命公司(Lethal Company)全卫星攻略:${moons.length} 颗卫星的风险等级、航线费用、天气池、室内类型与废料价值对照,含登陆/搜刮/撤离路线建议。`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: title,
+  description,
+};
+
+// 按风险等级分组(低 → 高,公司驻地置末)
+const tierOrder = ['D', 'C', 'B', 'A', 'S', 'S+', 'S++', 'Safe'] as const;
+const tierGroups = tierOrder
+  .map((tier) => ({ tier, list: moons.filter((m) => m.tier === tier) }))
+  .filter((g) => g.list.length > 0);
+const tierLabel = (tier: string) => (tier === 'Safe' ? 'Safe · 公司驻地' : `${tier} 级卫星`);
+
+// 性价比对照表:航线费用 vs 废料价值,按风险等级排序
+const compareRows = tierOrder.flatMap((tier) => moons.filter((m) => m.tier === tier));
+const costText = (c: number | null) => (c === null ? '待核' : c === 0 ? '免费' : `▮${c}`);
+---
+<Base title={title} description={description} jsonLd={jsonLd} active="moons">
+  <div class="wrap">
+    <section class="hero">
+      <div class="crumb"><a href="/">首页</a> / 卫星攻略</div>
+      <h1>全<span class="em">卫星</span>攻略</h1>
+      <p class="sub">{moons.length} 颗卫星的风险等级、天气池、室内类型与废料价值。点击查看登陆 / 搜刮 / 撤离路线。</p>
+    </section>
+
+    <AdSlot variant="top" />
+
+    {tierGroups.map((g) => (
+      <section class="tier-group">
+        <h2 class="tier-title" data-tier={g.tier}>{tierLabel(g.tier)}</h2>
+        <div class="moon-grid">
+          {g.list.map((moon) => <MoonCard moon={moon} />)}
+        </div>
+      </section>
+    ))}
+
+    <section class="compare-sec">
+      <h2>💰 性价比对照:航线费用 vs 废料价值</h2>
+      <p class="hint">废料数 / 价值为区间值,来自当前版本数据;费用「免费」即 0 信用点航线。</p>
+      <div class="table-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>卫星</th>
+              <th>风险</th>
+              <th>航线费用</th>
+              <th>废料数(件)</th>
+              <th>废料总价值(▮)</th>
+              <th>昼夜推进</th>
+            </tr>
+          </thead>
+          <tbody>
+            {compareRows.map((m) => (
+              <tr>
+                <td><a href={`/moons/${m.slug}`}>{moonTitle(m)}</a></td>
+                <td><span class="tier-chip" data-tier={m.tier}>{m.tier}</span></td>
+                <td>{costText(m.cost)}</td>
+                <td>{m.scrapCount.min === null ? "待核" : `${m.scrapCount.min}–${m.scrapCount.max}`}</td>
+                <td>{m.scrapValue.min}–{m.scrapValue.max}</td>
+                <td>{m.hasTime ? '有' : '无'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .hero{padding:46px 0 26px}
+  h1{font-size:40px;font-weight:900;letter-spacing:-.5px}
+  h1 .em{background:linear-gradient(120deg,var(--outdoor),var(--daytime) 50%,var(--indoor));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .sub{color:var(--txt-dim);margin-top:8px;max-width:640px}
+  .tier-group{margin-bottom:36px}
+  .tier-title{font-size:18px;color:var(--accent);margin-bottom:16px;padding-left:12px;border-left:3px solid var(--accent)}
+  .tier-title[data-tier="S"],.tier-title[data-tier="S+"],.tier-title[data-tier="S++"]{color:var(--indoor);border-color:var(--indoor)}
+  .tier-title[data-tier="A"]{color:var(--outdoor);border-color:var(--outdoor)}
+  .moon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+
+  .compare-sec{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:40px}
+  .compare-sec h2{font-size:17px;color:var(--accent);margin-bottom:8px}
+  .hint{font-size:13px;color:var(--txt-dim);margin-bottom:14px}
+  .table-scroll{overflow-x:auto}
+  .compare-table{width:100%;border-collapse:collapse;min-width:560px}
+  .compare-table th{text-align:left;font-size:12px;color:var(--txt-dim);font-weight:700;padding:8px 10px;border-bottom:1px solid var(--line)}
+  .compare-table td{font-size:13.5px;padding:9px 10px;border-bottom:1px solid var(--line)}
+  .compare-table tbody tr:last-child td{border-bottom:0}
+  .compare-table a{font-weight:700}
+  .compare-table a:hover{color:var(--accent)}
+  .tier-chip{font-size:11px;font-weight:700;padding:3px 9px;border-radius:6px;background:rgba(59,169,255,.14);color:var(--outdoor)}
+  .tier-chip[data-tier="S"],.tier-chip[data-tier="S+"],.tier-chip[data-tier="S++"]{background:rgba(255,84,112,.14);color:var(--indoor)}
+  .tier-chip[data-tier="Safe"]{background:rgba(255,216,78,.12);color:var(--daytime)}
+  @media(max-width:920px){h1{font-size:30px}}
+</style>

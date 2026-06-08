@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" font-family="sans-serif" role="img" aria-label="5-Embrion 外部布局示意图">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#211d22"/>
+      <stop offset="1" stop-color="#14161a"/>
+    </linearGradient>
+    <linearGradient id="gnd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#463c44" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#463c44" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="480" height="320" rx="10" fill="url(#sky)"/>
+  <path d="M0 212 L60 170 L120 210 L200 158 L280 208 L360 176 L480 210 L480 212 Z" fill="#3a323c" opacity="0.6"/>
+  <path d="M0 212 L480 212 L480 320 L0 320 Z" fill="url(#gnd)"/>
+  <path d="M90 268 L110 244 L132 268 Z" fill="#524652" opacity="0.7"/><path d="M330 284 L356 252 L384 284 Z" fill="#524652" opacity="0.6"/><circle cx="230" cy="290" r="6" fill="#524652" opacity="0.5"/><circle cx="430" cy="270" r="5" fill="#524652" opacity="0.45"/>
+  <rect x="84" y="224" width="52" height="24" rx="5" fill="#4ade80" opacity="0.18" stroke="#4ade80" stroke-width="1.5"/><g filter="url(#glow)"><path d="M106.5 234 L110 227 L113.5 234 Z" fill="#4ade80"/><rect x="106.5" y="234" width="7" height="9" rx="1.5" fill="#4ade80"/><path d="M106.5 243 L103 246 L106.5 240 Z" fill="#4ade80" opacity="0.8"/><path d="M113.5 243 L117 246 L113.5 240 Z" fill="#4ade80" opacity="0.8"/></g><rect x="76" y="248" width="68" height="16" rx="4" fill="#14161a" opacity="0.85"/><text x="110" y="260" text-anchor="middle" fill="#e8e8ec" font-size="10">飞船着陆区</text><g filter="url(#glow)"><path d="M242.0 230 L242.0 216.0 Q242.0 208 250 208 Q258.0 208 258.0 216.0 L258.0 230 Z" fill="#3ba9ff" opacity="0.3" stroke="#3ba9ff" stroke-width="1.8"/><circle cx="253.5" cy="221.0" r="1.4" fill="#3ba9ff"/></g><rect x="216" y="234" width="68" height="16" rx="4" fill="#14161a" opacity="0.85"/><text x="250" y="246" text-anchor="middle" fill="#e8e8ec" font-size="10">主入口</text><g filter="url(#glow)"><path d="M392.5 251 L392.5 241.5 Q392.5 236 398 236 Q403.5 236 403.5 241.5 L403.5 251 Z" fill="#ff5470" opacity="0.3" stroke="#ff5470" stroke-width="1.8"/><circle cx="399.0" cy="245.5" r="1.4" fill="#ff5470"/></g><rect x="364" y="256" width="68" height="16" rx="4" fill="#14161a" opacity="0.85"/><text x="398" y="268" text-anchor="middle" fill="#e8e8ec" font-size="10">防火门</text>
+  <text x="20" y="34" fill="#e8e8ec" font-size="18" font-weight="800">5-Embrion</text>
+  <rect x="20" y="44" width="25" height="18" rx="9" fill="#ffd84e" opacity="0.18" stroke="#ffd84e" stroke-width="1"/>
+  <text x="32.5" y="57" text-anchor="middle" fill="#ffd84e" font-size="11" font-weight="700">S</text>
+  <rect x="362" y="8" width="110" height="59" rx="6" fill="#14161a" opacity="0.72" stroke="#2c3038" stroke-width="1"/><rect x="372" y="17" width="14" height="10" rx="2" fill="#4ade80" opacity="0.25" stroke="#4ade80" stroke-width="1.2"/><text x="392" y="26" fill="#aab1bd" font-size="10">飞船着陆区</text><path d="M374.5 44 L374.5 37.5 Q374.5 33 379 33 Q383.5 33 383.5 37.5 L383.5 44 Z" fill="#3ba9ff" opacity="0.3" stroke="#3ba9ff" stroke-width="1.8"/><circle cx="379.0" cy="40.5" r="1.4" fill="#3ba9ff"/><text x="392" y="43" fill="#aab1bd" font-size="10">主入口</text><path d="M375.5 61 L375.5 55.5 Q375.5 52 379 52 Q382.5 52 382.5 55.5 L382.5 61 Z" fill="#ff5470" opacity="0.3" stroke="#ff5470" stroke-width="1.8"/><circle cx="378.0" cy="58.5" r="1.4" fill="#ff5470"/><text x="392" y="60" fill="#aab1bd" font-size="10">防火门</text>
+  <text x="460" y="299" text-anchor="end" fill="#8b92a0" font-size="10" font-weight="600">5-Embrion</text>
+  <text x="460" y="313" text-anchor="end" fill="#6b7280" font-size="10">示意图,非实际比例</text>
+  <rect x="1" y="1" width="478" height="318" rx="9" fill="none" stroke="#2c3038" stroke-width="2"/>
+</svg>

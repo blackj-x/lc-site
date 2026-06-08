@@ -1,51 +1,71 @@
-# 🦢 鹅鸭攻略社
+# 🛰️ 致命公司攻略社
 
-> 《鹅鸭杀》(Goose Goose Duck) 中文攻略站 —— 角色图鉴 · 地图攻略 · 新手入门
+> 《致命公司》(Lethal Company) 中文攻略站 —— 怪物图鉴 · 卫星攻略 · 物品价值表 · 终端指令
 
-🔗 **在线访问:[gooseduck.metaup.pro](https://gooseduck.metaup.pro)**
+🔗 **在线访问:[lethalcompany.metaup.pro](https://lethalcompany.metaup.pro)**
 
 ## 这是什么
 
-为多人社交推理游戏《鹅鸭杀》打造的中文攻略站,数据驱动的纯静态站点:
+为合作生存恐怖游戏《致命公司》打造的中文攻略站,数据驱动的纯静态站点,共 56 页:
 
-- 🪿 **角色图鉴** — 53 个角色(鹅 24 / 鸭 22 / 中立 7),技能、胜利条件、实战技巧、克制关系,支持阵营筛选与搜索
-- 🗺️ **地图攻略** — 12 张地图的机制特性与分阵营打法,热门图配原创 SVG 示意图 + 可交互标注(任务点 / 刀人点 / 通风口 / 视野盲区…)
-- 📖 **新手入门** — 核心规则、三阵营玩法、对局流程、黑话术语表、新手避坑
+- 👾 **怪物图鉴** — 33 种实体(室内 / 室外 / 日间),行为模式、危险等级、应对策略与实战技巧
+- 🛰️ **卫星攻略** — 13 颗卫星(含 Gordion 公司大楼、泰坦等),难度、地形、天气池、刷怪与路线建议
+- 💰 **物品价值表** — 90 件废料/装备的价格、重量、导电性等数值
+- 🖥️ **终端指令** — 19 条终端命令速查
+- 🌦️ **天气机制** — 6 种天气的影响与对策
+- 📖 **新手指南 + 版本解读** — v80 / v81 改动解读
 
 ## 技术栈
 
 | | |
 |---|---|
 | 框架 | [Astro](https://astro.build) 静态生成(SSG),零 JS 框架依赖 |
-| 数据 | JSON 数据驱动 —— 角色/地图都是数据文件,加内容不碰页面代码 |
-| 部署 | Cloudflare Pages,push 即自动构建发布 |
+| 数据 | JSON 数据驱动 —— 怪物/卫星/物品都是数据文件,加内容不碰页面代码 |
+| 数据管线 | Python 脚本从 miraheze 收割原料解析为结构化 JSON,内容字段独立合并 |
+| 部署 | Cloudflare(Workers 静态资产模式),`wrangler deploy` 发布 `dist/` |
 | SEO | 每页独立 canonical / OG / 结构化数据,动态生成 sitemap 与 robots |
 
 ## 本地开发
 
 ```bash
 npm install
-npm run dev      # http://localhost:4321
-npm run build    # 构建到 dist/
+npm run dev      # 开发服务器 http://localhost:4321
+npm run build    # 构建到 dist/(应产出 56 页)
 npm run preview  # 预览构建产物
+
+python3 -m pytest tests/ -q    # 数据管线测试(改 parse/数据前后必跑)
 ```
 
 ## 项目结构
 
 ```
 src/
-├─ data/            # ★ 数据源:roles.json / maps.json + 类型定义 + 字段文档
-├─ layouts/         # 全局布局(SEO 头部、导航、页脚)
-├─ components/      # 角色卡、地图卡
-├─ pages/           # 页面 + [slug] 动态详情页 + sitemap/robots 端点
-└─ styles/          # 设计系统(CSS 变量:暗紫底 + 阵营色)
+├─ data/            # ★ 唯一数据源:五个 JSON + 同名 *.schema.md 字段文档
+│                   #   + *.ts 类型与访问函数 + site.ts 站点配置
+├─ layouts/         # Base.astro 全局布局(SEO 头部、导航、页脚)
+├─ components/      # EntityCard / MoonCard / AdSlot
+├─ pages/           # 页面 + monsters|moons/[slug].astro 动态详情页
+│                   #   + sitemap.xml / robots.txt 端点 + updates/vXX 版本解读
+└─ styles/          # global.css 设计系统(工业暗色系)
+
+scripts/            # parse_data.py(raw→JSON) / gen_art.py / gen_og.py
+data/raw/           # miraheze 收割原料(wikitext + Lua 模块,基线 v81)
+public/
+├─ monsters-art/    # 33 张原创怪物 SVG
+└─ moons-art/       # 13 张原创卫星 SVG
 ```
 
-加一个角色或地图 = 往 JSON 加一条记录,详情页、列表页、sitemap 全部自动生成。
+**加一个怪物或卫星 = 往对应 JSON 加一条记录**,详情页、列表页、sitemap 全部自动生成。
+数值字段由 `scripts/parse_data.py` 从 `data/raw/` 解析生成;行为/应对/技巧等内容字段由内容工序独立合并(重跑解析脚本会覆盖内容字段,需谨慎)。
+
+## 部署
+
+域名在 `astro.config.mjs` 的 `site` 字段统一配置(已设为正式域名),sitemap / canonical / OG / robots 全部由它生成。
+部署流程见 [`DEPLOY.md`](./DEPLOY.md),上线检查清单见 [`LAUNCH-CHECKLIST.md`](./LAUNCH-CHECKLIST.md)。
 
 ## 说明
 
-- 本站为玩家自制的非官方攻略站,与 Gaggle Studios 无关联
-- 地图示意图均为原创抽象绘制,不使用游戏素材
-- 角色数据基于游戏当前版本整理,游戏更新后会持续核对修订
-# lc-site
+- 本站为玩家自制的非官方攻略站,与 Zeekerss / 致命公司开发方无关联
+- 所有怪物/卫星示意图均为原创 SVG 抽象绘制,不使用任何游戏截图或素材
+- 数据基于 miraheze wiki 快照(基线 v81)整理,游戏更新后持续核对修订
+- 术语统一采用攻略站术语表,空译名处显示英文原名,不做自译

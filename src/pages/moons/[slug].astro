@@ -1,0 +1,273 @@
+---
+import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { moons, annotationTypes, moonTitle, type Moon } from '../../data/moons';
+import { weathers } from '../../data/weather';
+
+export function getStaticPaths() {
+  return moons.map((moon) => ({ params: { slug: moon.slug }, props: { moon } }));
+}
+const { moon } = Astro.props as { moon: Moon };
+
+// title 规则:`${moonId}-${nameEn} 攻略:…`;有中文括注时不加空格;Gordion 特例
+const titleHead =
+  moon.slug === 'gordion'
+    ? '公司大楼(Gordion)攻略'
+    : moon.nameZh
+      ? `${moon.moonId}-${moon.nameEn}(${moon.nameZh})攻略`
+      : `${moon.moonId}-${moon.nameEn} 攻略`;
+const title = `${titleHead}:天气·室内类型·废料价值 - 致命公司`;
+const h1 = moonTitle(moon);
+const scrapCountText = moon.scrapCount.min === null ? '待核' : `${moon.scrapCount.min}–${moon.scrapCount.max} 件`;
+const description = `致命公司(Lethal Company)卫星 ${h1} 攻略:风险等级 ${moon.tier},废料 ${scrapCountText} / 总价值 ${moon.scrapValue.min}–${moon.scrapValue.max},含天气池、室内类型权重与登陆/搜刮/撤离建议。`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: title,
+      description,
+      dateModified: moon.updatedAt,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '首页', item: new URL('/', Astro.site).href },
+        { '@type': 'ListItem', position: 2, name: '卫星攻略', item: new URL('/moons', Astro.site).href },
+        { '@type': 'ListItem', position: 3, name: h1 },
+      ],
+    },
+  ],
+};
+
+// 天气池中文对照(weather.json nameZh 为空时降级显示 nameEn,禁止自译)
+const weatherByEn = new Map(weathers.map((w) => [w.nameEn, w]));
+const weatherName = (en: string) => weatherByEn.get(en)?.nameZh || en;
+
+// 室内类型名称对照(仅这三类,权重为生成权重原值)
+const interiorName: Record<string, string> = { Factory: '工厂', Mansion: '洋馆', Mineshaft: '矿井' };
+const interiorRows = Object.entries(moon.interiorTypes);
+
+const costText = moon.cost === null ? '待核' : moon.cost === 0 ? '免费' : `▮${moon.cost}`;
+const mechRows: [string, string][] = [
+  ['风险等级', moon.tier],
+  ['航线费用', costText],
+  ['废料数量', scrapCountText],
+  ['废料总价值', `▮${moon.scrapValue.min}–${moon.scrapValue.max}`],
+  ['地图规模', moon.sizeMultiplier !== null ? `×${moon.sizeMultiplier}` : '待核'],
+  ['昼夜推进', moon.hasTime ? '有' : '无'],
+];
+
+// 布局示意图按约定路径引用:/moons-art/{slug}.svg
+const layoutImg = `/moons-art/${moon.slug}.svg`;
+
+const strategyMeta = [
+  { key: 'landing', name: '登陆阶段', icon: '🛬' },
+  { key: 'scavenging', name: '搜刮阶段', icon: '💰' },
+  { key: 'evac', name: '撤离阶段', icon: '🚀' },
+] as const;
+const strategyItems = strategyMeta
+  .map((s) => ({ ...s, text: moon.strategy?.[s.key] }))
+  .filter((s) => s.text);
+
+const related = moons.filter((m) => m.tier === moon.tier && m.slug !== moon.slug).slice(0, 3);
+const fallbackRelated = related.length > 0 ? related : moons.filter((m) => m.slug !== moon.slug).slice(0, 3);
+---
+<Base title={title} description={description} jsonLd={jsonLd} active="moons">
+  <div class="wrap detail">
+    <div class="crumb"><a href="/">首页</a> / <a href="/moons">卫星攻略</a> / {h1}</div>
+
+    <header class="moon-head">
+      <div>
+        <div class="badges">
+          <span class="tier-badge" data-tier={moon.tier}>{moon.tier} 级风险</span>
+          <span class="cost-badge">{moon.cost === 0 ? '免费航线' : `航线费用 ${costText}`}</span>
+        </div>
+        <h1>{h1}</h1>
+        {moon.aliases.length > 0 && (
+          <div class="alias-row">
+            <span class="alias-label">别名</span>
+            {moon.aliases.map((a) => <span class="alias-tag">{a}</span>)}
+          </div>
+        )}
+      </div>
+    </header>
+    {moon.layoutNotes && <p class="lead">{moon.layoutNotes}</p>}
+
+    <AdSlot variant="top" label="广告位 · 内容顶部 728×90" />
+
+    <div class="detail-layout">
+      <main>
+        <section class="sec map-viewer-sec">
+          <h2>🗺️ 布局示意图</h2>
+          {moon.annotations.length > 0 && (
+            <p class="hint">把鼠标移到标注点上查看说明(移动端点击)。</p>
+          )}
+          <div class="map-viewer">
+            <img
+              src={layoutImg}
+              alt={`${h1} 布局示意图`}
+              width={moon.imageW ?? undefined}
+              height={moon.imageH ?? undefined}
+              loading="lazy"
+              decoding="async"
+            />
+            {(moon.annotations ?? []).map((a) => {
+              const t = annotationTypes[a.type];
+              return (
+                <button class="pin" style={`left:${a.x}%;top:${a.y}%;--pc:${t?.color ?? '#fff'}`} aria-label={a.label}>
+                  <span class="pin-dot"></span>
+                  <span class="pin-pop">
+                    <strong>{t?.icon} {a.label}</strong>
+                    {a.note && <em>{a.note}</em>}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+          {moon.annotations.length > 0 && (
+            <div class="legend">
+              {[...new Set((moon.annotations ?? []).map((a) => a.type))].map((tp) => (
+                <span class="leg"><i style={`background:${annotationTypes[tp]?.color}`}></i>{annotationTypes[tp]?.name}</span>
+              ))}
+            </div>
+          )}
+        </section>
+
+        {strategyItems.length > 0 && (
+          <section class="sec">
+            <h2>🎯 阶段打法</h2>
+            <div class="stage-strats">
+              {strategyItems.map((s) => (
+                <div class="stage-strat">
+                  <h3>{s.icon} {s.name}</h3>
+                  <p>{s.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {moon.tips.length > 0 && (
+          <section class="sec">
+            <h2>💡 速记要点</h2>
+            <ul class="tips">{moon.tips.map((t) => <li>{t}</li>)}</ul>
+          </section>
+        )}
+      </main>
+
+      <aside>
+        <div class="sec mini">
+          <h2>📊 卫星机制</h2>
+          <table class="feat-table">
+            {mechRows.map(([k, v]) => (
+              <tr><td>{k}</td><td class={v === '无' || v === '待核' ? 'no' : 'yes'}>{v}</td></tr>
+            ))}
+          </table>
+          <div class="sub-block">
+            <span class="sub-title">天气池</span>
+            {moon.weatherPool.length > 0 ? (
+              <div class="tag-row">
+                {moon.weatherPool.map((w) => <a class="w-tag" href="/weather">{weatherName(w)}</a>)}
+              </div>
+            ) : (
+              <span class="none-text">—</span>
+            )}
+          </div>
+          <div class="sub-block">
+            <span class="sub-title">室内类型(生成权重)</span>
+            {interiorRows.length > 0 ? (
+              <table class="feat-table">
+                {interiorRows.map(([k, v]) => (
+                  <tr><td>{interiorName[k] ?? k}</td><td class="yes">{v}</td></tr>
+                ))}
+              </table>
+            ) : (
+              <span class="none-text">—</span>
+            )}
+          </div>
+          <div class="updated">数据更新:{moon.updatedAt}</div>
+        </div>
+        <AdSlot variant="side" />
+        {fallbackRelated.length > 0 && (
+          <div class="sec mini">
+            <h2>🔗 相关卫星</h2>
+            {fallbackRelated.map((m) => (
+              <a class="rel" href={`/moons/${m.slug}`}>{moonTitle(m)} <span>{m.tier} 级</span></a>
+            ))}
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .detail{padding-top:24px}
+  .moon-head{display:flex;justify-content:space-between;align-items:flex-end;padding-top:8px}
+  .badges{display:flex;gap:8px;margin-bottom:10px}
+  .tier-badge{font-size:12px;font-weight:700;padding:5px 12px;border-radius:8px;background:rgba(59,169,255,.16);color:var(--outdoor)}
+  .tier-badge[data-tier="S"],.tier-badge[data-tier="S+"],.tier-badge[data-tier="S++"]{background:rgba(255,84,112,.16);color:var(--indoor)}
+  .tier-badge[data-tier="Safe"]{background:rgba(255,216,78,.12);color:var(--daytime)}
+  .cost-badge{font-size:12px;padding:5px 12px;border-radius:8px;background:var(--bg-elev);color:var(--txt-dim);border:1px solid var(--line)}
+  .moon-head h1{font-size:36px;font-weight:900}
+  .alias-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px}
+  .alias-label{font-size:12px;color:var(--txt-dim)}
+  .alias-tag{font-size:11px;color:var(--txt-dim);background:var(--bg-elev);border:1px solid var(--line);padding:3px 9px;border-radius:6px}
+  .lead{color:var(--txt-dim);font-size:16px;margin:14px 0 4px;max-width:720px}
+  .detail-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;margin-bottom:40px}
+  .sec{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:18px}
+  .sec h2{font-size:17px;color:var(--accent);margin-bottom:12px}
+  .hint{font-size:13px;color:var(--txt-dim);margin-bottom:14px}
+
+  /* 布局查看器:底图 + 百分比标注层(annotations 为空时仅显示底图) */
+  .map-viewer{position:relative;line-height:0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+  .map-viewer img{width:100%;height:auto;display:block}
+  .pin{position:absolute;transform:translate(-50%,-50%);background:none;border:none;cursor:pointer;padding:0;z-index:1}
+  .pin-dot{display:block;width:16px;height:16px;border-radius:50%;background:var(--pc);box-shadow:0 0 0 3px rgba(0,0,0,.35),0 0 12px -1px var(--pc);transition:.15s}
+  .pin:hover{z-index:5}
+  .pin:hover .pin-dot{transform:scale(1.4)}
+  .pin-pop{position:absolute;bottom:140%;left:50%;transform:translateX(-50%);background:var(--bg-elev);border:1px solid var(--pc);border-radius:10px;padding:9px 12px;width:200px;text-align:left;opacity:0;pointer-events:none;transition:.15s;line-height:1.5;z-index:10}
+  .pin:hover .pin-pop,.pin:focus .pin-pop{opacity:1}
+  .pin-pop strong{display:block;font-size:13px;color:var(--txt);margin-bottom:3px}
+  .pin-pop em{font-size:12px;color:var(--txt-dim);font-style:normal}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
+  .leg{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--txt-dim)}
+  .leg i{width:11px;height:11px;border-radius:50%}
+
+  /* 阶段打法 */
+  .stage-strats{display:flex;flex-direction:column;gap:14px}
+  .stage-strat{border-left:3px solid var(--outdoor);padding-left:14px}
+  .stage-strat h3{font-size:15px;color:var(--txt);margin-bottom:6px}
+  .stage-strat p{font-size:14px;color:var(--txt-dim);line-height:1.7}
+  .tips{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .tips li{font-size:14.5px;color:var(--txt-dim);padding-left:18px;position:relative}
+  .tips li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+
+  /* 侧栏机制表 */
+  .mini h2{font-size:15px}
+  .feat-table{width:100%;border-collapse:collapse}
+  .feat-table td{padding:7px 0;font-size:13.5px;border-bottom:1px solid var(--line)}
+  .feat-table td:first-child{color:var(--txt-dim)}
+  .feat-table td.yes{color:var(--accent);text-align:right;font-weight:700}
+  .feat-table td.no{color:var(--txt-dim);text-align:right}
+  .sub-block{margin-top:14px}
+  .sub-title{font-size:12px;color:var(--txt-dim);display:block;margin-bottom:8px}
+  .tag-row{display:flex;flex-wrap:wrap;gap:6px}
+  .w-tag{font-size:11px;background:rgba(59,169,255,.14);color:var(--outdoor);padding:3px 9px;border-radius:6px}
+  .w-tag:hover{background:rgba(59,169,255,.26)}
+  .none-text{font-size:13px;color:var(--txt-dim)}
+  .updated{margin-top:14px;font-size:11px;color:var(--txt-dim)}
+  .rel{display:block;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .rel:last-child{border:0}
+  .rel span{color:var(--txt-dim);font-size:12px}
+  .rel:hover{color:var(--accent)}
+
+  @media(max-width:920px){
+    .detail-layout{grid-template-columns:1fr}
+    .ad-side{display:none}
+    .moon-head h1{font-size:28px}
+    .pin-pop{width:160px}
+  }
+</style>

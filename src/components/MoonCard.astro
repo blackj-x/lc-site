@@ -1,0 +1,37 @@
+---
+import { moonTitle, type Moon } from '../data/moons';
+export interface Props { moon: Moon }
+const { moon } = Astro.props;
+// moonTitle 已含 moonId-nameEn(及中文括注);Gordion 标题为中文,副行补英文编号
+const sub = moon.slug === 'gordion' ? `${moon.moonId}-${moon.nameEn}` : '';
+---
+<a class="moon-card" href={`/moons/${moon.slug}`}>
+  <div class="moon-card-top">
+    <span class="tier-badge" data-tier={moon.tier}>{moon.tier} 级</span>
+    {moon.cost !== null && (
+      <span class="cost-badge">{moon.cost === 0 ? '免费航线' : `▮${moon.cost}`}</span>
+    )}
+  </div>
+  <h3>{moonTitle(moon)}</h3>
+  {sub && <div class="moon-en">{sub}</div>}
+  <p class="moon-desc">{moon.layoutNotes}</p>
+  <div class="moon-foot">
+    {moon.weatherPool.map((w) => <span class="feat-tag">{w}</span>)}
+  </div>
+</a>
+
+<style>
+  .moon-card{display:block;background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:20px;transition:.18s;position:relative;overflow:hidden}
+  .moon-card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--outdoor),var(--daytime),var(--indoor))}
+  .moon-card:hover{transform:translateY(-5px);border-color:var(--txt-dim);box-shadow:0 14px 38px -10px rgba(59,169,255,.45)}
+  .moon-card-top{display:flex;gap:8px;margin-bottom:12px}
+  .tier-badge{font-size:11px;font-weight:700;padding:4px 10px;border-radius:7px;background:rgba(59,169,255,.14);color:var(--outdoor)}
+  .tier-badge[data-tier="S"],.tier-badge[data-tier="S+"],.tier-badge[data-tier="S++"]{background:rgba(255,84,112,.14);color:var(--indoor)}
+  .tier-badge[data-tier="Safe"]{background:rgba(255,216,78,.12);color:var(--daytime)}
+  .cost-badge{font-size:11px;padding:4px 10px;border-radius:7px;background:var(--bg-elev);color:var(--txt-dim);border:1px solid var(--line)}
+  .moon-card h3{font-size:19px;font-weight:700;margin-bottom:2px}
+  .moon-en{font-size:12px;color:var(--txt-dim);margin-bottom:10px}
+  .moon-desc{font-size:13.5px;color:var(--txt-dim);min-height:60px}
+  .moon-foot{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+  .feat-tag{font-size:11px;color:var(--txt-dim);background:var(--bg-elev);border:1px solid var(--line);padding:3px 9px;border-radius:6px}
+</style>

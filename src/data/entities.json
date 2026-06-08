@@ -1,0 +1,1906 @@
+{
+  "version": "miraheze v81 (harvested 2026-06-07)",
+  "updatedAt": "2026-06-07",
+  "sources": [
+    "lethal.miraheze.org(浏览器/带UA curl 抓取,revid 见各条 evidence)"
+  ],
+  "categories": {
+    "indoor": {
+      "name": "室内怪物",
+      "nameEn": "Indoor",
+      "color": "#ff5470",
+      "icon": "🏭"
+    },
+    "outdoor": {
+      "name": "室外怪物",
+      "nameEn": "Outdoor",
+      "color": "#3ba9ff",
+      "icon": "🌑"
+    },
+    "daytime": {
+      "name": "日间生物",
+      "nameEn": "Daytime",
+      "color": "#ffd84e",
+      "icon": "🌤"
+    }
+  },
+  "entities": [
+    {
+      "slug": "baboon-hawk",
+      "nameEn": "Baboon Hawk",
+      "nameZh": "狒狒鹰",
+      "officialZh": "狒狒鹰",
+      "aliases": [
+        "翼猿",
+        "怪鸟",
+        "跳跳鸟",
+        "狒狒"
+      ],
+      "category": "outdoor",
+      "powerLevel": 0.5,
+      "maxCount": 15,
+      "hp": "4",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.1,
+      "attackDamage": "20",
+      "sciName": "Papio-volturius",
+      "behavior": "狒狒鹰是户外的群居领地型生物,体内有一套\"恐惧值\"机制决定打不打你:落单、被盯着看、玩家成群或满状态时它偏向观望退缩;一旦群体壮大、玩家残血、远离飞船或天色渐晚,它就会胆子变大转为进攻。动手前它会先尖叫挥舞作为警告,真正开打才用啄刺输出(单次 20 伤害)。它还会捡走地上的废料,杀人或偷到东西后拖回用三根木刺标记的巢穴。",
+      "counter": [
+        "往返飞船尽量结伴而行,它多数时候只敢远远跟着;进船关门就能逼退它或至少拖延时间。",
+        "别同时招惹多只;必须打时利用它机动差的弱点,冲进去敲一铲立刻后撤,打带跑循环,4 点血量并不耐打。",
+        "听到它对你尖叫挥舞就是开打前的最后警告,立刻拉开距离别硬挨——近身后它撕血很快。",
+        "盯着它看能让它后退保持距离,但盯太久反而会逼它进入攻击状态,吓退后就走,别恋战。",
+        "发声道具的噪音会把附近的狒狒鹰引过来,赶路搬货时管住喇叭和音响。"
+      ],
+      "tips": [
+        "每只狒狒鹰有随机的\"领导值\",数值越高体型越大——群里最大那只就是头领。",
+        "被它抢走的物品会被拖回三根尖刺标记的领地,标记好位置可以人多时去巢里抢回来。",
+        "夜里它们会回巢睡觉;白天早些出门、别拖到傍晚,能避开它们最大胆的时段。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Baboon Hawk",
+          "revid": 52954,
+          "timestamp": "2026-04-18T17:40:43Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Baboon Hawk (revid 52954)",
+            "巴哈姆特怪物大全: forum.gamer.com.tw/C.php?bsn=79130&snA=7"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "backwater-gunkfish",
+      "nameEn": "Backwater Gunkfish",
+      "nameZh": "回水黏鱼",
+      "officialZh": "回水黏鱼",
+      "aliases": [],
+      "category": "indoor",
+      "powerLevel": null,
+      "maxCount": null,
+      "hp": null,
+      "immortal": null,
+      "stunnable": null,
+      "doorSpeedMultiplier": null,
+      "attackDamage": "0",
+      "sciName": "Infectum linteum",
+      "behavior": "回水黏鱼是完全无害的室内生物(攻击力 0),平时一动不动趴在地上装死,极易被当成杂物。被攻击、贴脸,或被长时间正对着看,它会受惊逃窜:边跑边在地上拖出一条永久打滑的黏液带,起跑瞬间还会朝近处玩家\"喷射\"一口,把面罩糊满黄绿色黏液严重遮挡视野。冷静下来后它会减速扑腾,找一个隐蔽点重新趴下隐身,过一阵没人靠近又可能换地方。",
+      "counter": [
+        "最优解是不招惹:它不会主动伤人也打不死人,看到了绕开走就行。",
+        "挡路时直接跳过去,比逼它挪窝更省事也更安全。",
+        "别贴脸、别长时间正对着它看,这两件事都会触发受惊逃窜和喷射。",
+        "被糊脸不掉血,视野恢复前原地站稳或退到已知安全的位置等着,别瞎跑撞上别的怪。",
+        "黏液地面像冰面一样打滑且不会消失,口头或对讲机标记位置提醒队友,搬贵重废料经过时尤其小心。"
+      ],
+      "tips": [
+        "附近没人时它喜欢躲在废料旁边趴着,伸手捡东西前先看一眼旁边那块\"绿地毯\"动不动。",
+        "它受惊逃窜时速度远超冷静期,别想追上它,等它冷静扑腾、重新趴下后再绕过去。",
+        "刚喷过人的黏鱼会刻意躲到离你很远的地方,被糊一次后短时间内一般不会再撞见它。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Backwater Gunkfish",
+          "revid": 55207,
+          "timestamp": "2026-05-18T16:57:43Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Backwater Gunkfish (revid 55207)"
+          ],
+          "crossChecked": false,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "barber",
+      "nameEn": "Barber",
+      "nameZh": "理发师",
+      "officialZh": "理发师",
+      "aliases": [
+        "剪刀"
+      ],
+      "category": "indoor",
+      "powerLevel": 1,
+      "maxCount": 1,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.3,
+      "attackDamage": "Instant kill",
+      "sciName": null,
+      "behavior": "理发师是只在近距离才显形的隐身怪,拎着一把巨型剪刀,以不规则的\"跳步瞬移\"逼近目标:移动前先响起一段小军鼓滚奏,落步瞬间伴随响亮的喇叭声。它倾向于瞬移到你刚才站立过的位置,身体任何部位碰到剪刀都会被当场剪成两半即死。它无法被杀死,且在月球上待得越久移动间隔越短,越拖越危险。",
+      "counter": [
+        "全程靠耳朵:鼓声=它准备移动,喇叭声=它已落步,戴好耳机用声音判断方位和节奏。",
+        "听到鼓点立刻离开原地——它大概率瞬移到你上一刻站的位置,持续移动就是最好的防御。",
+        "任何情况下不要碰剪刀,擦到即死;队友被剪后只剩上半身可以搬运。",
+        "它杀不死,别浪费铲子;它可被眩晕,电击枪能短暂控住为撤离争取时间。",
+        "它的步频随时间越来越快,别在收容所里耗到深夜,早进早出。"
+      ],
+      "tips": [
+        "现版本每天最多刷 1 只;旧版本它们成对出现并由先刷的\"理发师头子\"同步指挥行动,玩旧版本听到一只就要防着第二只。",
+        "它在雷达上的光点很小,监控位容易漏看,报点时别只依赖地图。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Barber",
+          "revid": 54128,
+          "timestamp": "2026-04-23T07:48:18Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Barber (revid 54128)",
+            "巴哈姆特怪物大全: forum.gamer.com.tw/C.php?bsn=79130&snA=7"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "bracken",
+      "nameEn": "Bracken",
+      "nameZh": "蕨影",
+      "officialZh": "蕨影",
+      "aliases": [
+        "小黑",
+        "花人",
+        "布雷肯",
+        "背刺怪",
+        "蕨类",
+        "花男"
+      ],
+      "category": "indoor",
+      "powerLevel": 3,
+      "maxCount": 1,
+      "hp": "5",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1.25,
+      "attackDamage": "Instant Kill",
+      "sciName": "Rapax-folium",
+      "behavior": "蕨影是室内最危险的潜行猎手之一,有潜行、回避、暴怒三种状态:潜行时无声地从背后接近最近的玩家,得手即拧断脖子并把尸体拖向建筑深处它选定的\"老巢\"房间;被玩家用画面中央余光发现后会起身后撤进入回避;但它有一个怒气值,被长时间盯着、被贴近、被眩晕手雷砸或被武器打都会快速攒怒,攒满直接暴怒扑杀最近的人,攻击一击必杀。",
+      "counter": [
+        "室内勤回头,看一眼就够——被发现后只要你不追不瞪,它会自己退走。",
+        "它撤退时若仍看得到你,会有一段下行的低鸣声;声音彻底消失才算安全,再回头干活。",
+        "三不原则:不长时间对视、不主动逼近、不丢眩晕手雷——这些全在给它攒怒气,攒满就是当场扑杀。",
+        "要杀就用够格的火力:近距离霰弹枪一发带走,或电击枪定住+队友铲子连击(5 点血量);单人只有铲子时需要拉开大空间绕圈走位,风险极高。",
+        "队友被抓走后尸体会被拖离出口很远,沿血迹往深处找,或直接用飞船传送器收尸。"
+      ],
+      "tips": [
+        "它会开门:听到没有脚步声的开门声、或看到莫名敞开的门,多半是它在靠近;随手关门能给自己留声音预警。",
+        "它杀人后往固定的\"老巢\"房间拖,频繁在同一片区域撞见它就换条路线,别往它老巢凑——靠近老巢的蕨影更易暴怒。",
+        "被它抓住后无法使用任何道具,几乎必死,预防永远优于自救;靠传送救人只是运气而非战术。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Bracken",
+          "revid": 52892,
+          "timestamp": "2026-04-18T17:31:06Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Bracken (revid 52892)",
+            "巴哈姆特怪物大全: forum.gamer.com.tw/C.php?bsn=79130&snA=7"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "bunker-spider",
+      "nameEn": "Bunker Spider",
+      "nameZh": "地堡蜘蛛",
+      "officialZh": "地堡蜘蛛",
+      "aliases": [
+        "地堡巨蛛",
+        "地堡蛛",
+        "碉堡蜘蛛",
+        "蜘蛛"
+      ],
+      "category": "indoor",
+      "powerLevel": 2,
+      "maxCount": 1,
+      "hp": "5",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.15,
+      "attackDamage": "90",
+      "sciName": "Mutinum-ficedula",
+      "behavior": "地堡蜘蛛是伏击型织网猎手:刷出后先进入\"布网期\",在领地内四处铺蜘蛛网,这期间不会主动攻击,被撞见时有时会原地僵住装死;网铺完后它爬上墙壁或天花板蹲守,只有玩家碰到网或贴得太近才会被激怒追击,单次 90 伤害足以把满血员工一口打到濒死。杀死玩家后它会把尸体裹成茧吊上天花板。",
+      "counter": [
+        "没碰网就不算惹它——看清蜘蛛网的位置贴边绕行,可以从它眼皮底下安全路过。",
+        "单次 90 伤害,受过伤的人千万别靠近,先回船回血再说。",
+        "蜘蛛网可以用铲子敲掉,先清网再引怪,走位空间会宽裕得多。",
+        "眩晕手雷或电击枪控住后围殴,5 铲可击杀;它速度慢,也吃和打击者同款的绕圈走位,或边倒退冲刺边输出躲开咬击。",
+        "被追直接跑,冲刺速度比它快;Facility 内部它过不了铁梁桥,站在横梁中间它拿你没办法。"
+      ],
+      "tips": [
+        "被它裹成茧吊起的尸体无法捡起,只能用飞船传送器回收,收尸前先确认蜘蛛位置。",
+        "杀掉蜘蛛后尽快清掉残网:如果再刷一只新蜘蛛,旧网仍会触发它,等于给后面进来的队友埋雷。",
+        "怕蜘蛛的玩家可以开\"恐蛛模式\",模型会变成红色\"spider\"字样的 3D 文字,机制完全不变。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Bunker Spider",
+          "revid": 52845,
+          "timestamp": "2026-04-18T17:16:20Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Bunker Spider (revid 52845)",
+            "巴哈姆特怪物大全: forum.gamer.com.tw/C.php?bsn=79130&snA=7"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "butler",
+      "nameEn": "Butler",
+      "nameZh": "管家",
+      "officialZh": "管家",
+      "aliases": [
+        "屠夫",
+        "老头"
+      ],
+      "category": "indoor",
+      "powerLevel": 2,
+      "maxCount": 7,
+      "hp": "8",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.5,
+      "attackDamage": "10",
+      "sciName": null,
+      "behavior": "管家是室内实体,平时拿着扫帚在主入口一带游荡扫地,只要附近有两名以上员工就装作人畜无害。一旦它锁定了某个落单的员工,会先在附近盯梢一段时间,确认没有目击者后掏出小刀发起高频连刺;此时若有第二名员工进屋,它会立刻收刀继续扫地。被员工攻击会进入狂暴状态,无视人数扑向最近的人,且狂暴会传染给看到这一幕的其他管家。死亡时尸体膨胀爆炸,掉落小刀并放出一群面具虫。",
+      "counter": [
+        "室内始终保持两人同行,管家只对独处的员工动手,不落单就是最硬的防御。",
+        "被掏刀追杀时优先逃跑而不是对砍——它出刀间隔极短,近身换血几乎必输。",
+        "想杀管家要等它落单再动手,在其他管家视野内攻击会引发集体狂暴。",
+        "击杀时机放在当天最后撤离前:爆出的面具虫在设施狭窄空间里极难缠且会持续追踪。",
+        "用小刀攻击管家可以一击致死,捡到刀后它反而是最好杀的怪之一。"
+      ],
+      "tips": [
+        "单人模式下管家的血量远低于多人,主动击杀换小刀的性价比更高。",
+        "管家隔着设施和豪宅的门也能保持对你的视线,只有矿井类型的门能挡住它的追踪。",
+        "眩晕不会重置管家的盯梢计时,别指望电击枪拖延它动手的时间。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Butler",
+          "revid": 55178,
+          "timestamp": "2026-05-18T16:41:25Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze:Butler (revid 55178)",
+            "bilibili:cv31058075(小刀一击杀管家)",
+            "bahamut:forum.gamer.com.tw/C.php?bsn=79130&snA=7(落单触发、掏刀机制、掉落小刀)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "cadaver-bloom",
+      "nameEn": "Cadaver Bloom",
+      "nameZh": "",
+      "officialZh": "",
+      "aliases": [],
+      "category": "indoor",
+      "powerLevel": 3,
+      "maxCount": 8,
+      "hp": "4",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1.25,
+      "attackDamage": "30",
+      "sciName": "Moderantum flos",
+      "behavior": "Cadaver Bloom 不会自然刷新——它是被 Cadaver Growth 孢子感染且未获救治的员工死后变成的植物怪,因此室内室外都可能出现,常见于 Adamance。本体是寄生在员工尸体上的开花植物,靠腹部伸出的藤蔓行走。激活后会以极快的速度冲向视线内的员工,撕咬造成 30 点伤害,单次攻击足以重创任何人。",
+      "counter": [
+        "尽量在开阔地带迎战,留足走位空间,千万别在狭窄走廊里和它缠斗。",
+        "队友即将「开花」时,提前把他引到开阔区域,转化后能更快解决掉。",
+        "它被武器命中后会短暂硬直:打一下立刻退开,等它再逼近时再打,循环拉扯。",
+        "别用霰弹枪——它对霰弹枪有特殊减伤,伤害被压到极低,改用铲子或交通标志更划算。"
+      ],
+      "tips": [
+        "最好的应对是不让它出现:常备除草剂及时治疗被感染的队友,源头解决。",
+        "它是少数室内外都会出现的实体,出舱前也要留意外面有没有队友变的 Bloom。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Cadaver Bloom",
+          "revid": 54129,
+          "timestamp": "2026-04-23T07:48:48Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze:Cadaver Bloom (revid 54129)"
+          ],
+          "crossChecked": false,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "cadaver-growth",
+      "nameEn": "Cadaver Growth",
+      "nameZh": "",
+      "officialZh": "",
+      "aliases": [],
+      "category": "indoor",
+      "powerLevel": 2,
+      "maxCount": 1,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": false,
+      "doorSpeedMultiplier": 1.25,
+      "attackDamage": "N/A",
+      "sciName": "Moderantum flos",
+      "behavior": "Cadaver Growth 是在室内生长的感染性蕨类植物,从通风口进入后随机选一块房间扎根,随后自行快速蔓延并持续释放孢子云,本体不会直接攻击人。员工在孢子中停留过久会被感染,感染不治疗会持续加深,最终死亡并转化为 Cadaver Bloom;感染后期甚至死在别的怪手里也照样开花。它的蔓延速度随一天内的时间变化,还会周期性爆发式扩张,中午前后失控最快。",
+      "counter": [
+        "船上常备一瓶除草剂带进设施,队友感染后互相喷洒即可治愈,远比清剿植物本身省事。",
+        "不建议正面清剿植物:除草剂射程很短,喷植物时你自己往往已经站进感染范围,而且蔓延一旦失控根本除不完。",
+        "感染早期可以去淋浴间洗澡压制病情,错过早期就只能靠除草剂。",
+        "对疑似感染但没有外显症状的队友直接喷一下除草剂当「检测」——它只对感染者造成伤害,健康员工零风险。",
+        "多人模式下留意队友背上长出的黄色花瓣和终端雷达上员工图标的小红点,这是感染的外显信号。"
+      ],
+      "tips": [
+        "健康值低会显著提高被感染概率,带伤状态别在孢子区逗留。",
+        "感染进入爆发末期(视野泛红、耳鸣)后喷除草剂会让人当场开花;但如果还在可治疗阶段,值得冒这个险去救。",
+        "飞船拉杆拉下后员工就不会再开花,最后关头把感染队友塞上船起飞也是一条活路。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Cadaver Growth",
+          "revid": 55500,
+          "timestamp": "2026-06-05T20:33:59Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze:Cadaver Growth (revid 55500)"
+          ],
+          "crossChecked": false,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "circuit-bees",
+      "nameEn": "Circuit Bees",
+      "nameZh": "电路蜂群",
+      "officialZh": "电路蜂群",
+      "aliases": [
+        "电击蜜蜂",
+        "电流蜂",
+        "电路蜜蜂",
+        "蜂群",
+        "电蜂"
+      ],
+      "category": "daytime",
+      "powerLevel": 1,
+      "maxCount": 6,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": false,
+      "doorSpeedMultiplier": 0.3,
+      "attackDamage": "10",
+      "sciName": "Crabro-coruscus",
+      "behavior": "电路蜂群是白天的户外实体,守着筑在地面上的蜂巢,平时只在巢边盘旋发出嗡嗡声;一旦有员工踏进蜂巢的警戒范围,整群立刻出动,用放电连续电击入侵者,直到把人电死或对方退出范围。如果蜂巢被拿走或它们无法回巢(比如蜂巢被带进设施或关闭的飞船),蜂群会进入暴走状态四处游荡,移动速度和仇恨范围都大幅提升,见谁电谁。蜂群本身无法被杀死。",
+      "counter": [
+        "不打算偷蜂巢就绕着走,留意地面上的蜂巢位置,别误入警戒圈,这就是对它的全部防御。",
+        "偷巢用「风筝」法:先从远离撤退路线的方向接近,引蜂群绕圈拉开,再折返抢巢直奔飞船。",
+        "被蜂群追到体力见底时,把蜂巢丢在地上继续跑——蜂群会平静下来自己回巢,之后再重复拉扯。",
+        "千万别把蜂巢带进设施或用船门躲蜂群,回不了巢的蜂群会暴走,对户外所有人都是灾难。",
+        "可以把蜂巢放在船侧栏杆上,拉杆起飞瞬间蜂群会被甩在星球上;注意起飞时蜂群仍可能伤人,捡巢动作要快。"
+      ],
+      "tips": [
+        "蜂巢价值通常很高,时间允许的话几乎总是值得偷;同一天找到的所有蜂巢价值相同。",
+        "偷巢前尽量清空负重,TZP 吸入剂的加速对搬巢很有用,但小心它带来的视野副作用。",
+        "其他队友要离搬巢的人远一点,免得蜂群仇恨乱跳殃及旁人。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Circuit Bees",
+          "revid": 54047,
+          "timestamp": "2026-04-21T20:00:53Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze:Circuit Bees (revid 54047)",
+            "miraheze:Hive(偷巢风筝/丢巢回巢/拉杆起飞策略)",
+            "bahamut:forum.gamer.com.tw/C.php?bsn=79130&snA=7(不可击杀、引怪偷巢、丢巢自回、起飞带巢)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "coil-head",
+      "nameEn": "Coil-Head",
+      "nameZh": "弹簧头",
+      "officialZh": "弹簧头",
+      "aliases": [
+        "线圈头",
+        "SCP-173"
+      ],
+      "category": "indoor",
+      "powerLevel": 1,
+      "maxCount": 5,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.06,
+      "attackDamage": "90",
+      "sciName": "Vir colligerus",
+      "behavior": "弹簧头是室内实体,核心机制是「注视则静止」:只要有任何员工看着它,它就一动不动;无人注视的瞬间,它会以极高速度冲向最近的可达员工,无视之前的目标是谁。它的攻击高达 90 点伤害且出手间隔极短,一旦被贴身命中几乎不可能活着离开。追击累计一段时间后它会进入「缩头充电」的冷却状态,期间完全无法移动和攻击。它无法被杀死,但可以被眩晕。",
+      "counter": [
+        "发现弹簧头后保持注视、边盯边倒退撤离;过拐角时先退到转头就能立刻看见它的位置,断视线的时间越短越好。",
+        "遇到多只时想办法把它们「赶」到同一方向,让所有弹簧头同时处在你的视野里,逐个盯防必死。",
+        "眩晕手雷、电击枪、雷达增幅器都能定住它几秒,是脱身的保命道具。",
+        "它开门极慢,逃进房间随手关门能拖住它很久;但注意它被注视时照样会推门。",
+        "站上它爬不上去的高处(柜子等),它找不到可达路径就无法锁定你,此时全员短暂移开视线即可脱仇恨。"
+      ],
+      "tips": [
+        "多人队伍可以专门派一人盯住弹簧头掩护其他人收刮,但盯梢者要警惕被别的怪偷袭。",
+        "弹簧头+蕨影是最致命组合(一个要求看、一个要求别看):绕过拐角同时断双方视线,但脸朝弹簧头来的方向——它一转角就被你定住,蕨影也会被吓退。",
+        "它进入缩头充电后是绝对安全窗口,抓紧这段时间转移或撤离。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Coil-Head",
+          "revid": 52851,
+          "timestamp": "2026-04-18T17:18:44Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze:Coil-Head (revid 52851)",
+            "bilibili:cv31058075(注视静止、高伤、冷却缩头、关门拖延)",
+            "bahamut:forum.gamer.com.tw/C.php?bsn=79130&snA=7(不可击杀、震撼弹可眩晕、看着后退撤离)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "earth-leviathan",
+      "nameEn": "Earth Leviathan",
+      "nameZh": "大地利维坦",
+      "officialZh": "大地利维坦",
+      "aliases": [
+        "沙虫",
+        "利维坦",
+        "隐地利维坦",
+        "地球利维坦"
+      ],
+      "category": "outdoor",
+      "powerLevel": 2,
+      "maxCount": 3,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": false,
+      "doorSpeedMultiplier": 0.5,
+      "attackDamage": "Instant Kill",
+      "sciName": "Hemibdella-gigantis",
+      "behavior": "夜间在户外地底巡游的巨型沙虫,同图最多 3 条,无法被杀死也不吃眩晕。它在地下游走寻找目标,锁定地面上的雇员后持续追踪,满足贴近条件时从地底喷发而出,吞掉路径上的一切——被吞的人连尸体都不留,手里的物品一并消失,但丢在地上的物品不受影响。喷发前有明显前摇:先是低吼,然后落点处尘土飞扬,随机延迟后才真正出土。",
+      "counter": [
+        "在外行动时竖起耳朵听地底传来的低沉轰鸣,那是它在附近巡游的信号;监控位用对讲机或 Signal Translator 提前报点。",
+        "听到低吼、看到地面扬尘,立刻丢下手中所有物品,朝高处冲刺——船顶、梯子、大型建筑、管道都能让它够不到你。",
+        "千万别按图鉴说的『原路折返』,往回跑往往正好把自己送进它的吞噬判定中心,正确做法是丢包向前直线跑。",
+        "队伍在户外拉开间距,避免一次喷发团灭,但保持能互相喊话预警的距离。"
+      ],
+      "tips": [
+        "听到第一声吼先丢包原地走动,等尘土腾起的瞬间再起步冲刺,可以稳定骗掉它的出土时机。",
+        "躲进设施内部也能免疫攻击,但它可能蹲守在你进来的门口,出门前先观察。",
+        "它出土时会杀死路径上几乎所有可击杀实体,可以借它清理森林守护者等户外威胁,但属于同时拉扯两个即死怪的高风险操作。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Earth Leviathan",
+          "revid": 52961,
+          "timestamp": "2026-04-18T17:41:06Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Earth Leviathan (revid 52961)",
+            "巴哈姆特怪物大全: https://forum.gamer.com.tw/C.php?bsn=79130&snA=7"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "eyeless-dog",
+      "nameEn": "Eyeless Dog",
+      "nameZh": "无眼狗",
+      "officialZh": "无眼狗",
+      "aliases": [
+        "无眼猎犬",
+        "狗子",
+        "盲犬",
+        "听力狗"
+      ],
+      "category": "outdoor",
+      "powerLevel": 2,
+      "maxCount": 8,
+      "hp": "12",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.6,
+      "attackDamage": "Instant kill (employees) 3 (entities)",
+      "sciName": "Leo caecus",
+      "behavior": "全盲的户外群居猎手,同图最多 8 只,完全依赖听觉定位:任何足够响的声音都会推高它的怀疑值,而一只狗的咆哮还会引发同伴的连锁警报。怀疑值攒满或近距离听到响动后进入暴怒状态,朝声源大致方向猛扑——它判断的是声音位置而非你本人,所以扑空很常见,但被咬中即死。咬死人后它会甩头进食,有短暂硬直。",
+      "counter": [
+        "蹲下移动可以完全消除脚步声,关麦保持安静,从它行进路线的侧面绕开即可安全通过。",
+        "不要随手丢东西——任何物品落地声都会引它过来调查,触发条件是声音响度而非重量。",
+        "身上带着会自己发声的废品(假牙、旧电话、机器人玩具之类)等于自带警报器,先放下再行动。",
+        "它进船时蹲在角落保持沉默,未被激怒的狗即使贴着你也察觉不到;也可以用 Loud Horn 把它引到船头。",
+        "铲子打它会让它朝面朝方向猛冲,诱导它撞墙后连续敲击可以眩晕锁到死,血量 12。"
+      ],
+      "tips": [
+        "商店下单的运货舱落地铃声会吸引无眼狗,可以反过来当调虎离山用。",
+        "它咬死人甩头进食的几秒相当于硬直窗口,是队友撤离或反打的最佳时机。",
+        "即使全程蹲伏,它一旦被别处声音激怒后会直接扑进船里,船内附近全员都可能遭殃,别赌脸贴脸。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Eyeless Dog",
+          "revid": 54691,
+          "timestamp": "2026-05-16T04:30:49Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Eyeless Dog (revid 54691)",
+            "巴哈姆特怪物大全: https://forum.gamer.com.tw/C.php?bsn=79130&snA=7"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "feiopar",
+      "nameEn": "Feiopar",
+      "nameZh": "翡奥帕",
+      "officialZh": "翡奥帕",
+      "aliases": [],
+      "category": "outdoor",
+      "powerLevel": 2,
+      "maxCount": 6,
+      "hp": "4",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1,
+      "attackDamage": "7",
+      "sciName": "Felis arborum",
+      "behavior": "栖息在树冠间的大型黑豹型猎手,同图最多 6 只,平时在树与树之间攀爬跳跃,发现猎物后落地从背后悄悄逼近,跟踪时会发出低沉的咕噜声。被你看到时它会立刻僵住或闪到树后,等你移开视线再继续接近;但如果它已经贴得很近才被发现,会直接转入攻击。攻击方式是高频连续抓挠,每爪 7 点伤害,血量只有 4。",
+      "counter": [
+        "在树多的卫星上勤回头检查身后,听到低沉的咕噜声就说明已经被盯上了。",
+        "发现它在跟踪时持续盯着它看,它会越来越害怕,盯得够久它会彻底放弃追猎。",
+        "别等它贴脸了才回头——距离太近时与它对视反而会直接触发攻击,这时只能打或跑。",
+        "用铲子等武器打它一下就能把它吓跑,不需要真打死。"
+      ],
+      "tips": [
+        "它僵住后如果你移开视线太久,它会突然加速扑过来,要么一直盯住它,要么趁僵直直接拉开距离。",
+        "图鉴说它讨厌橙色和高可见度标记,但换装对它的行为实测毫无影响,别为此浪费信用点。",
+        "(社区经验,待核)血量很低,组队遭遇时围殴速杀比躲猫猫更省事。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Feiopar",
+          "revid": 54546,
+          "timestamp": "2026-05-01T18:13:52Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Feiopar (revid 54546)"
+          ],
+          "crossChecked": false,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "forest-keeper",
+      "nameEn": "Forest Keeper",
+      "nameZh": "森林守护者",
+      "officialZh": "森林守护者",
+      "aliases": [
+        "森林守卫",
+        "森林巨人",
+        "巨人",
+        "森林泰坦"
+      ],
+      "category": "outdoor",
+      "powerLevel": 3,
+      "maxCount": 3,
+      "hp": "38",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1,
+      "attackDamage": "Instant kill",
+      "sciName": "Satyrid-proceritas",
+      "behavior": "白天就会出没的户外巨人,威胁等级 3,同图最多 3 只,血量 38。它听不到任何声音,完全靠超远视野搜人:你出现在它视野里时怀疑度持续上涨,站立和移动都会成倍加速积累,攒满就开始追击;抓到人会直接塞进胸口的嘴里吞掉。甩开它的视线后,它会在附近搜索一阵,找不到人就回到游荡状态。",
+      "counter": [
+        "保持蹲伏、用树木岩石挡住视线;听到持续的低沉恐怖音效说明你正在它视野里,立刻找掩体断视线。",
+        "户外永远留体力:轻装冲刺比它快,看到屏幕里出现它的手(说明它正在追上你)就全力变向跑。",
+        "队友被抓时用电击枪、眩晕手雷、土制闪光弹或闪烁的雷达增幅器晕住它就能把人救下,Teleporter 也能直接把人拉回船。",
+        "火是它的天敌:复活节彩蛋爆炸、喷气背包爆炸、闪电、老鸟都能点燃它,着火后它很快死亡。",
+        "它够不到船内,但能看穿打开的舱门,别站在门口探头。"
+      ],
+      "tips": [
+        "一名队友站上船顶椭圆区域正中央当诱饵,可以把它钉死在船侧,掩护全队进出,甚至隔着船壁把它敲死。",
+        "引大地利维坦出土可以直接秒掉它,但要同时拉扯两个即死威胁,体力管理失误就是双倍葬礼。",
+        "它死亡倒地的躯体也有击杀判定,别站在尸体倒下的方向看戏。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Forest Keeper",
+          "revid": 52987,
+          "timestamp": "2026-04-18T17:46:55Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Forest Keeper (revid 52987)",
+            "巴哈姆特怪物大全: https://forum.gamer.com.tw/C.php?bsn=79130&snA=7"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "ghost-girl",
+      "nameEn": "Ghost Girl",
+      "nameZh": "幽灵小女孩",
+      "officialZh": "幽灵小女孩",
+      "aliases": [
+        "红衣小女孩",
+        "红衣女孩",
+        "幽灵女孩",
+        "小女孩",
+        "女鬼"
+      ],
+      "category": "indoor",
+      "powerLevel": 2,
+      "maxCount": 1,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": false,
+      "doorSpeedMultiplier": 1.5,
+      "attackDamage": null,
+      "sciName": null,
+      "behavior": "无法被扫描、无法被杀死的室内实体,全图只会出现 1 只,但她能跟着目标追出设施,是少数内外通杀的怪。生成后必定从队伍里挑一人开始闹鬼,选人权重由『精神值』(长时间落单涨得快、与队友同行或听对讲机会下降)和镜头转动量等因素加权决定;闹鬼期间灯光闪烁、出现笑声呼吸声心跳声,她会反复在目标背后现身,且只有被选中的人看得见她。看到她的次数过多或主动接近,就可能触发追杀:她小跑贴上来一击斩首,杀死目标后重新选人,循环到全队死光或离开卫星。",
+      "counter": [
+        "确认自己被闹鬼(只有你能看见她、听到异响)后,第一时间告知全队,让队伍调整分工。",
+        "核心原则就一条:听到呼吸、心跳、笑声或灯光异常闪烁时,坚决不回头,减少看到她的次数;主动靠近她更是大忌。",
+        "必须转身撤离时,蹲下盯着地板,由队友引路带你走到出口,全程不抬头。",
+        "万一触发追杀,拼命拉开距离或撑过短暂的追击时间,她就会传送走暂时停手,不是必死。",
+        "结伴行动、用对讲机保持交流能压低精神值,从源头降低被她选中的概率。"
+      ],
+      "tips": [
+        "需要同时提防蕨影时,让队友站在你身后帮你盯背后,你专心执行『不回头』纪律,两人都能活。",
+        "全程守终端的监控位基本不会被她追杀,可以让固定看监控的队友承担被选中的风险。",
+        "她随时会显示在船载热成像监控里,监控位据此报她的位置,被闹鬼的队友照着反方向走。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ghost Girl",
+          "revid": 53098,
+          "timestamp": "2026-04-18T22:44:23Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Ghost Girl (revid 53098)",
+            "巴哈姆特怪物大全: https://forum.gamer.com.tw/C.php?bsn=79130&snA=7",
+            "B站专栏 cv31058075"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "giant-sapsucker",
+      "nameEn": "Giant Sapsucker",
+      "nameZh": "巨型啄木鸟",
+      "officialZh": "巨型啄木鸟",
+      "aliases": [
+        "啄木鸟"
+      ],
+      "category": "daytime",
+      "powerLevel": 4,
+      "maxCount": 1,
+      "hp": "28",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1,
+      "attackDamage": "10",
+      "sciName": "Sphyrapicus cursus",
+      "behavior": "巨型啄木鸟是守巢型的大型不飞鸟,平时在巢附近按「休息—游荡—啄树」循环活动,本身不主动找人麻烦。一旦有人踏进巢的警戒范围,它会先尖叫挡在巢前示警,再靠近就开始连续啄击,每下对员工造成 10 点伤害且越打越快;受到伤害则进入狂暴,死咬伤害来源不放。巢里的鸟蛋被偷后会孵化并不断鸣叫暴露持蛋者位置,它会全图追击,甚至能用喙撬开飞船舱门。",
+      "counter": [
+        "不偷蛋就离巢远点——不进警戒圈它全程无害,听到示警尖叫立刻后退。",
+        "决意偷蛋要趁它睡着:蹲行进巢拿蛋、蹲行撤出,拿到蛋基本等于必须当场结算离开该星球,因为它连船门都能撬开。",
+        "用公司巡航车接应最稳:司机在巢附近待命,队友趁它睡觉抢蛋上车开走,挂上船的磁吸后它打不到车内的人。",
+        "单人偷蛋可吸 TZP 加速冲刺回船,省掉留人断后的牺牲。",
+        "想杀它就利用各星球上它够不到的岩石/高台,把蛋放到它拿不到的位置吸引仇恨,再用铲子慢慢耗死它。"
+      ],
+      "tips": [
+        "鸟蛋按离船距离定价,离船越远的蛋越值钱,但蛋是双手持握的重物,撤离前先清好背包。",
+        "它狂暴时会死磕伤害来源(包括打不死的目标),这是顺手摸蛋的窗口期——但蛋孵化鸣叫后火力会转向你。",
+        "巡航车高速碾压也能磨死它,适合它刷在 Vow 消防通道山谷等地形受限位置时使用。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Giant Sapsucker",
+          "revid": 55234,
+          "timestamp": "2026-05-22T22:53:39Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Giant Sapsucker (Mechanics/Strategy)",
+            "bilibili cv31058075(佐证激怒条件:近巢/偷蛋/攻击本体)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "hoarding-bug",
+      "nameEn": "Hoarding Bug",
+      "nameZh": "囤积虫",
+      "officialZh": "囤积虫",
+      "aliases": [
+        "贪财翅虫",
+        "掠夺虫",
+        "跳蚤",
+        "蟑螂"
+      ],
+      "category": "indoor",
+      "powerLevel": 1,
+      "maxCount": 10,
+      "hp": "3",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1.5,
+      "attackDamage": "30",
+      "sciName": "Linepithema-crassus",
+      "behavior": "囤积虫成群在设施里搜刮一切能搬的东西(废品、工具甚至尸体)运回共用巢穴,平时只顾搬运、不主动开战,但空手不等于绝对安全。翻脸有三档:贴巢太近、持物被它看见、或在游荡中的囤积虫身旁逗留过久,都会触发一轮短暂驱赶,拉开足够距离它就会平息;打它会换来一轮死缠追击;而从巢里拿走它「认领」的东西则让它永不消气地追杀到底,每次抓咬造成 30 点伤害。",
+      "counter": [
+        "见到尽早杀:它只有 3 点血,先手一击后侧身绕开它的飞扑,趁它转向迟钝补刀打完即可。",
+        "动它巢里的东西前先想好——那会触发永不平息的追杀,要么先清虫,要么拿了就头也不回地跑。",
+        "把收好的废品集中丢到设施外,避免被它顺走(部分星球要小心室外的狒狒鹰接盘)。",
+        "巢刷在出口附近时可以反向白嫖:放任它替你集中收废品,日终再清虫一锅端。"
+      ],
+      "tips": [
+        "多只扎堆时一发霰弹枪能同时清掉一片,比铲子逐只换血划算。",
+        "存在小概率的「囤积虫大爆发」(infestation)事件,同图大量刷虫——听到满地振翅声就改变当日策略。",
+        "被认领物如果凭空消失(钥匙用掉、蛋炸了),它同样永不消气,别以为东西没了就没事。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Hoarding Bug",
+          "revid": 52895,
+          "timestamp": "2026-04-18T17:32:14Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Hoarding Bug (Mechanics/States/Strategy, revid 52895)",
+            "巴哈怪物大全 forum.gamer.com.tw/C.php?bsn=79130&snA=7(佐证:持物才被抢、被打才反击;注:巴哈原文称『不管你怎麼靠近他都一樣』不攻击,与 wikitext Soft 档『在游荡个体旁逗留过久也会触发追击』不一致,以 wikitext 为准)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "hygrodere",
+      "nameEn": "Hygrodere",
+      "nameZh": "湿滑胶体",
+      "officialZh": "湿滑胶体",
+      "aliases": [
+        "史莱姆"
+      ],
+      "category": "indoor",
+      "powerLevel": 1,
+      "maxCount": 2,
+      "hp": "3",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.4,
+      "attackDamage": "35",
+      "sciName": "Hygrodere",
+      "behavior": "湿滑胶体是一团贴地蠕动的大型黏液,移动极慢但覆盖面广,始终朝最近的员工或声源爬行,碰到人时掉血非常快(每次接触 35 点伤害)。它不会开门,但门开着就能挤过去;对一切声音敏感,脚步、喇叭、音响都会把它引过来。",
+      "counter": [
+        "靠它特有的气泡声提前定位,规划走位别把自己逼进死路——开阔地带它几乎构不成威胁。",
+        "被它「看到」过一次后它会永远知道你的位置,在设施里久留时要把这股慢性追踪算进路线。",
+        "利用它不会开门的弱点,把它引进只靠门进出的房间关门封印,一劳永逸。",
+        "音响(Boombox)开着丢地上能把它引走,它会追音乐并停在音响跟前——救被堵队友的标准操作。",
+        "站上栏杆它就打不到你,窄走廊借栏杆借位通过即可。"
+      ],
+      "tips": [
+        "它偶尔会堵在设施出入口正后方,进门瞬间就可能被糊脸秒杀;出门时若见它在门附近,回程务必换口或提前探查。",
+        "(社区经验,待核)别用近战武器敲它,只会让它加速,纯属给自己加难度。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Hygrodere",
+          "revid": 52898,
+          "timestamp": "2026-04-18T17:32:36Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Hygrodere (Mechanics/Strategy)",
+            "巴哈怪物大全 forum.gamer.com.tw/C.php?bsn=79130&snA=7(佐证:循声索敌、噪音引走、栏杆免伤)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "jester",
+      "nameEn": "Jester",
+      "nameZh": "小丑盒子",
+      "officialZh": "小丑盒子",
+      "aliases": [
+        "小丑魔盒",
+        "盒子精",
+        "怪物箱",
+        "惊吓盒",
+        "宝箱怪",
+        "小丑盒",
+        "音乐盒",
+        "八音盒",
+        "小丑"
+      ],
+      "category": "indoor",
+      "powerLevel": 3,
+      "maxCount": 1,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.5,
+      "attackDamage": "Instant Kill",
+      "sciName": "INSANEUS THINGUS",
+      "behavior": "小丑盒子平时是一个安静游荡的玩偶盒,见到员工后会一路尾随;随机时刻它原地停下摇动手柄,播放越来越急促的八音盒曲子,摇满后骷髅头弹出进入追杀状态,碰到即死。追杀时它无视距离和视线锁定楼内所有活人,越追越快,杀一个人才重置一次速度,直到楼里没有活人才会收回盒子复位。",
+      "counter": [
+        "进馆发现小丑盒子,第一件事是规划好撤离路线;它一开始摇柄,全员立刻放下手头的事出馆。",
+        "全员撤出后稍等片刻它就会复位回盒子状态,之后可以再进去继续搜刮——撤离不等于这张图作废。",
+        "摇柄阶段用电击枪电它能暂停倒计时,给队友争取撤离时间;追杀阶段任何眩晕都会清空它攒下的速度,雷达增幅器掐好节奏甚至能把它无限控住。",
+        "它不会跳跃和攀爬:站上书架等必须跳上去的高台会直接废掉它的寻路,它会转头去找别的目标。",
+        "设施图可以用安全门把它锁进死胡同困一天——但注意拔装置断电会把安全门全部打开,把还在追杀状态的它放出来。"
+      ],
+      "tips": [
+        "追杀状态下它的速度和与目标的距离挂钩,贴得近时它只有步行速度——别恐慌甩开距离反而喂它加速。",
+        "千万别让它在关键门口进入摇柄状态,摇柄期间它原地不动会彻底堵路;被尾随的人要负责把它带离要道再绕回来。",
+        "豪宅图站在正门门顶的人会被它排在最后锁定:如果它朝门顶的你冲来,说明楼里其他人都已不在,通知队友即可安排复进。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Jester",
+          "revid": 52912,
+          "timestamp": "2026-04-18T17:34:46Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Jester (Mechanics/Strategy)",
+            "巴哈怪物大全 forum.gamer.com.tw/C.php?bsn=79130&snA=7(佐证:电击停表、追杀无法躲藏、全员出馆片刻后复位)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "kidnapper-fox",
+      "nameEn": "Kidnapper fox",
+      "nameZh": "绑匪狐狸",
+      "officialZh": "绑匪狐狸",
+      "aliases": [
+        "绑架狐狸",
+        "狐狸"
+      ],
+      "category": "outdoor",
+      "powerLevel": 1,
+      "maxCount": 1,
+      "hp": "7",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.3,
+      "attackDamage": "Instant kill",
+      "sciName": "Vulpes raptor",
+      "behavior": "绑匪狐狸潜伏在地图上最大的一丛 Vain Shroud(红色灌木)里,把那里当作老巢,平时极少离开领地。员工一旦踏入它的巢区,它会射出黏性长舌缠住人慢慢往嘴边拖,被拖中的人手里东西全部掉落,碰到它的嘴就被一口咬死。地图上红灌木越多它越可能现身,而巢区的警戒范围会随着你们在星球上停留的时间不断膨胀,毫无上限。",
+      "counter": [
+        "落地后优先用除草剂清理红色灌木,直接压低它的出现概率,这是唯一的源头治理手段。",
+        "团队外勤永远留一人拿铲子殿后:队友被舌头拖走时立刻追上去敲,能在进嘴前把人救下来。",
+        "在巢区范围外集体盯着它看可以把膨胀的领地压回去(全员或全员减一即可,单人模式一个人盯着就行)。",
+        "认出地图上最大的那丛红灌木,搬运路线主动绕开,别为抄近路赌命。"
+      ],
+      "tips": [
+        "在星球上耗得越久它的领地越大,极端情况能覆盖全图——有狐狸的图别拖到天黑才收尾。",
+        "v80 重做后它不会在开局立刻刷出,且红灌木不再直接长在飞船降落点,落地初期是清草和探路的安全窗口。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Kidnapper fox",
+          "revid": 55210,
+          "timestamp": "2026-05-18T17:20:19Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Kidnapper fox (Mechanics/Strategy)",
+            "bilibili cv31058075(佐证:清除红色草丛可减少狐狸活动范围)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "lasso-man",
+      "nameEn": "Lasso Man",
+      "nameZh": "套索人",
+      "officialZh": "套索人",
+      "aliases": [],
+      "category": "indoor",
+      "powerLevel": 2,
+      "maxCount": 2,
+      "hp": "3",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1.5,
+      "attackDamage": null,
+      "sciName": null,
+      "behavior": "套索人是游戏里未启用的废案怪物,正常游玩永远不会刷新,只能靠指令生成。它的 AI 几乎照搬打击者:在设施内巡逻,视野范围很窄,看到员工后开始追击,跟丢了会去最后目击位置搜索;移动中会持续加速,转向时则掉速。当前版本它无法对员工造成任何伤害,贴身接触只会触发肾上腺素效果,行走和攻击动画也都没有实际启用。",
+      "counter": [
+        "正常游戏不需要任何防备——它是未完成的隐藏内容,不会自然出现在任何卫星上。",
+        "如果在指令/模组环境下遇到,按打击者的思路处理:它视野极窄,提前绕开就不会被锁定。",
+        "被追时多拐弯,它和打击者一样直线越跑越快、转向会损失速度,利用拐角就能甩开。",
+        "当前版本它没有伤害判定,被贴脸也不致命,不必恐慌性逃跑浪费体力。"
+      ],
+      "tips": [
+        "代码里它的击杀死因写的是「勒杀」,区别于打击者的「撕咬」——这是辨认这只废案怪身份的彩蛋之一。",
+        "它的图鉴条目是直接改的缠缚蚤条目(危险度沿用 30% 文本、视频也是缠缚蚤的),并非正式内容。",
+        "想深入了解它的行动逻辑,直接参考打击者的机制页即可,两者 AI 基本一致。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Lasso Man",
+          "revid": 53930,
+          "timestamp": "2026-04-21T00:09:21Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Lasso Man (revid 53930)"
+          ],
+          "crossChecked": false,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "maneater",
+      "nameEn": "Maneater",
+      "nameZh": "食人魔",
+      "officialZh": "食人魔",
+      "aliases": [
+        "食人虫",
+        "小宝宝"
+      ],
+      "category": "indoor",
+      "powerLevel": 2,
+      "maxCount": 1,
+      "hp": "5",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1.25,
+      "attackDamage": "Instant Kill",
+      "sciName": "Periplaneta clamorus",
+      "behavior": "食人魔以「婴儿」形态刷新,平时在设施里闲逛,遇到员工会跟随,遇到废品有概率直接吃掉且无法找回。它有好感机制:永远喜欢第一个见到的员工,对后来者随机;被打、听到附近巨响、靠近尸体太久、被讨厌的人抱太久、被摇晃或被带到室外等都会让它哭泣——哭泣是一条不可逆的变身倒计时,只有抱起来轻轻摇才能暂停计时,呕吐则意味着变身已经迫在眉睫。变身后的成体会选定一个巢区潜伏,像蕨影一样贴近跟踪员工,还会假哭引诱,近身后下蹲前扑、命中即秒杀;在室外它会抛弃巢区机制,对大范围内的任何员工直接发动攻击。",
+      "counter": [
+        "对婴儿期保持安静、绝对别动手:武器命中、丢东西/开关手电的声响、带它出门都会触发哭泣,而哭泣倒计时不可逆转。",
+        "它一哭就立刻抱起来轻摇安抚;注意连点鼠标或恐惧值过高会变成「摇晃」,反而哄得更慢、放下后它还会逃跑。",
+        "看到它呕吐说明离变身只剩最后几秒,马上丢下一切拉开距离。",
+        "成体会假哭引诱,音调发闷的哭声是破绽,听到了别凑近;被扑时侧向闪避,然后跑出它的巢区范围,它就会停止追击。",
+        "千万别让它离开设施——成体在室外的攻击判定范围远大于室内,几乎无解。"
+      ],
+      "tips": [
+        "成体有 5 点血理论上可杀,但速度快、近身即死,且霰弹枪对它有特殊减伤(每发只算最低伤害),强杀性价比极低;社区流行的「堵门」打法是利用它扑空开门后的硬直反复关门消耗。",
+        "婴儿期可以用 Spike Trap 处理,但必须是短间隔或感应触发的陷阱——第一下命中会让它瞬间变身,需要第二下立刻补上。",
+        "它会随机吞掉身边的废品和装备且永久消失,贵重物别丢在它的活动范围内。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Maneater",
+          "revid": 54599,
+          "timestamp": "2026-05-04T12:01:48Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Maneater (revid 54599)",
+            "巴哈姆特怪物大全: forum.gamer.com.tw/C.php?bsn=79130&snA=7(食人蟲/小寶寶条目)",
+            "B站专栏 cv31058075(堵门打法)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "manticoil",
+      "nameEn": "Manticoil",
+      "nameZh": "四翼鸟",
+      "officialZh": "四翼鸟",
+      "aliases": [
+        "四翼山雀",
+        "山雀",
+        "蜻蜓鸟"
+      ],
+      "category": "daytime",
+      "powerLevel": 1,
+      "maxCount": 16,
+      "hp": "2",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.3,
+      "attackDamage": "N/A",
+      "sciName": "Quadrupes-manta",
+      "behavior": "四翼鸟是户外日间环境生物,凭借独特的四翼结构在空中盘旋或在地面跳跃觅食,单独或小群活动。它对员工完全无威胁:被靠近或听到噪音时只会一边鸣叫一边迅速飞走,是游戏里和漫游蝗虫并列的两种不会伤人的实体之一。",
+      "counter": [
+        "不需要任何应对——它没有攻击手段,看到了正常路过即可。",
+        "唯一要注意的是它惊飞时会发出鸣叫和振翅声,这些声音可能惊动靠听觉索敌的无眼狗。",
+        "外面有无眼狗时,规划路线主动绕开地面上的鸟群,避免它们替你「报警」。"
+      ],
+      "tips": [
+        "可以把鸟群当成「声音地雷」来读图:它们突然惊飞,说明有什么东西正在靠近那个位置。",
+        "它虽然可以被杀死,但没有死亡动画也没有任何收益,纯属浪费体力和武器耐久。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Manticoil",
+          "revid": 51218,
+          "timestamp": "2026-04-14T08:22:29Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Manticoil (revid 51218)",
+            "巴哈姆特怪物大全: forum.gamer.com.tw/C.php?bsn=79130&snA=7(列为完全不会攻击人的生态生物)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "mask-hornets",
+      "nameEn": "Mask Hornets",
+      "nameZh": "面具虫",
+      "officialZh": "",
+      "aliases": [],
+      "category": "indoor",
+      "powerLevel": 2,
+      "maxCount": 1,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.08,
+      "attackDamage": "10",
+      "sciName": null,
+      "behavior": "面具虫不会自然刷新,只在管家被杀死时从其体内涌出,行为模式类似电路蜂群的室内版。它们无法被杀死,会一直追逐最近的员工直到飞船离开;追击速度比员工默认步行速度略慢,巡游时移动更慢且伴随响亮的嗡嗡声。它们无法离开设施,也打不开上锁的门,普通门也要花很长时间才能推开。",
+      "counter": [
+        "从源头管控:杀管家前先和全队商量好——虫群一旦放出无法消灭,会骚扰你们一整天。",
+        "确实要杀管家,尽量拖到当天下午晚些再动手,把虫群存在的时间压到最短。",
+        "被追就随手关门:它们开门极慢,一扇门就能换来大段逃跑窗口,用法和关弹簧头、小丑盒子一样。",
+        "它们追击比默认步行还慢一点,不超重的情况下正常走路就能持续拉开距离。",
+        "设施里存在它们到不了的点位,实在甩不掉可以躲进去等传送或队友支援。"
+      ],
+      "tips": [
+        "它们出不了设施、也开不了上锁的门——室外和锁门之后是绝对安全区。",
+        "巡游时的嗡嗡声非常明显,靠听声辨位就能提前绕开整片区域。",
+        "虽然杀不死,但可以被短暂眩晕,紧急脱身时眩晕道具能买到几秒。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Mask Hornets",
+          "revid": 53023,
+          "timestamp": "2026-04-18T18:00:56Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Mask Hornets (revid 53023)",
+            "巴哈姆特怪物大全: forum.gamer.com.tw/C.php?bsn=79130&snA=7(面具蟲条目:不能被击杀、可被短暂眩晕、尽量远离)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "masked",
+      "nameEn": "Masked",
+      "nameZh": "覆面者",
+      "officialZh": "覆面者",
+      "aliases": [
+        "面具人",
+        "假人",
+        "面具怪",
+        "假面"
+      ],
+      "category": "indoor",
+      "powerLevel": 1,
+      "maxCount": 10,
+      "hp": "4",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 2,
+      "attackDamage": "Instant kill",
+      "sciName": null,
+      "behavior": "覆面者既会自然刷新,也会由戴上 Masks 的员工被「夺舍」转化而来,外形和普通员工几乎一样,只是脸上长着白色面具。它能自由进出设施、开门速度极快(倍率 2),有巡游、追击、埋伏三种模式:巡游时在雷达上原地乱转是最大破绽;对飞船积累足够「兴趣」后会潜入船内蹲守偷袭——这是它全游戏唯一会蹲下的时刻。抓住员工后它会向对方脸上吐血,把人感染成新的覆面者,近身被抓即死。",
+      "counter": [
+        "辨认手段:监视器上自然刷新的覆面者无法被切换视角或传送;它巡游时会频繁原地转圈;身上不保留喷漆——开局给全队喷漆做标记,是低成本的「验人」方法。",
+        "发现覆面者立刻通报全队并拉开距离、抢占开阔地形,最怕的是有人不知情被抓、变成第二只。",
+        "队友被抓住时有救援窗口:用铲子击打可以打断感染过程,成功传送、或用眩晕手雷/土制闪光弹/电击枪/雷达增幅器打停它都能救人。",
+        "主动处理时用铲子:铲子的攻击距离比它的抓取范围更长,贴着极限距离拉打相对安全;小刀距离太短,不推荐。",
+        "回船前先扫一眼船内:它会蹲在船里埋伏,而且逆向传送器无法把船上的覆面者传走。"
+      ],
+      "tips": [
+        "多只覆面者会简单配合包夹——常见套路是一只藏在船里、其余在船附近巡逻,别单人空手回船。",
+        "它能听到声音并循声张望(不一定过来调查),控制噪音能降低被锁定的概率。",
+        "「面具轮盘」(全队轮流戴面具赌谁被夺舍)是社区作死玩法:戴上面具每隔几秒就有一次被夺舍判定,想活着别玩。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Masked",
+          "revid": 55175,
+          "timestamp": "2026-05-18T16:41:14Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Masked (revid 55175)",
+            "巴哈姆特怪物大全: forum.gamer.com.tw/C.php?bsn=79130&snA=7(面具/The Mask 条目:两种生成方式、抓人同化、可敲打救援)",
+            "B站专栏 cv31058075(假人条目:雷达标志旋转、配合跑步击杀)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "nutcracker",
+      "nameEn": "Nutcracker",
+      "nameZh": "胡桃夹子",
+      "officialZh": "胡桃夹子",
+      "aliases": [
+        "士兵",
+        "胡桃钳"
+      ],
+      "category": "indoor",
+      "powerLevel": 1,
+      "maxCount": 10,
+      "hp": "5",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 2,
+      "attackDamage": "5-100 (Shotgun) Instant Kill (Kick)",
+      "sciName": null,
+      "behavior": "胡桃夹子是手持 Shotgun 的室内巡逻兵,有巡逻、扫描、攻击三种状态:巡逻时它完全是瞎的,只会四处走动;每隔一段时间停下进入扫描状态,抬起头盖原地转一整圈搜索。扫描中只要你在它视线内且有任何『动作』——走动、转动视角、蹲起甚至做表情——就会被锁定进入攻击状态,伴随金属铃声和进行曲口哨。攻击时它边移动边瞄准开枪,连开两枪后必须原地装填,装填期间不能移动、不能开枪也不能踢人;贴身接触会被它一脚踢死。",
+      "counter": [
+        "巡逻状态的胡桃夹子看不见任何东西,保持距离直接绕过即可,但别贴太近——踢击是即死。",
+        "它抬头扫描时立刻定住:不走动、不转鼠标视角、不做任何动作,等它转过去再走,只动视角也算『移动』会被发现。",
+        "单挑标准打法是『骗枪』:躲在掩体后探头骗出它的两枪,趁装填硬直冲上去铲一下再回掩体循环,它共有5点血。",
+        "多人可在它巡逻时围上去,等它进入扫描抬头的瞬间群铲秒杀;配合 Stun grenade、Homemade flashbang 或 Zap gun 更稳。",
+        "Landmine 和落下的 Spike Trap 都能直接秒杀它:把追击中的胡桃夹子引到 Landmine 上由玩家触发,或诱使它走到 Spike Trap 下方。"
+      ],
+      "tips": [
+        "击杀后必掉它手里的 Shotgun 和备用弹药,这是它最大的价值——但枪在它死前绝对抢不下来,想要枪就只能打。",
+        "如果你已经有一把 Shotgun,贴脸打它暴露的眼睛一发最高5点伤害,正好打满它的5点血直接秒杀。",
+        "它的霰弹会误伤其他怪物:可以拉住仇恨借它的枪清怪;同时激怒两只胡桃夹子,站位得当时它们会互相打死一只,捡枪反杀另一只。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Nutcracker",
+          "revid": 54677,
+          "timestamp": "2026-05-13T21:02:46Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Nutcracker (revid 54677)",
+            "bilibili: cv31058075",
+            "bahamut: forum.gamer.com.tw/C.php?bsn=79130&snA=7 怪物大全"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "old-bird",
+      "nameEn": "Old Bird",
+      "nameZh": "老鸟",
+      "officialZh": "老鸟",
+      "aliases": [
+        "机器鸟"
+      ],
+      "category": "outdoor",
+      "powerLevel": 3,
+      "maxCount": 20,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1,
+      "attackDamage": "Lethal (Grab)~40 (Rockets)~10 (Stomp)",
+      "sciName": null,
+      "behavior": "老鸟是无法被杀死的大型战争机甲,开局以失活雕像的形态立在地图上,到达预定时间、或有人拔出 Apparatus 时全图激活,日蚀天气下落地时就有部分已在活动。激活后它开着探照灯四处巡游,偶尔点燃腿部火箭飞上高空大范围索敌,发现目标后会飞扑过来。攻击手段包括:低精度但高伤害的导弹齐射(约40)、近身抬脚踩踏(约10)、起飞后直接砸落在目标身上,以及小概率用机械爪抓人并用喷火器活活烧死(致命)。无论它有没有发现你,走路踩到脚下的单位都会造成伤害。",
+      "counter": [
+        "它是无敌的(眩晕有效但杀不死),唯一正解是躲:被发现后贴着它绕小半圈跑,逼它缓慢转身,趁机拉开距离躲进掩体断视线就能甩掉它。",
+        "导弹飞行轨迹弯曲但并不真正追踪,保持不停移动很难被直接命中;但导弹在你脚边地面爆炸是即死,跑动时远离弹着点。",
+        "永远不要靠近它脚下——踩踏判定范围很大,而且被它从空中砸中伤害极高。",
+        "拔 Apparatus 前先确认全员位置和撤离路线,因为拔出的瞬间地图上所有待机老鸟同时激活。",
+        "被它抓住后任何眩晕手段都不能让它松手(这点与森林守护者不同),队友别浪费道具,优先自保。"
+      ],
+      "tips": [
+        "老鸟会无差别攻击其他怪物,可以躲在远处借它清理户外威胁,把灾难变成免费火力。",
+        "被抓烧死的队友尸体和身上物品都能回收,记得收尸保品。",
+        "大地利维坦可以一口吞掉老鸟;另外(社区经验,待核)在老鸟活跃的地图运货时,用 Jetpack 快速往返能大幅减少暴露时间。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Old Bird",
+          "revid": 52988,
+          "timestamp": "2026-04-18T17:49:16Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Old Bird (revid 52988)",
+            "bilibili: cv31058075",
+            "bahamut: forum.gamer.com.tw/C.php?bsn=79130&snA=7 怪物大全"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "red-pill",
+      "nameEn": "Red Pill",
+      "nameZh": "",
+      "officialZh": "",
+      "aliases": [],
+      "category": "indoor",
+      "powerLevel": 2,
+      "maxCount": 0,
+      "hp": "3",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 1,
+      "attackDamage": null,
+      "sciName": null,
+      "behavior": "Red Pill 是一个未实装的废弃实体,正式游戏中永远不会自然生成。它最初的模型就是字面意义上的一颗红色药丸,现在的模型则换成了 NextBot 梗图『Obunga』。如果用 mod 强行生成,它的行为和 NextBot 如出一辙:从任意距离锁定员工、直线追击、碰到即杀;而且它似乎没有命中判定,无法被任何手段杀死,连 Spike Trap 都对它无效。",
+      "counter": [
+        "正式版本中它不会出现,正常游玩无需任何应对。",
+        "若在 mod 环境中遇到:它接触即杀且全图索敌,唯一对策是保持移动、永远不被追上。",
+        "不要尝试用武器或陷阱反制——它没有碰撞判定,Spike Trap 也杀不死它。"
+      ],
+      "tips": [
+        "用怪物生成类 mod 测试时注意别误生成它,基本等于给房间放了一个无解的死神。",
+        "模型来源是 Garry's Mod 时代的 NextBot meme『Obunga』,纯属开发者埋的彩蛋遗产。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Red Pill",
+          "revid": 43596,
+          "timestamp": "2026-02-05T07:12:16Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Red Pill (revid 43596)"
+          ],
+          "crossChecked": false,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "roaming-locusts",
+      "nameEn": "Roaming Locusts",
+      "nameZh": "漫游蝗虫",
+      "officialZh": "漫游蝗虫",
+      "aliases": [
+        "蝗虫",
+        "游荡蚊虫"
+      ],
+      "category": "daytime",
+      "powerLevel": 1,
+      "maxCount": 5,
+      "hp": "3",
+      "immortal": false,
+      "stunnable": false,
+      "doorSpeedMultiplier": 0.3,
+      "attackDamage": null,
+      "sciName": "Anacridium-vega",
+      "behavior": "漫游蝗虫是白天出现在户外的小型昆虫,总是聚成一个球形虫群漂浮飞行,几乎从不落地,数量少时也会紧紧抱团。它们完全无害,没有任何攻击手段;当玩家或其他生物靠近时虫群会迅速四散,过一段时间也会自行散去。图鉴设定中它们强烈趋光,但这一机制并未真正实装进游戏。",
+      "counter": [
+        "零威胁,直接穿过去就行,不需要绕路也不需要浪费任何时间。",
+        "虫群被惊散不一定是你造成的——其他生物靠近同样会让它们四散,看到远处虫群突然炸开可以当作附近有东西在活动的信号。",
+        "别浪费武器和体力去打它,它和四翼鸟同属不会伤害玩家的生物,击杀没有任何收益。"
+      ],
+      "tips": [
+        "趋光性只存在于图鉴描述里:开发中它们原本会被飞船灯光吸引、可能成为一种飞船隐患,这个机制最终没有加入游戏。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Roaming Locusts",
+          "revid": 44472,
+          "timestamp": "2026-04-05T05:37:40Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Roaming Locusts (revid 44472)",
+            "bahamut: forum.gamer.com.tw/C.php?bsn=79130&snA=7 怪物大全(确认完全无害,与四翼鸟并列为不会攻击人的生物)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "snare-flea",
+      "nameEn": "Snare Flea",
+      "nameZh": "缠缚蚤",
+      "officialZh": "缠缚蚤",
+      "aliases": [
+        "抱脸虫",
+        "蜈蚣",
+        "潜匿蜈蚣",
+        "陷阱跳蚤",
+        "捕网跳蚤"
+      ],
+      "category": "indoor",
+      "powerLevel": 1,
+      "maxCount": 4,
+      "hp": "3",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.23,
+      "attackDamage": "10",
+      "sciName": "Dolus-scolopendra",
+      "behavior": "缠缚蚤倒挂在房间或走廊的天花板上守株待兔,有员工从正下方经过就直接坠落扑脸;扑空落地后会追人一段时间。一旦得手,它会缠住你的头:视野被完全遮挡、说话被捂住、手上所有物品强制掉落,然后持续造成伤害(每次10点)直到被打掉或你死亡。单人模式下它会在你濒死时自行松开——但它没死,第二次被抱必死无疑。",
+      "counter": [
+        "室内推进时养成抬头看天花板的习惯,尤其过门洞和狭窄走廊前先确认头顶。",
+        "队友被抱头时用 Shovel 打一下虫子就能救人;救下后它还活着,可以补刀,也可以把铲子丢给刚获救的队友轮流掩护。",
+        "落单被抱不要慌:你的武器就掉在脚边,用扫描定位地上的 Shovel、Stop sign 或 Kitchen knife,捡起来攻击就能自救。",
+        "带着虫走出设施大门它会当场死亡;队友用 Teleporter 把你传回船上同样直接杀死它。",
+        "Stun grenade 或 Zap gun 眩晕它会立即松手,适合救援时机不好下铲的场合。"
+      ],
+      "tips": [
+        "Kitchen knife 是 scrap,可以被扫描高亮,关键时刻比扫不出来的 Shovel 好找——带把刀进设施是廉价保险。",
+        "独自遇到还没触发的缠缚蚤,绕开即可:它的攻击范围极小,不会主动离开蹲点太远,但可能正好堵住必经的门洞。",
+        "最坏情况下(无武器、无队友、离出口远),抱着虫跳坑同归于尽能确保它不再威胁队友。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Snare Flea",
+          "revid": 52939,
+          "timestamp": "2026-04-18T17:39:18Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Snare Flea (revid 52939)",
+            "bilibili: cv31058075",
+            "bahamut: forum.gamer.com.tw/C.php?bsn=79130&snA=7 怪物大全"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "spore-lizard",
+      "nameEn": "Spore Lizard",
+      "nameZh": "孢子蜥蜴",
+      "officialZh": "孢子蜥蜴",
+      "aliases": [
+        "毒蜥蜴",
+        "胞子蜥蜴"
+      ],
+      "category": "indoor",
+      "powerLevel": 1,
+      "maxCount": 2,
+      "hp": "3",
+      "immortal": true,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.3,
+      "attackDamage": "N/A",
+      "sciName": "Lacerta-glomerorum",
+      "behavior": "孢子蜥蜴是性情温顺的室内实体,平时在设施里游荡,走路时发出黏糊的吧唧声。远远察觉到员工后它会原地嘶叫、竖起尾巴摇晃示警,然后一边盯着你一边倒退,找机会脱离视线溜走。只有被逼得太近或堵进死角时,它才会咬人一口并从尾部喷出粉色孢子云遮挡视野,借机逃跑;这口咬击本身不致命。",
+      "counter": [
+        "听到嘶叫和尾巴的咔啦声就绕道走,它远在你能靠近之前就会示警,保持距离它绝不会主动攻击。",
+        "不要把它逼进死角或贴脸凑近,近身才会触发它的咬击和孢子云。",
+        "它真正的危险是连环效应:孢子云在你被其他猎杀型实体追击时会糊住视野,提前记下它活动的区域,被追时避开那一带跑。",
+        "万一被孢子糊脸也别慌,咬击是非致命的,退出烟雾恢复视野再走即可。"
+      ],
+      "tips": [
+        "可以反向追踪受惊逃跑的孢子蜥蜴来探图,思路类似跟踪蕨影;但它优先拉开距离而不是直奔深处,要先给它逃跑空间再跟脚步,且只会把你带到随机房间——好处是比跟蕨影安全得多。",
+        "(社区经验,待核)台服社区称可以拿铲子追着把它打死,但这与数据面板的不死标记冲突,不建议浪费体力验证。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Spore Lizard",
+          "revid": 52942,
+          "timestamp": "2026-04-18T17:39:37Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Spore Lizard (revid 52942)",
+            "bahamut: https://forum.gamer.com.tw/C.php?bsn=79130&snA=7 怪物大全「毒蜥蜴」条目"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "thumper",
+      "nameEn": "Thumper",
+      "nameZh": "打击者",
+      "officialZh": "打击者",
+      "aliases": [
+        "重拳猛鱼",
+        "半身怪",
+        "大嘴怪",
+        "半身鱼",
+        "撞击者",
+        "冲撞者",
+        "车力"
+      ],
+      "category": "indoor",
+      "powerLevel": 3,
+      "maxCount": 4,
+      "hp": "4",
+      "immortal": false,
+      "stunnable": true,
+      "doorSpeedMultiplier": 0.3,
+      "attackDamage": "40",
+      "sciName": "Pistris-saevus",
+      "behavior": "打击者是完全失聪的室内猎手,索敌全靠视觉,平时以稳定步速在设施里巡逻。它的核心机制是动量:直线移动会不断加速,转弯掉一部分速度,高速撞墙则会损失大部分速度;在足够长的直线上,它能跑出任何员工都甩不掉的速度。一旦看到员工就会发起追击,丢失视野后会去你最后出现的位置搜索;追上目标后用连续的快速撕咬把人咬死,单次咬击伤害 40。",
+      "counter": [
+        "它是聋子,脚步声、说话声都不会暴露你——只要不进它的视线,贴墙蹲住等它走过去就是安全的。",
+        "逃跑时连续急转弯、专挑拐角多的路线跑,每次转向都会削掉它的速度,千万别和它拼直线。",
+        "故意引它高速撞墙,它会瞬间损失大部分速度,这是拉开身位的关键手段。",
+        "手里有眩晕手雷或电击枪就别省着,先定住再处理。",
+        "练熟后可以贴着它绕小圈,它转向慢跟不上你的角速度,绕圈状态下它几乎打不到你。"
+      ],
+      "tips": [
+        "它的 HP 为 4,用铲子对线时注意:每次命中会让它略微提速,越打越快,要靠绕圈和骗它撞墙抵消提速,熟练后单人一把铲子也能解决。",
+        "powerLevel 3、同图最多 4 只,是室内的主力威胁之一,新手没把握就走位脱离,别贪刀。",
+        "(社区经验,待核)它移动时动静很大,听到密集的撞击声就提前规划好带拐角的撤离路线。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Thumper",
+          "revid": 52947,
+          "timestamp": "2026-04-18T17:39:58Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Thumper (revid 52947)",
+            "bahamut: https://forum.gamer.com.tw/C.php?bsn=79130&snA=7 怪物大全「撞擊者」条目",
+            "bilibili: cv31058075(提及半身鱼边退边打策略)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "tulip-snake",
+      "nameEn": "Tulip Snake",
+      "nameZh": "郁金香蛇",
+      "officialZh": "郁金香蛇",
+      "aliases": [
+        "草麝蛇",
+        "蝙蝠"
+      ],
+      "category": "daytime",
+      "powerLevel": 0.5,
+      "maxCount": 12,
+      "hp": "3",
+      "immortal": false,
+      "stunnable": false,
+      "doorSpeedMultiplier": 0.3,
+      "attackDamage": "-",
+      "sciName": "Draco tulipa",
+      "behavior": "郁金香蛇是白昼户外实体,有多种颜色,成群在地图上游荡,同图最多 12 只。看到员工就会嘶叫着扑脸,扑空了还会回身再扑;扑中后挂在你头上,稍后开始扇动翅膀试图把你抬起来。单条挂身抬不动人,多条叠加才会把你带上天;升空时你可以像用喷气背包一样水平机动,但控制不了高度,挂得越多飞得越高越快。挂够时间后它们会集体松手飞走,本身不造成直接伤害,真正杀人的是松手瞬间的坠落伤。",
+      "counter": [
+        "它不会直接咬伤你,致命点是被抬到高空后突然松手——飞行时尽量贴近地面,或者确认翅膀停扇前你能落到安全位置。",
+        "不想被骑脸就别进它的扑击视线,它扑空又看不到你时会自己回到游荡状态。",
+        "想清掉它,铲子或小刀单次挥击就能打死(面板 HP 3 只是标称值)。",
+        "每条挂身的蛇都会增加你的负重拖慢撤离,而且会被你带进设施内部,进门前先清掉头上的蛇。"
+      ],
+      "tips": [
+        "高级玩法是反向利用:主动凑够几条让它们抬你飞,在翅膀开始扇动时起跳,可以快速跨越悬崖、长距离地形,甚至直接飞过被森林守护者把守的回船路线。",
+        "到下午它们会准时集体飞离地图并放开所有被挂的员工,想借蛇飞行要趁早,也别指望它们把你挂到收工。",
+        "千万别在用喷气背包飞行时头上带蛇:蛇一开始扇翅就会覆盖喷气背包的飞行机制,让你当场坠落。"
+      ],
+      "image": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Tulip Snake",
+          "revid": 54708,
+          "timestamp": "2026-05-16T16:15:03Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Entities/Data/v81",
+          "revid": 44753,
+          "timestamp": "2026-04-09T19:44:35Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Tulip Snake (revid 54708)",
+            "bahamut: https://forum.gamer.com.tw/C.php?bsn=79130&snA=7 怪物大全「Tulip Snake 蝙蝠 [V50]」条目"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    }
+  ]
+}

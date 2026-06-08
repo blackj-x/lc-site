@@ -1,0 +1,232 @@
+---
+import Base from '../layouts/Base.astro';
+import AdSlot from '../components/AdSlot.astro';
+import EntityCard from '../components/EntityCard.astro';
+import MoonCard from '../components/MoonCard.astro';
+import { entities, categories, categoryName } from '../data/entities';
+import { moons } from '../data/moons';
+import { items } from '../data/items';
+import { commands } from '../data/terminal';
+
+const title = '致命公司攻略社 - 怪物图鉴 / 卫星攻略 / 物品价值表';
+const description =
+  '致命公司（Lethal Company）中文图鉴数据库：怪物打法、卫星攻略、废料价值表、终端指令速查。室内 / 室外 / 日间全怪物档案，卫星风险评级与搜刮路线，一站掌握。';
+
+// 全部数字从 JSON 动态算,不写死
+const counts = {
+  indoor: entities.filter((e) => e.category === 'indoor').length,
+  outdoor: entities.filter((e) => e.category === 'outdoor').length,
+  daytime: entities.filter((e) => e.category === 'daytime').length,
+};
+const scrapItems = items.filter((i) => i.type === 'scrap').length;
+const freeMoons = moons.filter((m) => m.cost === 0).length;
+
+// 危险度(Power Level)分布,数据缺失(null)不计入
+const dangerBuckets = [
+  { label: '高危 PL≥3', count: entities.filter((e) => e.powerLevel !== null && e.powerLevel >= 3).length },
+  { label: '中危 PL 2', count: entities.filter((e) => e.powerLevel === 2).length },
+  { label: '低危 PL<2', count: entities.filter((e) => e.powerLevel !== null && e.powerLevel < 2).length },
+];
+const maxDangerCount = Math.max(...dangerBuckets.map((d) => d.count));
+
+// featured:危险度 top4 怪物
+const featured = [...entities]
+  .filter((e) => e.powerLevel !== null)
+  .sort((a, b) => (b.powerLevel as number) - (a.powerLevel as number))
+  .slice(0, 4);
+
+// S 级卫星(S / S+ / S++;Safe 不算)
+const sTierMoons = moons.filter((m) => ['S', 'S+', 'S++'].includes(m.tier));
+---
+<Base title={title} description={description} active="home">
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="kicker">登舱前 30 秒情报板</div>
+        <h1>致命公司<span class="em">攻略社</span></h1>
+        <p class="sub">先查怪物打法，再定卫星航线。怪物图鉴、卫星攻略、废料价值表、终端指令，一站掌握 Lethal Company。</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="/monsters">查怪物</a>
+          <a class="ghost-btn" href="/moons">看卫星</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>COMPANY TERMINAL — BESTIARY</span></div>
+        <div class="intel-board" aria-label="站点内容统计">
+          <div class="board-head">
+            <span>怪物档案</span>
+            <strong>{entities.length}</strong>
+          </div>
+          <div class="camp-bars">
+            <div class="camp-bar indoor" style={`--w:${(counts.indoor / entities.length) * 100}%`}>
+              <span>{categories.indoor.icon} {categoryName.indoor}</span><b>{counts.indoor}</b>
+            </div>
+            <div class="camp-bar outdoor" style={`--w:${(counts.outdoor / entities.length) * 100}%`}>
+              <span>{categories.outdoor.icon} {categoryName.outdoor}</span><b>{counts.outdoor}</b>
+            </div>
+            <div class="camp-bar daytime" style={`--w:${(counts.daytime / entities.length) * 100}%`}>
+              <span>{categories.daytime.icon} {categoryName.daytime}</span><b>{counts.daytime}</b>
+            </div>
+          </div>
+          <div class="stat-grid">
+            <div><b>{moons.length}</b><span>颗卫星攻略</span></div>
+            <div><b>{items.length}</b><span>件物品价值</span></div>
+            <div><b>{commands.length}</b><span>条终端指令</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <AdSlot variant="top" />
+
+    <section class="bento">
+      <a class="tile big" href="/monsters">
+        <div class="tile-kicker">三大分类</div>
+        <div class="tile-label">怪物图鉴</div>
+        <div class="tile-sub">{entities.length} 种实体 · 数值档案、打法应对、危险度评级</div>
+        <div class="camp-mini">
+          <span class="m indoor">{categoryName.indoor} {counts.indoor}</span>
+          <span class="m outdoor">{categoryName.outdoor} {counts.outdoor}</span>
+          <span class="m daytime">{categoryName.daytime} {counts.daytime}</span>
+        </div>
+        <div class="difficulty-chart" aria-label="怪物危险度分布">
+          {dangerBuckets.map((d) => (
+            <div class="diff-row">
+              <span>{d.label}</span>
+              <i style={`--w:${(d.count / maxDangerCount) * 100}%`}></i>
+              <b>{d.count}</b>
+            </div>
+          ))}
+        </div>
+      </a>
+      <a class="tile" href="/moons">
+        <div class="tile-kicker">{freeMoons} 条免费航线</div>
+        <div class="tile-label">卫星攻略</div>
+        <div class="tile-sub">{moons.length} 颗卫星 · 风险评级、天气池、废料区间</div>
+        <div class="guide-list">
+          {sTierMoons.slice(0, 3).map((m) => (
+            <span>{m.tier} 级 · {m.moonId}-{m.nameEn}</span>
+          ))}
+        </div>
+      </a>
+      <a class="tile" href="/items">
+        <div class="tile-kicker">{scrapItems} 件废料</div>
+        <div class="tile-label">物品价值表</div>
+        <div class="tile-sub">{items.length} 件物品 · 价值区间、重量、导电与双手位</div>
+        <div class="guide-list">
+          <span>捡什么最值钱</span>
+          <span>雷暴天扔导电物</span>
+          <span>负重影响移速</span>
+        </div>
+      </a>
+      <a class="tile" href="/terminal">
+        <div class="tile-kicker">{commands.length} 条指令</div>
+        <div class="tile-label">终端指令</div>
+        <div class="tile-sub">航行 / 商店 / 图鉴 / 雷达全指令速查</div>
+        <div class="guide-list">
+          <span>开关大门救队友</span>
+          <span>切换雷达盯人</span>
+          <span>远程引爆地雷</span>
+        </div>
+      </a>
+      <a class="tile" href="/guide">
+        <div class="tile-kicker">新员工必读</div>
+        <div class="tile-label">新手指南</div>
+        <div class="tile-sub">核心循环、生死铁律与中英术语速查</div>
+        <div class="guide-list">
+          <span>看懂配额怎么算</span>
+          <span>背熟保命铁律</span>
+          <span>听懂队友黑话</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="feat">
+      <div class="section-head">
+        <div>
+          <h2>高危怪物速览</h2>
+          <p>按危险度（Power Level）排序的最致命实体，进门前先认脸。</p>
+        </div>
+        <a href="/monsters">全部怪物 →</a>
+      </div>
+      <div class="grid">
+        {featured.map((e) => <EntityCard entity={e} />)}
+      </div>
+    </section>
+
+    <section class="feat">
+      <div class="section-head">
+        <div>
+          <h2>S 级高收益卫星</h2>
+          <p>高风险高回报航线：废料更值钱，怪物也更不讲理。</p>
+        </div>
+        <a href="/moons">全部卫星 →</a>
+      </div>
+      <div class="grid moons-grid">
+        {sTierMoons.map((m) => <MoonCard moon={m} />)}
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .hero{padding:54px 0 30px;display:grid;grid-template-columns:minmax(0,.96fr) minmax(420px,1.04fr);gap:30px;align-items:center}
+  .kicker,.tile-kicker{color:var(--accent);font-size:13px;font-weight:900;letter-spacing:1px}
+  h1{font-size:54px;font-weight:900;line-height:1.08}
+  h1 .em{background:linear-gradient(120deg,var(--outdoor),var(--daytime) 50%,var(--indoor));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .sub{color:var(--txt-dim);margin-top:10px;max-width:640px;font-size:17px}
+  .hero-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+  .primary-btn,.ghost-btn{min-height:44px;padding:10px 18px;border-radius:8px;font-weight:900;display:inline-flex;align-items:center;justify-content:center}
+  .primary-btn{background:var(--accent);color:#14161a}
+  .ghost-btn{border:1px solid var(--line);background:var(--bg-card);color:var(--txt)}
+  .hero-visual{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--bg-card);box-shadow:0 26px 70px -36px rgba(59,169,255,.55)}
+  .terminal-bar{display:flex;align-items:center;gap:7px;padding:11px 16px;border-bottom:1px solid var(--line);background:var(--bg-elev);font-size:11px;letter-spacing:2px;color:var(--txt-dim)}
+  .terminal-bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+  .terminal-bar i:nth-child(1){background:var(--indoor)}
+  .terminal-bar i:nth-child(2){background:var(--daytime)}
+  .terminal-bar i:nth-child(3){background:var(--outdoor)}
+  .terminal-bar span{margin-left:6px}
+  .intel-board{position:relative;padding:18px;overflow:hidden}
+  .intel-board::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--outdoor),var(--daytime),var(--indoor),var(--accent))}
+  .board-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px}
+  .board-head span{color:var(--txt-dim);font-size:13px}
+  .board-head strong{font-size:44px;line-height:1;color:var(--accent)}
+  .camp-bars{display:grid;gap:10px}
+  .camp-bar{position:relative;display:flex;justify-content:space-between;gap:12px;padding:9px 11px;border-radius:8px;overflow:hidden;background:var(--bg-elev);font-size:13px}
+  .camp-bar::before{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);opacity:.26}
+  .camp-bar span,.camp-bar b{position:relative;z-index:1}
+  .camp-bar.indoor::before{background:var(--indoor)}
+  .camp-bar.outdoor::before{background:var(--outdoor)}
+  .camp-bar.daytime::before{background:var(--daytime)}
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+  .stat-grid div{background:var(--bg-elev);border:1px solid var(--line);border-radius:10px;padding:12px}
+  .stat-grid b{display:block;font-size:24px;color:var(--txt)}
+  .stat-grid span{display:block;color:var(--txt-dim);font-size:12px;margin-top:2px}
+  .bento{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:16px;margin:14px 0 40px}
+  .tile{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:22px;min-height:200px;display:flex;flex-direction:column;transition:.18s;position:relative;overflow:hidden}
+  .tile::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--outdoor),var(--daytime),var(--indoor))}
+  .tile:hover{transform:translateY(-4px);border-color:var(--txt-dim);box-shadow:0 14px 38px -12px rgba(59,169,255,.5)}
+  .tile.big{grid-row:span 2;min-height:250px}
+  .tile-label{font-size:22px;font-weight:900;margin-top:2px}
+  .tile-sub{color:var(--txt-dim);font-size:14px;margin-top:4px}
+  .camp-mini{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .camp-mini .m{font-size:13px;padding:5px 11px;border-radius:8px;background:var(--bg-elev)}
+  .camp-mini .indoor{color:var(--indoor)}.camp-mini .outdoor{color:var(--outdoor)}.camp-mini .daytime{color:var(--daytime)}
+  .difficulty-chart{display:grid;gap:8px;margin-top:auto;padding-top:18px}
+  .diff-row{display:grid;grid-template-columns:80px 1fr 24px;gap:9px;align-items:center;font-size:12px;color:var(--txt-dim)}
+  .diff-row i{height:8px;border-radius:99px;background:var(--bg-elev);position:relative;overflow:hidden}
+  .diff-row i::before{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);border-radius:inherit;background:linear-gradient(90deg,var(--outdoor),var(--accent))}
+  .diff-row b{color:var(--txt);font-style:normal;text-align:right}
+  .guide-list{display:grid;gap:8px;margin-top:auto;padding-top:18px}
+  .guide-list span{font-size:13px;color:var(--txt);background:var(--bg-elev);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+  .guide-list span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:middle}
+  .feat{margin:0 0 42px}
+  .section-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin-bottom:16px}
+  .section-head h2{font-size:22px;margin-bottom:4px}
+  .section-head p{color:var(--txt-dim);font-size:14px}
+  .section-head a{color:var(--accent);font-size:14px;font-weight:900}
+  .moons-grid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+  @media(max-width:1040px){.hero{grid-template-columns:1fr}.hero-visual{max-width:720px}.bento{grid-template-columns:1fr 1fr}.tile.big{grid-row:auto;grid-column:span 2}}
+  @media(max-width:920px){h1{font-size:38px}.hero{padding-top:34px}.section-head{align-items:flex-start;flex-direction:column}}
+  @media(max-width:560px){.stat-grid{grid-template-columns:1fr 1fr}.bento{grid-template-columns:1fr}.tile.big{grid-column:auto}.tile{min-height:0}.tile.big{min-height:0}}
+</style>

@@ -1,0 +1,2811 @@
+{
+  "version": "miraheze v81 (harvested 2026-06-07)",
+  "updatedAt": "2026-06-07",
+  "sources": [
+    "lethal.miraheze.org Module:Scraps/Data/v81 + Module:Items/Data + Module:I18n/Items"
+  ],
+  "items": [
+    {
+      "slug": "airhorn",
+      "nameEn": "Airhorn",
+      "nameZh": "空气喇叭",
+      "aliases": [
+        "喇叭",
+        "气喇叭"
+      ],
+      "type": "tool",
+      "value": {
+        "min": 130,
+        "max": 180
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Airhorn",
+          "revid": 52255,
+          "timestamp": "2026-04-16T09:52:18Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "ammo",
+      "nameEn": "Ammo",
+      "nameZh": "霰弹",
+      "aliases": [
+        "弹药"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ammo",
+          "revid": 54763,
+          "timestamp": "2026-05-18T05:22:19Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "apparatus",
+      "nameEn": "Apparatus",
+      "nameZh": "发电装置",
+      "aliases": [
+        "电源"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 40,
+        "max": 120
+      },
+      "weight": 1.3,
+      "conductive": true,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Apparatus",
+          "revid": 45541,
+          "timestamp": "2026-04-09T20:55:44Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "bell",
+      "nameEn": "Bell",
+      "nameZh": "黄铜铃",
+      "aliases": [
+        "黄铜钟"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 120,
+        "max": 200
+      },
+      "weight": 1.23,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Bell",
+          "revid": 52311,
+          "timestamp": "2026-04-16T10:25:59Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "belt-bag",
+      "nameEn": "Belt bag",
+      "nameZh": "腰包",
+      "aliases": [],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.15,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 45,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Belt bag",
+          "revid": 51401,
+          "timestamp": "2026-04-14T10:39:51Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "big-bolt",
+      "nameEn": "Big bolt",
+      "nameZh": "大型螺栓",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 50,
+        "max": 80
+      },
+      "weight": 1.18,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Big bolt",
+          "revid": 54795,
+          "timestamp": "2026-05-18T05:33:33Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "binoculars",
+      "nameEn": "Binoculars",
+      "nameZh": "望远镜",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Binoculars",
+          "revid": 43705,
+          "timestamp": "2026-02-05T21:20:44Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "body",
+      "nameEn": "Body",
+      "nameZh": "尸体",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 15,
+        "max": 90
+      },
+      "weight": 1.1,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Body",
+          "revid": 52148,
+          "timestamp": "2026-04-16T07:41:25Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "bone",
+      "nameEn": "Bone",
+      "nameZh": "骨头",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 17,
+        "max": 37
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Bone",
+          "revid": 54801,
+          "timestamp": "2026-05-18T05:36:08Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "boombox",
+      "nameEn": "Boombox",
+      "nameZh": "音响",
+      "aliases": [
+        "音乐盒",
+        "音响"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.15,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 60,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Boombox",
+          "revid": 48974,
+          "timestamp": "2026-04-11T18:18:12Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "bottles",
+      "nameEn": "Bottles",
+      "nameZh": "一箱瓶子",
+      "aliases": [
+        "瓶子"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 110,
+        "max": 140
+      },
+      "weight": 1.18,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Bottles",
+          "revid": 54816,
+          "timestamp": "2026-05-18T05:38:25Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "brush",
+      "nameEn": "Brush",
+      "nameZh": "发梳",
+      "aliases": [
+        "发刷",
+        "刷子"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 20,
+        "max": 90
+      },
+      "weight": 1.1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Brush",
+          "revid": 54825,
+          "timestamp": "2026-05-18T05:45:50Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "candy",
+      "nameEn": "Candy",
+      "nameZh": "糖果",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 15,
+        "max": 90
+      },
+      "weight": 1.1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Candy",
+          "revid": 54833,
+          "timestamp": "2026-05-18T05:48:02Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "cash-register",
+      "nameEn": "Cash register",
+      "nameZh": "收银机",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 200,
+        "max": 400
+      },
+      "weight": 1.8,
+      "conductive": true,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Cash register",
+          "revid": 52248,
+          "timestamp": "2026-04-16T09:51:26Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "chemical-jug",
+      "nameEn": "Chemical jug",
+      "nameZh": "化学品罐",
+      "aliases": [
+        "化学罐"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 80,
+        "max": 210
+      },
+      "weight": 1.3,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Chemical jug",
+          "revid": 54840,
+          "timestamp": "2026-05-18T05:49:39Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "clipboard",
+      "nameEn": "Clipboard",
+      "nameZh": "剪贴板",
+      "aliases": [],
+      "type": "scrap",
+      "value": null,
+      "weight": null,
+      "conductive": null,
+      "twoHanded": null,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Clipboard",
+          "revid": 55263,
+          "timestamp": "2026-05-22T23:53:52Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "clock",
+      "nameEn": "Clock",
+      "nameZh": "时钟",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 110,
+        "max": 140
+      },
+      "weight": 1.25,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Clock",
+          "revid": 54847,
+          "timestamp": "2026-05-18T05:55:57Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "clown-horn",
+      "nameEn": "Clown horn",
+      "nameZh": "小丑喇叭",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 130,
+        "max": 180
+      },
+      "weight": 1,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Clown horn",
+          "revid": 52263,
+          "timestamp": "2026-04-16T10:05:32Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "control-pad",
+      "nameEn": "Control pad",
+      "nameZh": "控制板",
+      "aliases": [
+        "控制面板"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 85,
+        "max": 160
+      },
+      "weight": 1.15,
+      "conductive": true,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Control pad",
+          "revid": 54858,
+          "timestamp": "2026-05-18T05:57:43Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "cookie-mold-pan",
+      "nameEn": "Cookie mold pan",
+      "nameZh": "饼干模具",
+      "aliases": [
+        "饼干模具锅",
+        "饼干模具盘"
+      ],
+      "type": "scrap",
+      "value": null,
+      "weight": null,
+      "conductive": null,
+      "twoHanded": null,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Cookie mold pan",
+          "revid": 54865,
+          "timestamp": "2026-05-18T05:59:04Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "dust-pan",
+      "nameEn": "Dust pan",
+      "nameZh": "簸箕",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 30,
+        "max": 80
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Dust pan",
+          "revid": 51119,
+          "timestamp": "2026-04-14T07:32:55Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "ear",
+      "nameEn": "Ear",
+      "nameZh": "断耳",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 7,
+        "max": 35
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ear",
+          "revid": 44035,
+          "timestamp": "2026-03-14T07:04:10Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "easter-egg",
+      "nameEn": "Easter egg",
+      "nameZh": "复活节彩蛋",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 55,
+        "max": 130
+      },
+      "weight": 1.03,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Easter egg",
+          "revid": 55534,
+          "timestamp": "2026-06-05T22:33:08Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "egg",
+      "nameEn": "Egg",
+      "nameZh": "",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 150,
+        "max": 210
+      },
+      "weight": 1.18,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Egg",
+          "revid": 52164,
+          "timestamp": "2026-04-16T07:46:41Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "egg-beater",
+      "nameEn": "Egg beater",
+      "nameZh": "打蛋器",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 30,
+        "max": 110
+      },
+      "weight": 1.1,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Egg beater",
+          "revid": 44057,
+          "timestamp": "2026-03-15T22:00:52Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "extension-ladder",
+      "nameEn": "Extension ladder",
+      "nameZh": "伸缩梯",
+      "aliases": [
+        "延展梯子",
+        "可延展梯子",
+        "伸缩梯"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": 60,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Extension ladder",
+          "revid": 48977,
+          "timestamp": "2026-04-11T18:21:26Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "fancy-lamp",
+      "nameEn": "Fancy lamp",
+      "nameZh": "华丽台灯",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 150,
+        "max": 320
+      },
+      "weight": 1.2,
+      "conductive": true,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Fancy lamp",
+          "revid": 52313,
+          "timestamp": "2026-04-16T10:26:31Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "flashlight",
+      "nameEn": "Flashlight",
+      "nameZh": "手电筒",
+      "aliases": [
+        "手电筒"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 15,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Flashlight",
+          "revid": 48978,
+          "timestamp": "2026-04-11T18:22:16Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "flask",
+      "nameEn": "Flask",
+      "nameZh": "烧瓶",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 40,
+        "max": 110
+      },
+      "weight": 1.15,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Flask",
+          "revid": 43883,
+          "timestamp": "2026-03-11T03:31:35Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "foot",
+      "nameEn": "Foot",
+      "nameZh": "断脚",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 15,
+        "max": 55
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Foot",
+          "revid": 46196,
+          "timestamp": "2026-04-10T02:57:34Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "garbage-lid",
+      "nameEn": "Garbage lid",
+      "nameZh": "垃圾桶盖",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 50,
+        "max": 110
+      },
+      "weight": 1,
+      "conductive": true,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Garbage lid",
+          "revid": 43886,
+          "timestamp": "2026-03-11T03:43:01Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "gift",
+      "nameEn": "Gift",
+      "nameZh": "礼物盒",
+      "aliases": [
+        "礼物"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 30,
+        "max": 70
+      },
+      "weight": 1.18,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Gift",
+          "revid": 52192,
+          "timestamp": "2026-04-16T08:07:04Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "gold-bar",
+      "nameEn": "Gold bar",
+      "nameZh": "金条",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 255,
+        "max": 525
+      },
+      "weight": 1.73,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Gold bar",
+          "revid": 44059,
+          "timestamp": "2026-03-15T22:02:02Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "golden-cup",
+      "nameEn": "Golden cup",
+      "nameZh": "金杯",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 100,
+        "max": 200
+      },
+      "weight": 1.15,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Golden cup",
+          "revid": 43790,
+          "timestamp": "2026-03-10T05:56:23Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "hairdryer",
+      "nameEn": "Hairdryer",
+      "nameZh": "电吹风",
+      "aliases": [
+        "吹风机"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 150,
+        "max": 250
+      },
+      "weight": 1.07,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Hairdryer",
+          "revid": 52271,
+          "timestamp": "2026-04-16T10:12:52Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "hand",
+      "nameEn": "Hand",
+      "nameZh": "断手",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 10,
+        "max": 30
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Hand",
+          "revid": 44060,
+          "timestamp": "2026-03-15T22:02:25Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "heart",
+      "nameEn": "Heart",
+      "nameZh": "心脏",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 60,
+        "max": 250
+      },
+      "weight": 1.3,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Heart",
+          "revid": 47195,
+          "timestamp": "2026-04-10T15:21:41Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "hive",
+      "nameEn": "Hive",
+      "nameZh": "蜂巢",
+      "aliases": [
+        "蜂窝"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 90,
+        "max": 140
+      },
+      "weight": 1,
+      "conductive": true,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Hive",
+          "revid": 45429,
+          "timestamp": "2026-04-09T20:39:03Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "homemade-flashbang",
+      "nameEn": "Homemade flashbang",
+      "nameZh": "土制闪光弹",
+      "aliases": [],
+      "type": "tool",
+      "value": {
+        "min": 25,
+        "max": 70
+      },
+      "weight": 1.05,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Homemade flashbang",
+          "revid": 55254,
+          "timestamp": "2026-05-22T23:49:43Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "jar-of-pickles",
+      "nameEn": "Jar of pickles",
+      "nameZh": "一罐腌黄瓜",
+      "aliases": [
+        "腌黄瓜罐"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 80,
+        "max": 150
+      },
+      "weight": 1.15,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Jar of pickles",
+          "revid": 43800,
+          "timestamp": "2026-03-10T06:47:36Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "jetpack",
+      "nameEn": "Jetpack",
+      "nameZh": "喷气背包",
+      "aliases": [
+        "喷射背包",
+        "喷气背包"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.5,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": 900,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Jetpack",
+          "revid": 53757,
+          "timestamp": "2026-04-20T04:25:29Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "key",
+      "nameEn": "Key",
+      "nameZh": "钥匙",
+      "aliases": [],
+      "type": "tool",
+      "value": {
+        "min": 3,
+        "max": 4
+      },
+      "weight": 1,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Key",
+          "revid": 55268,
+          "timestamp": "2026-05-22T23:56:49Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "kitchen-knife",
+      "nameEn": "Kitchen knife",
+      "nameZh": "小刀",
+      "aliases": [
+        "菜刀"
+      ],
+      "type": "tool",
+      "value": {
+        "min": 70,
+        "max": 210
+      },
+      "weight": 1,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Kitchen knife",
+          "revid": 44126,
+          "timestamp": "2026-03-29T08:36:46Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "knee",
+      "nameEn": "Knee",
+      "nameZh": "膝盖",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 20,
+        "max": 45
+      },
+      "weight": 1.05,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Knee",
+          "revid": 44064,
+          "timestamp": "2026-03-15T22:05:09Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "large-axle",
+      "nameEn": "Large axle",
+      "nameZh": "大型轴承",
+      "aliases": [
+        "大号轴承"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 90,
+        "max": 140
+      },
+      "weight": 1.15,
+      "conductive": true,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Large axle",
+          "revid": 43643,
+          "timestamp": "2026-02-05T20:36:30Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "laser-pointer",
+      "nameEn": "Laser pointer",
+      "nameZh": "镭射指示器",
+      "aliases": [
+        "镭射笔"
+      ],
+      "type": "tool",
+      "value": {
+        "min": 80,
+        "max": 250
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Laser pointer",
+          "revid": 51948,
+          "timestamp": "2026-04-15T08:13:03Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "lockpicker",
+      "nameEn": "Lockpicker",
+      "nameZh": "开锁器",
+      "aliases": [
+        "解锁器",
+        "开锁器"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 20,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Lockpicker",
+          "revid": 55272,
+          "timestamp": "2026-05-23T00:06:06Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "magic-7-ball",
+      "nameEn": "Magic 7 ball",
+      "nameZh": "“魔法”七号球",
+      "aliases": [
+        "魔法 7 号球",
+        "七号球"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 90,
+        "max": 180
+      },
+      "weight": 1.15,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Magic 7 ball",
+          "revid": 44066,
+          "timestamp": "2026-03-15T22:12:11Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "magnifying-glass",
+      "nameEn": "Magnifying glass",
+      "nameZh": "放大镜",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 110,
+        "max": 150
+      },
+      "weight": 1.1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Magnifying glass",
+          "revid": 44050,
+          "timestamp": "2026-03-15T21:29:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "mapper",
+      "nameEn": "Mapper",
+      "nameZh": "",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Mapper",
+          "revid": 43714,
+          "timestamp": "2026-02-05T21:22:59Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "masks-item",
+      "nameEn": "Masks (Item)",
+      "nameZh": "",
+      "aliases": [
+        "喜剧面具",
+        "悲剧面具"
+      ],
+      "type": "scrap",
+      "value": null,
+      "weight": null,
+      "conductive": null,
+      "twoHanded": null,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Masks (Item)",
+          "revid": 52634,
+          "timestamp": "2026-04-17T14:57:26Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "metal-sheet",
+      "nameEn": "Metal sheet",
+      "nameZh": "金属板",
+      "aliases": [
+        "金属片"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 25,
+        "max": 55
+      },
+      "weight": 1.25,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Metal sheet",
+          "revid": 43831,
+          "timestamp": "2026-03-10T19:32:52Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "mug",
+      "nameEn": "Mug",
+      "nameZh": "马克杯",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 60,
+        "max": 170
+      },
+      "weight": 1.05,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Mug",
+          "revid": 44067,
+          "timestamp": "2026-03-15T22:12:27Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "old-phone",
+      "nameEn": "Old phone",
+      "nameZh": "旧电话",
+      "aliases": [
+        "老式电话"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 120,
+        "max": 160
+      },
+      "weight": 1.05,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Old phone",
+          "revid": 52379,
+          "timestamp": "2026-04-17T04:06:00Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "painting",
+      "nameEn": "Painting",
+      "nameZh": "画",
+      "aliases": [
+        "画作"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 150,
+        "max": 310
+      },
+      "weight": 1.3,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Painting",
+          "revid": 43957,
+          "timestamp": "2026-03-12T22:57:38Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "perfume-bottle",
+      "nameEn": "Perfume bottle",
+      "nameZh": "香水瓶",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 120,
+        "max": 260
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Perfume bottle",
+          "revid": 43837,
+          "timestamp": "2026-03-10T20:08:09Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "pill-bottle",
+      "nameEn": "Pill bottle",
+      "nameZh": "药瓶",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 40,
+        "max": 100
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Pill bottle",
+          "revid": 43838,
+          "timestamp": "2026-03-10T20:19:39Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "plastic-cup",
+      "nameEn": "Plastic cup",
+      "nameZh": "塑料杯",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 30,
+        "max": 90
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Plastic cup",
+          "revid": 43688,
+          "timestamp": "2026-02-05T20:54:00Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "plastic-fish",
+      "nameEn": "Plastic fish",
+      "nameZh": "塑料鱼",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 70,
+        "max": 100
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Plastic fish",
+          "revid": 43958,
+          "timestamp": "2026-03-12T22:59:43Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "pro-flashlight",
+      "nameEn": "Pro-flashlight",
+      "nameZh": "专业手电筒",
+      "aliases": [
+        "高级手电筒",
+        "手电筒Pro",
+        "Pro手电筒"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.05,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 28,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Pro-flashlight",
+          "revid": 48979,
+          "timestamp": "2026-04-11T18:22:37Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "radar-booster",
+      "nameEn": "Radar-booster",
+      "nameZh": "雷达增幅器",
+      "aliases": [
+        "雷达发射器"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.18,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": 60,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Radar-booster",
+          "revid": 55253,
+          "timestamp": "2026-05-22T23:49:30Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "red-soda",
+      "nameEn": "Red soda",
+      "nameZh": "红色苏打水",
+      "aliases": [
+        "红色汽水"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 45,
+        "max": 225
+      },
+      "weight": 1.07,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Red soda",
+          "revid": 43961,
+          "timestamp": "2026-03-12T23:03:15Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "remote",
+      "nameEn": "Remote",
+      "nameZh": "遥控器",
+      "aliases": [],
+      "type": "tool",
+      "value": {
+        "min": 50,
+        "max": 120
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Remote",
+          "revid": 52205,
+          "timestamp": "2026-04-16T08:11:07Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "ribcage",
+      "nameEn": "Ribcage",
+      "nameZh": "肋骨",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 20,
+        "max": 65
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ribcage",
+          "revid": 44040,
+          "timestamp": "2026-03-14T07:04:36Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "ring",
+      "nameEn": "Ring",
+      "nameZh": "戒指",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 130,
+        "max": 200
+      },
+      "weight": 1.15,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Ring",
+          "revid": 43673,
+          "timestamp": "2026-02-05T20:49:06Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "rubber-ducky",
+      "nameEn": "Rubber Ducky",
+      "nameZh": "橡皮鸭鸭",
+      "aliases": [
+        "橡皮鸭",
+        "橡胶鸭"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 5,
+        "max": 250
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Rubber Ducky",
+          "revid": 43675,
+          "timestamp": "2026-02-05T20:49:59Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "shotgun",
+      "nameEn": "Shotgun",
+      "nameZh": "霰弹枪",
+      "aliases": [
+        "双管霰弹枪",
+        "散弹枪"
+      ],
+      "type": "tool",
+      "value": {
+        "min": 30,
+        "max": 100
+      },
+      "weight": 1.15,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Shotgun",
+          "revid": 55273,
+          "timestamp": "2026-05-23T00:06:08Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "shovel",
+      "nameEn": "Shovel",
+      "nameZh": "铲子",
+      "aliases": [
+        "大铲子",
+        "铁铲",
+        "铲子"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.13,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": 30,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Shovel",
+          "revid": 54756,
+          "timestamp": "2026-05-18T05:17:16Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "soccer-ball",
+      "nameEn": "Soccer ball",
+      "nameZh": "足球",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 110,
+        "max": 180
+      },
+      "weight": 1.18,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Soccer ball",
+          "revid": 52215,
+          "timestamp": "2026-04-16T08:14:57Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "spray-paint",
+      "nameEn": "Spray paint",
+      "nameZh": "喷漆",
+      "aliases": [
+        "喷漆罐",
+        "喷漆"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 50,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Spray paint",
+          "revid": 55294,
+          "timestamp": "2026-05-23T00:09:01Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "steering-wheel",
+      "nameEn": "Steering wheel",
+      "nameZh": "方向盘",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 40,
+        "max": 80
+      },
+      "weight": 1.15,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Steering wheel",
+          "revid": 43678,
+          "timestamp": "2026-02-05T20:51:00Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "sticky-note",
+      "nameEn": "Sticky note",
+      "nameZh": "便签",
+      "aliases": [
+        "便利贴"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 70,
+        "max": 100
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Sticky note",
+          "revid": 54759,
+          "timestamp": "2026-05-18T05:20:32Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "stop-sign",
+      "nameEn": "Stop sign",
+      "nameZh": "停止标志",
+      "aliases": [
+        "标志牌"
+      ],
+      "type": "tool",
+      "value": {
+        "min": 50,
+        "max": 130
+      },
+      "weight": 1.27,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Stop sign",
+          "revid": 44947,
+          "timestamp": "2026-04-09T20:19:15Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "stun-grenade",
+      "nameEn": "Stun grenade",
+      "nameZh": "眩晕手雷",
+      "aliases": [
+        "闪光弹",
+        "震爆弹",
+        "闪光震撼弹",
+        "震撼弹",
+        "眩晕手雷"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.05,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 30,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Stun grenade",
+          "revid": 55274,
+          "timestamp": "2026-05-23T00:06:11Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "tea-kettle",
+      "nameEn": "Tea kettle",
+      "nameZh": "茶壶",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 80,
+        "max": 140
+      },
+      "weight": 1.2,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Tea kettle",
+          "revid": 43680,
+          "timestamp": "2026-02-05T20:51:24Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "teeth",
+      "nameEn": "Teeth",
+      "nameZh": "假牙",
+      "aliases": [
+        "牙齿"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 150,
+        "max": 210
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Teeth",
+          "revid": 52290,
+          "timestamp": "2026-04-16T10:15:17Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "toilet-paper",
+      "nameEn": "Toilet paper",
+      "nameZh": "厕纸",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 150,
+        "max": 220
+      },
+      "weight": 1.05,
+      "conductive": false,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Toilet paper",
+          "revid": 43690,
+          "timestamp": "2026-02-05T20:54:28Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "tongue",
+      "nameEn": "Tongue",
+      "nameZh": "",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 8,
+        "max": 40
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Tongue",
+          "revid": 54744,
+          "timestamp": "2026-05-18T04:42:49Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "toothpaste",
+      "nameEn": "Toothpaste",
+      "nameZh": "牙膏",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 35,
+        "max": 120
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Toothpaste",
+          "revid": 43681,
+          "timestamp": "2026-02-05T20:51:37Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "toy-cube",
+      "nameEn": "Toy cube",
+      "nameZh": "玩具魔方",
+      "aliases": [
+        "玩具方块",
+        "魔方"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 60,
+        "max": 110
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Toy cube",
+          "revid": 43682,
+          "timestamp": "2026-02-05T20:51:59Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "toy-robot",
+      "nameEn": "Toy robot",
+      "nameZh": "机器人玩具",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 140,
+        "max": 220
+      },
+      "weight": 1.2,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Toy robot",
+          "revid": 52294,
+          "timestamp": "2026-04-16T10:16:02Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "toy-train",
+      "nameEn": "Toy train",
+      "nameZh": "玩具火车",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 130,
+        "max": 210
+      },
+      "weight": 1.2,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Toy train",
+          "revid": 43691,
+          "timestamp": "2026-02-05T20:55:02Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "tzp-inhalant",
+      "nameEn": "TZP-Inhalant",
+      "nameZh": "TZP吸入剂",
+      "aliases": [
+        "TZP-可吸入增强剂",
+        "TZP吸入剂"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": 80,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "TZP-Inhalant",
+          "revid": 49221,
+          "timestamp": "2026-04-12T03:24:11Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "v-type-engine",
+      "nameEn": "V-type engine",
+      "nameZh": "V型引擎",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 50,
+        "max": 140
+      },
+      "weight": 1.15,
+      "conductive": true,
+      "twoHanded": true,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "V-type engine",
+          "revid": 51698,
+          "timestamp": "2026-04-15T04:50:02Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "walkie-talkie",
+      "nameEn": "Walkie-talkie",
+      "nameZh": "对讲机",
+      "aliases": [
+        "无线电",
+        "无线对讲机",
+        "对讲机"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 10,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Walkie-talkie",
+          "revid": 46206,
+          "timestamp": "2026-04-10T02:59:29Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "weed-killer",
+      "nameEn": "Weed killer",
+      "nameZh": "除草剂",
+      "aliases": [],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": 20,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Weed killer",
+          "revid": 50192,
+          "timestamp": "2026-04-13T00:17:52Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "whoopie-cushion",
+      "nameEn": "Whoopie cushion",
+      "nameZh": "放屁袋",
+      "aliases": [
+        "放屁臭垫"
+      ],
+      "type": "scrap",
+      "value": {
+        "min": 15,
+        "max": 90
+      },
+      "weight": 1,
+      "conductive": false,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Whoopie cushion",
+          "revid": 52381,
+          "timestamp": "2026-04-17T04:07:06Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "yield-sign",
+      "nameEn": "Yield sign",
+      "nameZh": "让行标志",
+      "aliases": [
+        "标志牌"
+      ],
+      "type": "tool",
+      "value": {
+        "min": 45,
+        "max": 90
+      },
+      "weight": 1.4,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Yield sign",
+          "revid": 51693,
+          "timestamp": "2026-04-15T04:46:35Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    },
+    {
+      "slug": "zap-gun",
+      "nameEn": "Zap gun",
+      "nameZh": "电击枪",
+      "aliases": [
+        "电击枪"
+      ],
+      "type": "store",
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "weight": 1.1,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": 400,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Zap gun",
+          "revid": 48992,
+          "timestamp": "2026-04-11T18:46:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Items/Data",
+          "revid": 55267,
+          "timestamp": "2026-05-22T23:55:31Z"
+        }
+      ]
+    },
+    {
+      "slug": "zed-dog",
+      "nameEn": "Zed Dog",
+      "nameZh": "泽德犬",
+      "aliases": [],
+      "type": "scrap",
+      "value": {
+        "min": 1,
+        "max": 500
+      },
+      "weight": 1,
+      "conductive": true,
+      "twoHanded": false,
+      "storePrice": null,
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Zed Dog",
+          "revid": 45859,
+          "timestamp": "2026-04-09T23:48:06Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Scraps/Data/v81",
+          "revid": 44728,
+          "timestamp": "2026-04-09T18:36:17Z"
+        }
+      ]
+    }
+  ]
+}

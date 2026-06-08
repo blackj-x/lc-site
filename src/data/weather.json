@@ -1,0 +1,195 @@
+{
+  "version": "miraheze v81 (harvested 2026-06-07)",
+  "updatedAt": "2026-06-07",
+  "sources": [
+    "Module:WikiAutomated WEATHER_TYPE_NAMES + Weather 页"
+  ],
+  "weathers": [
+    {
+      "slug": "clear",
+      "nameEn": "Clear",
+      "nameZh": "",
+      "aliases": [],
+      "enumIndex": 0,
+      "effect": "无特殊影响,基准状态。",
+      "danger": 1,
+      "affectedItems": [],
+      "counter": [
+        "登陆前用终端 moons 指令查看各卫星名旁括号里的天气预报(需当天日期已完全刷新),把 Clear 天留给高威胁卫星,可以白省一层环境风险。",
+        "天气不影响 scrap 的数量与价值,Clear 天没有任何收益惩罚,适合作为练手和规划路线的基准日。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Weather",
+          "revid": 54146,
+          "timestamp": "2026-04-23T16:18:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:WikiAutomated",
+          "revid": 55230,
+          "timestamp": "2026-05-18T19:39:18Z"
+        }
+      ]
+    },
+    {
+      "slug": "rainy",
+      "nameEn": "Rainy",
+      "nameZh": "",
+      "aliases": [],
+      "enumIndex": 1,
+      "effect": "降雨在地表留下流沙坑:外观像一大圈棕色泥土的圆形水洼,踩入会快速下沉,陷得过深直接死亡——不留尸体,所携物品全部删除。夜间流沙尤其难以辨认。",
+      "danger": 2,
+      "affectedItems": [],
+      "counter": [
+        "踩进流沙的瞬间反应要快:在下沉过深之前立刻移出即可脱身,犹豫就是丢人又丢货。",
+        "认准外观:像地面上一大圈棕色泥土的圆形水洼;夜间几乎看不清,雨天夜路尽量沿已确认安全的路线走。",
+        "陷死会删除全部手持物品且不留尸体,满载返程时宁可绕路也别赌可疑地面。",
+        "March(该卫星不会下雨)和 Adamance 无论什么天气都有固定流沙点,在这两个卫星上要常态保持雨天警觉。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Weather",
+          "revid": 54146,
+          "timestamp": "2026-04-23T16:18:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:WikiAutomated",
+          "revid": 55230,
+          "timestamp": "2026-05-18T19:39:18Z"
+        }
+      ]
+    },
+    {
+      "slug": "stormy",
+      "nameEn": "Stormy",
+      "nameZh": "",
+      "aliases": [],
+      "enumIndex": 2,
+      "effect": "雷暴期间,地上或员工持有的导电物品会蓄积电荷,短暂延迟后被闪电击中;带电时物品会明显冒火花并发出声响。另有随机闪电在地图各处无预警落下,可能直接劈中员工。雷击对员工造成 50 点伤害至直接致死,取决于与落点的距离。闪电击中飞船会关闭船灯和监视器。",
+      "danger": 3,
+      "affectedItems": [],
+      "counter": [
+        "本天气针对的是全部导电物品(items.json 中 conductive=true 的金属类 scrap 与装备,如铲子、金属板、停止标志、大型螺栓、喷气背包等):听到火花声立即丢下导电物并远离,即可躲开这次雷击。",
+        "导电物在背包栏里没拿在手上也会冒火花;逐个切换物品栏就能找出带电的那一件再丢。注意:物品栏里有带电物品时不会出现『Lightning strike warning』提示,只能靠火花声自查。",
+        "闪电可能多次劈同一件金属物,丢下后等一两秒再捡。",
+        "把冒火花的物品放到坚固屋顶或飞船天花板下,闪电会劈在顶上而不直接命中物品;但并非所有掩体都可靠,主要对实心屋顶有效。",
+        "手持冒火花物品时贴墙站立,或身上挂着郁金香蛇,能在一定程度上避免被雷劈中。",
+        "船被雷劈后:电灯用墙上开关或遥控器重开,监视器按侧面电源键重启。",
+        "雷暴当天在商店购买的物品不导电,这一状态持续到飞船再次入轨为止——雷暴天补给装备反而安全。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Weather",
+          "revid": 54146,
+          "timestamp": "2026-04-23T16:18:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:WikiAutomated",
+          "revid": 55230,
+          "timestamp": "2026-05-18T19:39:18Z"
+        }
+      ]
+    },
+    {
+      "slug": "foggy",
+      "nameEn": "Foggy",
+      "nameZh": "",
+      "aliases": [],
+      "enumIndex": 3,
+      "effect": "整个卫星的室外被浓雾覆盖,导航困难(仅室外,与室内雾是两回事)。同时雾会统一限制所有实体的视野:发现员工的最大视距被压到 30 单位,由实体基类 EnemyAI 统一处理,当前没有任何实体能豁免。",
+      "danger": 2,
+      "affectedItems": [],
+      "counter": [
+        "雾对双方都生效:实体发现你的最大视距被钉死在 30 单位,对玩家不全是坏消息,贴近威胁区时反而多了一层掩护。",
+        "雾只覆盖室外,进入设施后体验与平时无异;真正的损耗在室外找路和找船的时间。",
+        "(社区经验,待核)出舱先记参照物、用对讲机互相报点,雾天最大的杀手不是怪而是迷路耗掉的时间。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Weather",
+          "revid": 54146,
+          "timestamp": "2026-04-23T16:18:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:WikiAutomated",
+          "revid": 55230,
+          "timestamp": "2026-05-18T19:39:18Z"
+        }
+      ]
+    },
+    {
+      "slug": "flooded",
+      "nameEn": "Flooded",
+      "nameZh": "",
+      "aliases": [],
+      "enumIndex": 4,
+      "effect": "卫星随时间推移逐渐被水淹没,水位约在下午 5 点前后达到最高(各卫星有差异),超过某个时间点后室外将无法通行。涉水大幅减速、无法冲刺,并持续消耗体力——出水之前体力不会恢复;长时间没入水下会溺死。部分卫星(如 Adamance)开局即满水位,随白天推移水位反而下降。",
+      "danger": 3,
+      "affectedItems": [],
+      "counter": [
+        "水位跟一天的时间走,越晚越难走:把出货节奏整体前移,上午多跑几趟,别把重货压到下午。",
+        "涉水时无法冲刺且体力被持续抽干,出水前不回体力——规划路线时避开必须长距离泡水的走法,遇怪在水里基本跑不掉。",
+        "长时间没入水下会溺死,涉深水前确认自己有足够余量上岸。",
+        "Adamance 这类开局满水位、白天水位下降的卫星节奏相反:前期别硬闯,等水退了再展开。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Weather",
+          "revid": 54146,
+          "timestamp": "2026-04-23T16:18:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:WikiAutomated",
+          "revid": 55230,
+          "timestamp": "2026-05-18T19:39:18Z"
+        }
+      ]
+    },
+    {
+      "slug": "eclipsed",
+      "nameEn": "Eclipsed",
+      "nameZh": "",
+      "aliases": [],
+      "enumIndex": 5,
+      "effect": "日蚀允许夜间实体在开局就立即刷新,并显著提高室内与室外双方的刷怪率,而探索收益没有任何提升,是纯加难度的天气。各卫星的 minEnemiesToSpawn(室内)与 minOutsideEnemiesToSpawn(夜间室外)被改为固定值:Experimentation / Assurance / Vow 为 1,March 为 2,Adamance / Rend / Titan / Artifice 为 3,Offense / Dine / Embrion 为 4。",
+      "danger": 5,
+      "affectedItems": [],
+      "counter": [
+        "天气不影响 scrap 数量与价值,而日蚀没有任何额外收益——低配或缺人手的队伍直接换卫星是完全合理的选择,不丢分。",
+        "看清各卫星的日蚀保底刷怪数再决定去留:Offense / Dine / Embrion 日蚀时室内外保底各 4 只,落地即地狱;Experimentation / Assurance / Vow 保底只有 1,是日蚀天里相对能打的选项。",
+        "夜间实体开局即可出现在室外,不要按平时『白天室外安全』的习惯行动,出舱第一时间观察周边。",
+        "(社区经验,待核)若必须打日蚀,用喷气背包速去速回压缩室外暴露时间,并可携带闪光弹牵制大型室外实体(B 站专栏 cv31058075 提及)。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Weather",
+          "revid": 54146,
+          "timestamp": "2026-04-23T16:18:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:WikiAutomated",
+          "revid": 55230,
+          "timestamp": "2026-05-18T19:39:18Z"
+        }
+      ]
+    }
+  ]
+}

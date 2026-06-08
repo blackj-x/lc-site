@@ -1,0 +1,1143 @@
+{
+  "version": "miraheze v81 (harvested 2026-06-07)",
+  "updatedAt": "2026-06-07",
+  "sources": [
+    "lethal.miraheze.org Module:Moons/Data/v81 + 各卫星页 infobox"
+  ],
+  "annotationTypes": {
+    "entrance": {
+      "name": "主入口",
+      "color": "#3ba9ff",
+      "icon": "🚪"
+    },
+    "fire-exit": {
+      "name": "防火门",
+      "color": "#ff5470",
+      "icon": "🧯"
+    },
+    "ship": {
+      "name": "飞船着陆点",
+      "color": "#4ade80",
+      "icon": "🚀"
+    },
+    "machine": {
+      "name": "发电装置",
+      "color": "#ffd84e",
+      "icon": "⚙️"
+    },
+    "hazard": {
+      "name": "环境危害",
+      "color": "#fb923c",
+      "icon": "⚠️"
+    },
+    "spawn": {
+      "name": "怪物高发区",
+      "color": "#b06bff",
+      "icon": "👁"
+    },
+    "item": {
+      "name": "高价值废料区",
+      "color": "#facc15",
+      "icon": "💰"
+    },
+    "terrain": {
+      "name": "地形要点",
+      "color": "#94a3b8",
+      "icon": "⛰"
+    }
+  },
+  "moons": [
+    {
+      "slug": "embrion",
+      "moonId": "5",
+      "nameEn": "Embrion",
+      "nameZh": "",
+      "aliases": [
+        "隐藏_5-Embrion"
+      ],
+      "tier": "S",
+      "cost": 150,
+      "weatherPool": [
+        "Foggy",
+        "Eclipsed"
+      ],
+      "interiorTypes": {
+        "Factory": 300,
+        "Mansion": 10,
+        "Mineshaft": 44
+      },
+      "scrapCount": {
+        "min": 14,
+        "max": 17
+      },
+      "scrapValue": {
+        "min": 100,
+        "max": 250
+      },
+      "sizeMultiplier": 1.1,
+      "hasTime": true,
+      "layoutNotes": "Embrion 是 v50 加入的隐藏卫星,不在 MOONS 列表里,唯一线索藏在老鸟的图鉴词条中。紫色的紫水晶地表分布着山脊和浅坑,整体平坦;主门开在一处需要跳跃才能上去的岩台上。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "航线费用只要 150,但这是个陷阱价:此星是老鸟的『试验场』,刷新率极高、地表怪物强度全游戏最高,一天之内老鸟就会铺满地图。",
+          "废料只有 14–17 件、单件 100–250,wiki 原话是『高风险低回报,几乎不值得来搜刮』——除非你是来看老鸟或拿成就的。",
+          "天气池只有 Foggy 和 Eclipsed,Eclipsed 等于开局就和成群老鸟同台,别落。"
+        ],
+        "scavenging": [
+          "室内布局随机(默认 Factory),不背固定路线;囤积虫在这里刷新率很高,捡到的东西很难守住,贵重物到手就回运,别堆在门口。",
+          "时间窗口极短:越晚老鸟越多,搜刮按『一进一出』的小批次执行,不恋战。"
+        ],
+        "evac": [
+          "记住主门在岩台上要跳上跳下,负重撤离时这一下跳跃就是被老鸟点名的窗口,先观察再动。",
+          "老鸟会随时间铺满地图,撤离路线避开开阔地、贴山脊和浅坑走(社区经验,待核)。",
+          "一旦老鸟开始巡逻飞船附近,果断弃货保人,提前升空。"
+        ]
+      },
+      "tips": [
+        "150 的票价买的是『老鸟动物园门票』,刷分请去别的 S 级星。",
+        "想安全观察老鸟机制,Embrion 是最稳定的刷出点,但请空手来。",
+        "囤积虫+老鸟的组合意味着:屋里丢东西、屋外丢命,全程别单走。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Embrion",
+          "revid": 53364,
+          "timestamp": "2026-04-19T01:13:28Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Embrion",
+            "miraheze: Module:Moons/Data/v81",
+            "bilibili cv31058075"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "dine",
+      "moonId": "7",
+      "nameEn": "Dine",
+      "nameZh": "",
+      "aliases": [
+        "7-Dine",
+        "晚餐",
+        "7晚餐",
+        "戴因"
+      ],
+      "tier": "S",
+      "cost": 600,
+      "weatherPool": [
+        "Flooded",
+        "Eclipsed",
+        "Rainy"
+      ],
+      "interiorTypes": {
+        "Mansion": 300,
+        "Factory": 7,
+        "Mineshaft": 17
+      },
+      "scrapCount": {
+        "min": null,
+        "max": null
+      },
+      "scrapValue": {
+        "min": 250,
+        "max": 700
+      },
+      "sizeMultiplier": 1.8,
+      "hasTime": true,
+      "layoutNotes": "Dine 是与 Rend、泰坦并列的三颗雪地卫星之一,全程刮着类似 Foggy 天气但更稀薄的暴风雪,会压低能见度并闷掉语音和怪物声音。主门在飞船舱门正前方略偏右、距离稍远,中间隔着大片崎岖丘陵,最佳路线是穿过地图中央的一道围栏;防火门在出舱后的左手边,比主门更近。注意地表的灯光是死路,不像 Rend 那样指向主门。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "航线费用 600,默认室内是 Mansion(Mineshaft 次之,Factory 极少见),开局先按 Mansion 的搜刮思路配装。",
+          "出舱先定方向:左手边近处是防火门,正前偏右翻过丘陵是主门。暴风雪环境下提前用对讲机约定路线,声音会被风雪闷掉。",
+          "Flooded 天气时开局两个入口都被水淹,水位会像 Adamance 一样随时间退去;主门赶在淹死前还能强行进,防火门带 Jetpack 则全天可达。Eclipsed 直接劝退:开局就刷满夜间怪外加室内怪,wiki 明确不建议降落。"
+        ],
+        "scavenging": [
+          "室内布局每局随机,别背固定路线,靠门牌、转角特征记路并及时回报位置。",
+          "室内最常见的威胁是管家:通常在你运完第一趟废料时,设施里已经刷出好几只,二次进门前先听吸尘器声、人多结伴压制。",
+          "单件废料价值区间 250–700,Mansion 图优先扫卧室、书房这类家具密集区(社区经验,待核)。"
+        ],
+        "evac": [
+          "无眼狗和森林守护者是 Dine 夜间最常见的组合,多只同刷时非常致命;傍晚起夜间刷怪持续走高、午夜见顶,最后一趟要提早。",
+          "撤离时贴着丘陵地形潜行,保留体力条,被森林守护者锁定后利用山体快速切角甩掉追击。",
+          "记住地表灯光是死路,别在暴风雪里跟着灯走,认准飞船方向。"
+        ]
+      },
+      "tips": [
+        "暴风雪会同时削弱视野和听觉,组队时对讲机比喊话可靠。",
+        "Eclipsed 的 Dine 开局即刷满夜怪+室内怪,除非刷怪押注,否则直接换星。",
+        "Flooded 时如果只想抢防火门,Jetpack 可以无视水位全天进出。",
+        "地表有 1 枚数据芯片:在防火门上方的岩台上(Desmond 日志)。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Dine",
+          "revid": 53351,
+          "timestamp": "2026-04-19T01:11:45Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Dine",
+            "miraheze: Module:Moons/Data/v81",
+            "bilibili cv31058075"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ],
+      "dataNotes": "wiki Module:Moons/Data/v81 原始值 minScrap=200/maxScrap=250,与全部其他卫星量级(13-45)明显不符,疑似上游数据异常;按校验闸规则不渲染,标待核。原始值与 revid 见 evidence。"
+    },
+    {
+      "slug": "titan",
+      "moonId": "8",
+      "nameEn": "Titan",
+      "nameZh": "泰坦",
+      "aliases": [
+        "8-Titan",
+        "8泰坦"
+      ],
+      "tier": "S+",
+      "cost": 700,
+      "weatherPool": [
+        "Stormy",
+        "Foggy",
+        "Eclipsed"
+      ],
+      "interiorTypes": {
+        "Factory": 300,
+        "Mansion": 57,
+        "Mineshaft": 115
+      },
+      "scrapCount": {
+        "min": 28,
+        "max": 32
+      },
+      "scrapValue": {
+        "min": 300,
+        "max": 700
+      },
+      "sizeMultiplier": 2.2,
+      "hasTime": true,
+      "layoutNotes": "泰坦是大雪封盖的小型地表+全游戏最大室内(尺寸系数 2.2)的组合:飞船舱门正对两组多段楼梯,爬上去就是主门;另一组楼梯更快通向防火门,而防火门和主门共享同一个平台,两边楼梯都能互通。地表极小,怪和人挤在同一块区域。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "航线费用 700,S+ 级。默认室内 Factory(Mineshaft、Mansion 也可能),废料 28–32 件、单件 300–700,是高风险高回报的冲分图。",
+          "Jetpack 可以直接飞越楼梯抵达主门,甚至在飞船未落地时就跳出舱门点火滑过去——但姿态控制不好会摔伤甚至摔死,wiki 原文明确提示风险。",
+          "Stormy/Foggy/Eclipsed 都可能出现;地表小意味着坏天气的惩罚被放大,Eclipsed 慎落。"
+        ],
+        "scavenging": [
+          "室内是全游戏最大且每局随机,千万别深入到记不住回头路的位置——在泰坦迷路是最糟的事,wiki 原话是『见好就收』。",
+          "小丑盒子是泰坦最常见的室内怪,一旦在关键通道开摇就只能提前撤,所以行程要短而高效,先扫近门区域。",
+          "运货别走楼梯:把废料直接从平台边缘扔下去,落点接近飞船;架一把 Extension ladder 能让东西直接掉到地面而不是卡在二层平台。"
+        ],
+        "evac": [
+          "无眼狗和森林守护者会爬楼梯,主门口和防火门口都不是安全区,严禁在门口逗留挂机。",
+          "人可以不掉血速降:踩楼梯扶手→墙沿小台阶→二层平台→下段楼梯扶手落地,比绕楼梯快得多(wiki 路线注记)。",
+          "大地利维坦虽会刷但威胁很小,飞船离入口近,直线冲刺即可;真正要盯防的是守在楼梯上的狗和巨人。"
+        ]
+      },
+      "tips": [
+        "夜间刷怪曲线和 Dine 几乎一样,但全部挤在迷你地表上,体感密度远高于其他星。",
+        "室内刷怪从早上就开始爬升,泰坦没有真正的『安全时段』,落地即开工。",
+        "扔货下楼+一人地面接驳的分工,比全员爬楼梯效率高一倍以上(社区经验,待核)。",
+        "地表有 1 枚数据芯片:防火门左侧的岩台上(辞职信日志)。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Titan",
+          "revid": 53359,
+          "timestamp": "2026-04-19T01:12:26Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Titan",
+            "miraheze: Module:Moons/Data/v81",
+            "bilibili cv31058075"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "adamance",
+      "moonId": "20",
+      "nameEn": "Adamance",
+      "nameZh": "",
+      "aliases": [
+        "20-Adamance"
+      ],
+      "tier": "B",
+      "cost": 0,
+      "weatherPool": [
+        "Stormy",
+        "Eclipsed",
+        "Rainy",
+        "Flooded",
+        "Foggy"
+      ],
+      "interiorTypes": {
+        "Factory": 300,
+        "Mansion": 8,
+        "Mineshaft": 48
+      },
+      "scrapCount": {
+        "min": 14,
+        "max": 17
+      },
+      "scrapValue": {
+        "min": 300,
+        "max": 700
+      },
+      "sizeMultiplier": 1.18,
+      "hasTime": true,
+      "layoutNotes": "Adamance 是红叶森林卫星,地形以陡峭的深谷与高山为主。主入口在飞船对面的悬崖上方,短途爬坡即到;图上有两座桥:船到主入口的长桥走普通危桥机制,通往防火门的短桥固定在第 4 次落脚时断裂。主入口右侧有一处永久流沙坑,谷地尽头有一间开局上锁的小屋(需 Key 或 Lockpicker)。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "出船对面爬一小段崖坡就是主入口(wikitext);但船和主入口附近都是窄路,极易被地表生物堵死,赶时间时反而危险。",
+          "通防火门的短桥按次数断(第 4 次落脚必塌,原地跳也计数,wikitext)——全队过桥前先数好剩余次数,或干脆留给回程用。",
+          "下坡贴着山体走可以快速安全降落;绕开谷地的替代路线是小屋后山丘左侧最缓的坡(wikitext)。"
+        ],
+        "scavenging": [
+          "废料 14–17 件、单件 300–700(JSON),免费图里价值上限最高的一档,但 wikitext 称其『可以说是最危险的免费卫星』,收益匹配风险。",
+          "室内权重 Factory 300 / Mineshaft 48 / Mansion 8(JSON),以工厂为主偶有矿井;布局种子随机。",
+          "带上 Key 或 Lockpicker 开谷地尽头的小屋,里面架子上有一份日志芯片(wikitext);Cadaver Growth 在本图利用特殊机制开局必刷一只(wikitext 注释),进屋区域前先扫描。"
+        ],
+        "evac": [
+          "回程是本图最大死点:窄路+崖壁让地表怪很容易把你和船隔开(wikitext);有 Teleporter 的队伍优先给本图配(巴哈攻略同建议,社区经验,待核)。",
+          "主入口右侧的永久流沙坑是固定危害(wikitext),夜里慌不择路时千万别从那一侧抄近道。",
+          "Flooded 天气开局即最高水位、白天逐渐退水(wikitext)——和别的图相反:早上必须靠两座桥进出,下午谷地才能通行。"
+        ]
+      },
+      "tips": [
+        "天气池五种全有(JSON:Stormy/Eclipsed/Rainy/Flooded/Foggy);巴哈攻略直言 Foggy 在本图『基本玩不了』(社区经验,待核),选日子时优先避开 Foggy/Eclipsed。",
+        "本图什么怪都可能出(巴哈称『生物大百科』,与 wikitext 实体表方向一致),不要按单一怪种备装,Shovel+手电是底配。",
+        "免费图毕业局:建议打完 Offense/March 再来,把它当 Rend 前的压力测试。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Adamance",
+          "revid": 54657,
+          "timestamp": "2026-05-09T10:27:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze wikitext: Adamance(Environment/Strategy/Weather/Data chips 章节及 notes)",
+            "moons.json v81 / entities.json",
+            "巴哈姆特 Lethal Company 板【攻略】星球篇 forum.gamer.com.tw/C.php?bsn=79130&snA=2"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "offense",
+      "moonId": "21",
+      "nameEn": "Offense",
+      "nameZh": "",
+      "aliases": [
+        "21-Offense",
+        "前线",
+        "21前线"
+      ],
+      "tier": "B",
+      "cost": 0,
+      "weatherPool": [
+        "Rainy",
+        "Stormy",
+        "Eclipsed",
+        "Flooded",
+        "Foggy"
+      ],
+      "interiorTypes": {
+        "Factory": 64,
+        "Mansion": 4,
+        "Mineshaft": 300
+      },
+      "scrapCount": {
+        "min": 14,
+        "max": 19
+      },
+      "scrapValue": {
+        "min": 100,
+        "max": 250
+      },
+      "sizeMultiplier": 1.25,
+      "hasTime": true,
+      "layoutNotes": "Offense 是陡坡密布的沙漠卫星,废弃机械遍地,地图中央一座大型脚手架连接两半区域。主入口要穿过岩石间的窄缝、沿窄坡上山右转、再从右侧略向下的爬梯进入。它是唯一防火门不易到达的卫星:要么用 Extension Ladder,要么在飞船降落阶段跳上横贯地图的大管道——管道从防火门一路通到船。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "出船微右转直线走到岩石区,穿小口贴左侧岩壁,沿窄路上坡右转,爬梯就在右侧偏下(wikitext 原版路线)。",
+          "岩石开口处有怪堵路时,可爬右侧大石跳跃上脚手架绕过(wikitext)。",
+          "想吃防火门红利:降落阶段练会跳上大管道,熟练后运货效率和安全性大幅提升。"
+        ],
+        "scavenging": [
+          "废料 14–19 件(JSON),是免费图中件数上限最高的,值得多跑一两轮。",
+          "注意:v81 室内权重 Mineshaft 300 / Factory 64 / Mansion 4(JSON),大概率进矿井——备好照明和体力管理,矿井纵深大、搬运耗时。",
+          "打击者(powerLevel 3)和地堡蜘蛛是最常见室内怪(wikitext),两者都能被 Shovel 几下敲死,务必人手一把。"
+        ],
+        "evac": [
+          "管道就是撤离生命线:从防火门沿管道直达船,Eclipsed 时只要不掉下来几乎可以无视夜间生物(wikitext 明确)。",
+          "Flooded 天气水位从地下慢慢涨,约 3pm 淹没地表(wikitext)——当天务必走管道线并提前收队。",
+          "无眼狗是地表头号威胁,刷得早、刷得多(wikitext);狒狒鹰多时狗鹰互殴,可借机溜走。"
+        ]
+      },
+      "tips": [
+        "Eclipsed 时开局即刷至少 4 只夜间+4 只室内生物(wikitext),没有管道跳跃熟练度就别选这天来。",
+        "本图不刷电路蜂群和漫游蝗虫、四翼鸟必刷(wikitext)——没有蜂巢外快,收入全靠室内,规划好往返趟数。",
+        "夜间刷怪 2pm 起持续走高(wikitext),没有『安全早晨拖延期』的资本,落地就开工。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Offense",
+          "revid": 53338,
+          "timestamp": "2026-04-19T01:05:46Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze wikitext: Offense(Environment/Strategy/Weather/Entities 章节)",
+            "moons.json v81 / entities.json",
+            "巴哈姆特 Lethal Company 板【攻略】星球篇 forum.gamer.com.tw/C.php?bsn=79130&snA=2"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "experimentation",
+      "moonId": "41",
+      "nameEn": "Experimentation",
+      "nameZh": "",
+      "aliases": [
+        "41-Experimentation",
+        "实验室",
+        "41实验室"
+      ],
+      "tier": "D",
+      "cost": 0,
+      "weatherPool": [
+        "Rainy",
+        "Stormy",
+        "Foggy",
+        "Flooded",
+        "Eclipsed"
+      ],
+      "interiorTypes": {
+        "Factory": 300,
+        "Mansion": 1,
+        "Mineshaft": 3
+      },
+      "scrapCount": {
+        "min": 8,
+        "max": 12
+      },
+      "scrapValue": {
+        "min": 80,
+        "max": 450
+      },
+      "sizeMultiplier": 1,
+      "hasTime": true,
+      "layoutNotes": "Experimentation 是沙漠卫星、起始星球,地图上散布各类建筑。主入口所在大厅前方有一条架在高台上的铁轨横贯地图;防火门在主入口左侧、上一段楼梯即到。从防火门处有一根管道一路通回飞船着陆点,可作运货通道。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "下船后直线走向铁轨的爬梯,上铁轨后直行就是主入口,这是 wikitext 给出的最优路线。",
+          "爬梯有概率被随机刷出的大石头堵住;遇到就向右绕,找另一架爬梯上去。",
+          "主入口大厅的大卷帘门会随机半落,触发次数多了会完全关死——届时全队改走左侧楼梯上的防火门。"
+        ],
+        "scavenging": [
+          "废料 8–12 件、单件价值 80–450(JSON 数据),量少价低,目标是快进快出冲早期配额,不恋战。",
+          "室内权重 Factory 300 / Mineshaft 3 / Mansion 1(JSON),基本必进工厂;但内部布局随种子随机,靠扫描和记门别背路线。",
+          "室内常见缠缚蚤和地堡蜘蛛,带一把 Shovel 能快速敲掉扒脸的缠缚蚤,蜘蛛绕开走即可。"
+        ],
+        "evac": [
+          "回程从铁轨两侧直接跳下都不掉血(wikitext 明确),不必找爬梯,省时间。",
+          "夜间生物约 5pm 才开始刷、10pm 后激增(wikitext 刷怪曲线),尽量在 10pm 前收队。",
+          "夜里遇到无眼狗(hp 12)别跑直线发声,蹲走回船;若刷出老鸟或森林守护者,地表掩体少,可沿防火门旁的管道走回船。"
+        ]
+      },
+      "tips": [
+        "天气池含 Rainy/Stormy/Foggy/Flooded/Eclipsed(JSON),其中 Eclipsed 最危险,新手日可直接重选。",
+        "一人引开蜂群、一人搬蜂巢是常用的低风险快钱打法(巴哈攻略推荐,社区经验);搬巢前清空负重。",
+        "多人局务必有人带 Shovel,缠缚蚤扒脸时队友一铲即救。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Experimentation",
+          "revid": 53725,
+          "timestamp": "2026-04-20T00:30:37Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze wikitext: Experimentation(Environment/Strategy/Entities 章节)",
+            "moons.json v81 / entities.json(TDD 校验数值)",
+            "巴哈姆特 Lethal Company 板【攻略】星球篇 forum.gamer.com.tw/C.php?bsn=79130&snA=2"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "liquidation",
+      "moonId": "44",
+      "nameEn": "Liquidation",
+      "nameZh": "",
+      "aliases": [],
+      "tier": "S++",
+      "cost": null,
+      "weatherPool": [
+        "Stormy",
+        "Eclipsed",
+        "Rainy",
+        "Flooded"
+      ],
+      "interiorTypes": {
+        "Factory": 118,
+        "Mansion": 300
+      },
+      "scrapCount": {
+        "min": 28,
+        "max": 45
+      },
+      "scrapValue": {
+        "min": 300,
+        "max": 700
+      },
+      "sizeMultiplier": 1.6,
+      "hasTime": false,
+      "layoutNotes": "按 miraheze v81 的说明,Liquidation 只存在于游戏源文件中的未完成定义:没有地表地图、缺少终端定义,正式版里无法 ROUTE 前往或着陆。终端档案描述它曾因工业资源被开采,如今大部分被海洋覆盖、无人居住——是一颗『海洋卫星』的雏形。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "当前(v81)无法着陆:这是源文件里的 WIP 卫星,本条目仅作前瞻档案,正式攻略等它真正实装后更新。",
+          "从文件数据看定位极高:S++ 级、废料 28–45 件、单件 300–700,室内权重 Mansion 高于 Factory,天气池含 Stormy/Eclipsed/Rainy/Flooded。"
+        ],
+        "scavenging": [
+          "文件中尚未配置任何夜间/日间怪物表,室内体验无从谈起;一切『Liquidation 打法』都属于猜测,本站不编。"
+        ],
+        "evac": [
+          "无可执行内容;若未来以海洋地形实装,涨水/涉水机制大概率是撤离的核心变量(推断,待实装核验)。"
+        ]
+      },
+      "tips": [
+        "看到第三方攻略宣称『Liquidation 实战路线』,先核对游戏版本——v81 内根本去不了。",
+        "数据面(S++ + 最高废料上限 45)说明它被设计成 Artifice 同级或更高的终局图,值得持续关注版本更新。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Liquidation",
+          "revid": 53369,
+          "timestamp": "2026-04-19T01:14:38Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Liquidation",
+            "miraheze: Moons",
+            "miraheze: Module:Moons/Data/v81"
+          ],
+          "crossChecked": false,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "vow",
+      "moonId": "56",
+      "nameEn": "Vow",
+      "nameZh": "",
+      "aliases": [
+        "56-Vow",
+        "誓言",
+        "56誓言"
+      ],
+      "tier": "C",
+      "cost": 0,
+      "weatherPool": [
+        "Flooded",
+        "Stormy",
+        "Foggy",
+        "Eclipsed"
+      ],
+      "interiorTypes": {
+        "Factory": 300,
+        "Mansion": 3,
+        "Mineshaft": 192
+      },
+      "scrapCount": {
+        "min": 12,
+        "max": 15
+      },
+      "scrapValue": {
+        "min": 300,
+        "max": 700
+      },
+      "sizeMultiplier": 1.15,
+      "hasTime": true,
+      "layoutNotes": "Vow 是茂密的森林卫星,丘陵起伏、地标稀少容易迷路。主入口前是一条深谷,由两座桥连通:一座是实心水坝,防火门就在坝脚;另一座是脆弱的金属危桥,承重过大会塌。着陆区到主入口的路:出船右转直线走向危桥。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "出船右转直奔危桥是最快路线(wikitext);着陆区缺地标,认不清方向就多按扫描。",
+          "危桥通常只承得住 1 名员工;多人同行或搬重物时改走水坝(wikitext 明确)。"
+        ],
+        "scavenging": [
+          "废料 12–15 件但单件 300–700(JSON),性价比靠『少拿精拿』:优先高价值大件。",
+          "室内权重 Factory 300 / Mineshaft 192 / Mansion 3(JSON)——进矿井的概率非常高,记得多带照明;B 站 cv31058075 也提到 Vow 高概率矿洞地形。",
+          "蕨影(powerLevel 3,JSON)是本图最常见室内怪:别单刷,结伴互相盯背后;被盯上时短暂对视逼退、再缓慢退离,千万别持续瞪它也别背身跑死路。"
+        ],
+        "evac": [
+          "傍晚起地表必须『短直快』:wikitext 明确入夜后几乎必有至少一只森林守护者(hp 38),且密林极易迷路。",
+          "夜间生物约 2pm 就开始刷、9pm 后陡增(wikitext)——这是免费图里最早的之一,建议比别的图早收队。",
+          "翡奥帕与森林守护者夜间刷率都超 40%(wikitext):看到巨人剪影立刻进树丛或建筑断视线,不要在开阔地直线跑。"
+        ]
+      },
+      "tips": [
+        "天气池 Flooded/Stormy/Foggy/Eclipsed(JSON):Flooded 会让深谷与防火门线路报废、淹死率激增(巴哈攻略同样点名),建议跳过。",
+        "巨型啄木鸟(powerLevel 4,JSON)在 Vow 比任何图都常见(wikitext),白天听到巨鸟叫别靠近巢区。",
+        "远离船的蜂巢/鸟蛋搜刮只在清晨做(wikitext 明确),中午以后不再深入远区。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Vow",
+          "revid": 53334,
+          "timestamp": "2026-04-19T01:05:14Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze wikitext: Vow(Environment/Strategy/Entities 章节)",
+            "moons.json v81 / entities.json",
+            "巴哈姆特 Lethal Company 板【攻略】星球篇 forum.gamer.com.tw/C.php?bsn=79130&snA=2",
+            "bilibili 专栏 cv31058075(印证 Vow 高概率矿洞地形)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "march",
+      "moonId": "61",
+      "nameEn": "March",
+      "nameZh": "",
+      "aliases": [
+        "61-March",
+        "行军",
+        "61行军"
+      ],
+      "tier": "B",
+      "cost": 0,
+      "weatherPool": [
+        "Stormy",
+        "Foggy",
+        "Eclipsed"
+      ],
+      "interiorTypes": {},
+      "scrapCount": {
+        "min": 13,
+        "max": 17
+      },
+      "scrapValue": {
+        "min": 300,
+        "max": 700
+      },
+      "sizeMultiplier": 1.75,
+      "hasTime": true,
+      "layoutNotes": "March 是深沼泽地貌的大图(sizeMultiplier 1.75,JSON),地表布满水坑,深处可溺水;有两道瀑布,其中一道遮着一个防火门并配有木楼梯。全游戏唯一拥有三个防火门的卫星。主入口沿船前方的木桥直走即到,桥上有缺口,踩空有溺水风险。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "出船沿正前方木桥直走到主入口,注意桥上的缺口(wikitext 明确,踩空可能溺水)。",
+          "把三个防火门都摸清是本图核心功课(wikitext):它们既是搬货捷径也是逃生口;巴哈楼层补充三门大致分布在船尾两侧与正门反方向,首次来建议白天专门探一轮。"
+        ],
+        "scavenging": [
+          "废料 13–17 件、单件 300–700(JSON),配合三防火门多线搬运,产出效率在免费图里很高。",
+          "室内必为 Factory(wikitext Trivia:March 不支持 Mansion 和 Mineshaft),但工厂内部依旧种子随机,别背固定路线。",
+          "室内常见打击者、回水黏鱼、地堡蜘蛛(wikitext),带 Shovel 能解决前两者;水声环境下更要靠扫描防身后。",
+          "全游戏蜂巢刷新率最高的图(wikitext):会搬巢就是稳定外快,但空间受限、引蜂风险比别的图高,新手别贪。"
+        ],
+        "evac": [
+          "夜间主力是森林守护者和无眼狗(wikitext);本图回船岔路多,利用分支路线绕开守护者视线比直线狂奔安全。",
+          "主入口附近缺掩护、容易被怪堵门(巴哈攻略,社区经验,待核),出门前先扫描再露头。",
+          "夜间刷怪 2pm 起持续走高、9–11pm 有一波尖峰(wikitext),最晚 9pm 前结束最后一趟深入。"
+        ]
+      },
+      "tips": [
+        "天气池只有 Stormy/Foggy/Eclipsed(JSON),不支持 Rainy(wikitext:常年阴雨观感但无降雨天气);Foggy 在这张多水坑大图上极易踩深水,建议跳过。",
+        "深水坑分深浅(wikitext),搬重物时绕水走,别为抄近路赌水深。",
+        "图大(1.75 倍)意味着步行时间贵:出发前在船上规划好『主门进、最近防火门出』的单向流。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "March",
+          "revid": 53430,
+          "timestamp": "2026-04-19T17:43:05Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze wikitext: March(Environment/Strategy/Entities/Trivia 章节)",
+            "moons.json v81 / entities.json",
+            "巴哈姆特 Lethal Company 板【攻略】星球篇 forum.gamer.com.tw/C.php?bsn=79130&snA=2(含楼层关于三防火门方位的问答)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "artifice",
+      "moonId": "68",
+      "nameEn": "Artifice",
+      "nameZh": "",
+      "aliases": [
+        "隐藏_67-Artifice",
+        "Art"
+      ],
+      "tier": "S++",
+      "cost": 1500,
+      "weatherPool": [
+        "Stormy",
+        "Eclipsed",
+        "Rainy",
+        "Flooded",
+        "Foggy"
+      ],
+      "interiorTypes": {
+        "Factory": 64,
+        "Mansion": 151,
+        "Mineshaft": 213
+      },
+      "scrapCount": {
+        "min": 26,
+        "max": 31
+      },
+      "scrapValue": {
+        "min": 300,
+        "max": 700
+      },
+      "sizeMultiplier": 1.8,
+      "hasTime": true,
+      "layoutNotes": "Artifice 是 S++ 隐藏卫星,不出现在终端 MOONS 列表里,需要直接输入名字订航线(线索画在 Adamance 小屋墙上)。地表荒废空旷:飞船降落在相对主区域的高坡上,回船要跑上坡;场上有四座仓库(一座进不去),每座可用内部开关启闭卷帘门;主门右侧(防火门正对方向)有一间墙体破损的小屋,可以绕过围栏进出。右侧另有一间带后门密道的棚屋可作藏身点。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "航线费用 1500,废料 26–31 件、总价值 300–700;S++ 风险等级,落地即按最高威胁标准行动,优先确认撤离路线再分头搜刮。",
+          "落地先确认老鸟位置:它们可能直接刷在仓库里,趁其在内拉闸关门可以整只关押;wiki 也提到可以反过来留一只老鸟在外游荡,让它替你清掉森林守护者、狒狒鹰和无眼狗。",
+          "v81 室内权重 Mineshaft 最高、Mansion 次之、Factory 最低,落地后先报室内类型再分工。"
+        ],
+        "scavenging": [
+          "室内布局随机,不押固定路线;胡桃夹子是这里最大的室内威胁,射程远、伤害高,听到踏步声先躲视线再绕行,多只同场时考虑放弃该区域。",
+          "幽灵小女孩在这里也会出现,且比她常驻的低级卫星更难处理;被她盯上的人尽快说明情况、贴队友行动。",
+          "仓库本身可搜也可利用:最近的仓库是带办公室的『医院』,对面是带天桥的大空库,最远一座常年有雾,要从后门、邻库天桥或侧面楼梯进。"
+        ],
+        "evac": [
+          "回船是上坡路,负重冲刺最容易被夜间怪截杀,运货班次要赶在天黑前压缩完毕。",
+          "正门进出风险高时,走主门右侧破墙小屋绕过围栏,慢但安全(wiki 原文路线)。",
+          "把追兵引进仓库再拉闸关门,是 Artifice 独有的脱身手段,对老鸟和其他怪都适用。"
+        ]
+      },
+      "tips": [
+        "天气池含 Stormy/Eclipsed/Rainy/Flooded/Foggy;日蚀(Eclipsed)天的户外威胁密度极高,稳妥起见可直接换星(社区经验,待核)。",
+        "棚屋后部有通到围栏外的暗口,被巨人追时可当应急通道。",
+        "留一只老鸟当『保镖』清野是高级队的玩法,新队还是优先关门处理。",
+        "地表有 1 枚数据芯片:离主门最近的左侧仓库后面(Work 日志)。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Artifice",
+          "revid": 53368,
+          "timestamp": "2026-04-19T01:13:58Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Artifice",
+            "miraheze: Module:Moons/Data/v81",
+            "bilibili cv31058075"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "gordion",
+      "moonId": "71",
+      "nameEn": "Gordion",
+      "nameZh": "",
+      "aliases": [
+        "公司大楼",
+        "公司驻地",
+        "公司",
+        "71-The Company building",
+        "戈尔迪翁"
+      ],
+      "tier": "Safe",
+      "cost": 0,
+      "weatherPool": [],
+      "interiorTypes": {},
+      "scrapCount": {
+        "min": 5,
+        "max": 11
+      },
+      "scrapValue": {
+        "min": 100,
+        "max": 250
+      },
+      "sizeMultiplier": 0.35,
+      "hasTime": false,
+      "layoutNotes": "Gordion 是公司总部所在地,终端里列作『The Company building』,直接输 gordion 反而无法 ROUTE/INFO。地图极小(尺寸系数 0.35):一个主平台、若干集装箱和一面墙,再加上主平台下方放着钻机的下层空间,入口是订单投递点附近的舱口。没有昼夜循环,也没有天气。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "这里不是搜刮星,是卖货点:把废料卖给公司换信用点、顺便领取商店订单。注意只要卖了东西,往返一趟就会消耗一天,卖货日要计入配额倒计时。",
+          "配额最后期限是三天;提前达成可以早点来卖,卖完多余的废料还能留给下一轮配额(前提是下一颗星至少活着回来一个人)。"
+        ],
+        "scavenging": [
+          "全图唯一的『居民』是处理收购的公司怪(社区俗称 Jeb),没有其他怪物;主平台下层尽头的栈桥上有一枚数据芯片(Hiding 日志),顺路可取。",
+          "钻机舱口可以下去参观:有双 apparatus 插槽、数据芯片槽和标着 BATTERY 的插口,但 v81 尚无任何功能,纯彩蛋,别浪费时间研究。"
+        ],
+        "evac": [
+          "货放上柜台、确认结算后就走,不要在柜台前逗留或反复骚扰柜台后的东西——(社区经验,待核)频繁敲铃/久留可能触发公司怪攻击。",
+          "卖货动线提前分工:一人递货、其余人搬运排队,缩短全员在柜台区的总停留时间(社区经验,待核)。"
+        ]
+      },
+      "tips": [
+        "提前完成配额再来卖,可以吃到 Overtime Bonus:卖得越早、超额越多,加班奖励越高。",
+        "对讲机在这颗星上有一个专属彩蛋,闲下来可以试试。",
+        "终端要用『The Company building』对应的编号路由,输 gordion 是无效指令。",
+        "这里安全 ≠ 免费:每次卖货行程消耗一天配额时间,别把『回公司』当成喘息日随便用。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Gordion",
+          "revid": 53570,
+          "timestamp": "2026-04-19T23:32:49Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze: Gordion",
+            "miraheze: Quota",
+            "miraheze: Moons",
+            "bilibili cv31058075"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "rend",
+      "moonId": "85",
+      "nameEn": "Rend",
+      "nameZh": "",
+      "aliases": [
+        "85-Rend",
+        "撕裂",
+        "85撕裂",
+        "瑞德"
+      ],
+      "tier": "A",
+      "cost": 550,
+      "weatherPool": [
+        "Stormy",
+        "Eclipsed"
+      ],
+      "interiorTypes": {
+        "Mansion": 300,
+        "Factory": 5,
+        "Mineshaft": 28
+      },
+      "scrapCount": {
+        "min": 18,
+        "max": 26
+      },
+      "scrapValue": {
+        "min": 300,
+        "max": 700
+      },
+      "sizeMultiplier": 1.8,
+      "hasTime": true,
+      "layoutNotes": "Rend 是付费雪地卫星(航线 550 信用点,JSON),常年暴风雪:视野受限且会闷掉语音和怪物音效。从着陆点到主入口路程很长,但沿途设有一排灯柱直通主入口,跟灯走就不会迷路。防火门不需要 Extension Ladder 也能到,但位置很远,回程极易找不到船。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "落地后认准灯柱线,全程跟灯走到主入口(wikitext);暴风雪里脱离灯线就等于赌命。",
+          "留一人守船配 Walkie-talkie(wikitext 建议):豪宅内部难走+地表风雪,需要船上雷达报点和回程引导。",
+          "随时报时间:风雪会掩盖夜间生物的脚步声(wikitext),不能靠听觉判断收队时机。"
+        ],
+        "scavenging": [
+          "废料 18–26 件、单件 300–700(JSON),一趟的期望收入远超免费图,值 550 的门票。",
+          "室内权重 Mansion 300 / Mineshaft 28 / Factory 5(JSON),默认进豪宅(wikitext;B 站 cv31058075 同样印证 Rend 高概率洋房地形);豪宅布局种子随机且易迷路,进门就用喷漆/废料标记来路。",
+          "胡桃夹子是最常见室内怪、其次是小丑盒子(wikitext):胡桃夹子可以用正确操作击杀,小丑盒子只能避——听到摇柄音乐就立即向出口撤,别恋货。"
+        ],
+        "evac": [
+          "防火门虽可达但极远,且回程在风雪里极易丢失船的方向(wikitext)——没把握就坚持主入口灯线进出。",
+          "夜间约 3pm 开始刷怪(wikitext),无眼狗+森林守护者是地表主力;风雪里它们出现得比你听到的更近,回程蹲走沿灯柱。",
+          "Eclipsed 开局即至少 3 只夜间+3 只室内生物(wikitext);本图天气池只有 Stormy/Eclipsed(JSON),Eclipsed 日直接不去。"
+        ]
+      },
+      "tips": [
+        "本图不刷白天生物(wikitext),早晨地表是全天唯一的安全窗口,把远途搬运全压在上午。",
+        "巴哈攻略认为 Rend 是三张付费雪图里最适合试水的一张(同时在场怪量最少、好逃跑)(巴哈攻略,已核)。",
+        "豪宅内 Shovel 对小丑盒子无效、对胡桃夹子高风险:这图的『武器』是信息——多扫描、多报点、快进快出。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Rend",
+          "revid": 53348,
+          "timestamp": "2026-04-19T01:10:44Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze wikitext: Rend(Environment/Strategy/Weather/Entities 章节)",
+            "moons.json v81 / entities.json",
+            "巴哈姆特 Lethal Company 板【攻略】星球篇 forum.gamer.com.tw/C.php?bsn=79130&snA=2",
+            "bilibili 专栏 cv31058075(印证 Rend 航线费用与豪宅地形倾向)"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "assurance",
+      "moonId": "220",
+      "nameEn": "Assurance",
+      "nameZh": "",
+      "aliases": [
+        "220-Assurance",
+        "保护区",
+        "220保护区"
+      ],
+      "tier": "C",
+      "cost": 0,
+      "weatherPool": [
+        "Rainy",
+        "Stormy",
+        "Flooded",
+        "Eclipsed",
+        "Foggy"
+      ],
+      "interiorTypes": {
+        "Factory": 300,
+        "Mansion": 3,
+        "Mineshaft": 40
+      },
+      "scrapCount": {
+        "min": 13,
+        "max": 16
+      },
+      "scrapValue": {
+        "min": 100,
+        "max": 250
+      },
+      "sizeMultiplier": 1,
+      "hasTime": true,
+      "layoutNotes": "Assurance 是多丘陵的沙漠卫星,巨石遍布,岩石上架着大型机械与管道。去主入口要翻飞船左侧那座缓坡小山;防火门藏在一根大管道末端右侧——从船前方脚手架里的高爬梯爬上去、再从大石跳上管道即达。",
+      "image": null,
+      "imageW": null,
+      "imageH": null,
+      "annotations": [],
+      "strategy": {
+        "landing": [
+          "最优路线:出船向左上缓坡直行到主入口;或在飞船降落阶段直接跳上左边大石抄近路(wikitext)。",
+          "想开防火门线:爬船前脚手架内的长爬梯→从大石跳上大管道→沿管道走到末端右侧就是防火门。"
+        ],
+        "scavenging": [
+          "废料 13–16 件、价值 100–250(JSON),是三张免费新手图里量最足的,适合快速刷配额。",
+          "室内权重 Factory 300 / Mineshaft 40 / Mansion 8(JSON),以工厂为主但偶进矿井;布局种子随机,进门先记主门方向。",
+          "缠缚蚤和囤积虫是室内最常见威胁(wikitext),都怕 Shovel;囤积虫抢了东西会搬回巢,找到虫巢常能一次拿回一堆。"
+        ],
+        "evac": [
+          "回程不能原路翻山——山另一面太陡爬不上去,要绕山走(wikitext 明确)。",
+          "夜间约 3pm 就开始刷怪、10pm 后激增(wikitext),比 Experimentation 早,收队节奏要提前。",
+          "夜里大地利维坦(最多 3 只,JSON)+无眼狗是致命组合:听到地鸣立刻变向跑,对狗则蹲走禁声。"
+        ]
+      },
+      "tips": [
+        "wikitext 明确不建议 Eclipsed 天气来——蚯蚓和狗同刷概率都被拉高,可团灭整队。",
+        "巴哈攻略印证:本图防火门偏难找,第一次来建议先白天走一遍管道路线再决定用不用。",
+        "小图+防火门可达,适合双人快速轮换:一人室内递货到防火门,一人沿管道运回船。"
+      ],
+      "updatedAt": "2026-06-07",
+      "evidence": [
+        {
+          "source": "miraheze",
+          "page": "Assurance",
+          "revid": 53328,
+          "timestamp": "2026-04-19T01:04:09Z"
+        },
+        {
+          "source": "miraheze",
+          "page": "Module:Moons/Data/v81",
+          "revid": 44730,
+          "timestamp": "2026-04-09T18:41:44Z"
+        },
+        {
+          "source": "content",
+          "refs": [
+            "miraheze wikitext: Assurance(Environment/Strategy/Entities 章节)",
+            "moons.json v81 / entities.json",
+            "巴哈姆特 Lethal Company 板【攻略】星球篇 forum.gamer.com.tw/C.php?bsn=79130&snA=2"
+          ],
+          "crossChecked": true,
+          "date": "2026-06-08"
+        }
+      ]
+    }
+  ]
+}

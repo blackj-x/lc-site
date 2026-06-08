@@ -1,0 +1,15 @@
+// Cloudflare Workers 部署配置 —— 纯静态资产模式(无 Worker 脚本)
+// 构建命令 npm run build 产出 dist/,npx wrangler deploy 把 dist/ 作为静态站发布
+{
+  "name": "lc-site",
+  "compatibility_date": "2026-06-06",
+  "assets": {
+    "directory": "./dist",
+    // 404 时返回构建出的 /404.html
+    "not_found_handling": "404-page"
+  },
+  // 正式域名 —— metaup.pro 托管在本 CF 账号,custom_domain 自动建 DNS + 签证书
+  "routes": [
+    { "pattern": "lethalcompany.metaup.pro", "custom_domain": true }
+  ]
+}

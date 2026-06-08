@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="sans-serif" role="img" aria-label="弹簧头 抽象示意图">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14161a"/>
+      <stop offset="1" stop-color="#1c2026"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="12" fill="url(#bg)"/>
+  <rect x="0" y="0" width="320" height="6" rx="3" fill="#ff5470" opacity="0.9"/>
+  <rect x="0.75" y="0.75" width="318.5" height="198.5" rx="11" fill="none" stroke="#ff5470" stroke-width="1.5" opacity="0.7"/>
+  <path d="M0 60 L320 60 M0 130 L320 130" stroke="#ff5470" stroke-width="0.5" opacity="0.08"/>
+  <circle cx="20" cy="22" r="4" fill="#ff5470"/>
+  <text x="32" y="26" fill="#ff5470" font-size="10" letter-spacing="2">INDOOR</text>
+
+<path d="M107.0 70.0 L143.0 78.0 L107.0 86.0 L143.0 94.0 L107.0 102.0 L143.0 110.0 L107.0 118.0 L143.0 126.0 L107.0 134.0 L143.0 142.0 L107.0 150.0" stroke="#ff5470" stroke-width="5" fill="none" stroke-linejoin="round"/>
+<rect x="103" y="36" width="44" height="38" rx="6" fill="#ff5470" opacity="0.85"/>
+<circle cx="116" cy="52" r="4" fill="#14161a"/><circle cx="134" cy="52" r="4" fill="#14161a"/>
+<path d="M112 64 L138 64" stroke="#14161a" stroke-width="3"/>
+<rect x="100" y="150" width="50" height="12" rx="3" fill="#ff5470" opacity="0.5"/>
+  <circle cx="22" cy="182" r="3.6" fill="#ff5470" opacity="1"/>
+  <text x="302" y="170" text-anchor="end" fill="#e8e8ec" font-size="17" font-weight="700">弹簧头</text>
+  <text x="302" y="186" text-anchor="end" fill="#8b92a0" font-size="10" font-family="sans-serif">Coil-Head</text>
+</svg>

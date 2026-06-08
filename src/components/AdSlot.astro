@@ -1,0 +1,35 @@
+---
+// 广告位组件：配置了 AdSense 发布商 ID + 对应 slot ID 时渲染真实广告单元,
+// 否则渲染原占位块。容器尺寸固定(在 global.css 的 .ad-top/.ad-side),防 CLS。
+import { SITE } from '../data/site';
+
+export interface Props {
+  /** top = 顶部横幅 728×90,side = 侧栏 300×600 */
+  variant: 'top' | 'side';
+  /** 占位块文案,仅未接入真实广告时显示 */
+  label?: string;
+}
+
+const { variant, label } = Astro.props;
+const slot = SITE.adsenseClient ? SITE.adSlots[variant] : '';
+const placeholder = label ?? (variant === 'top' ? '广告位 · 顶部横幅 728×90' : '广告位 侧栏 300×600');
+---
+{slot ? (
+  <div class={`ad-wrap ad-${variant}`}>
+    <ins
+      class="adsbygoogle"
+      style={variant === 'top' ? 'display:block;width:100%;height:90px' : 'display:inline-block;width:300px;height:600px'}
+      data-ad-client={SITE.adsenseClient}
+      data-ad-slot={slot}
+    ></ins>
+    <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+) : (
+  <div class={`ad ad-${variant}`} set:html={placeholder} />
+)}
+
+<style>
+  /* 真实广告容器沿用占位块的固定尺寸与间距,只去掉占位样式 */
+  .ad-wrap.ad-top { height: 90px; margin: 8px 0 28px; overflow: hidden; }
+  .ad-wrap.ad-side { height: 600px; position: sticky; top: 84px; }
+</style>

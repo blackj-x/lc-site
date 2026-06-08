@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "source": "lethal.miraheze.org MediaWiki API(浏览器辅助抓取,agent 直连 403)",
+    "harvestedAt": "2026-06-07",
+    "totalWikiPages": 1107,
+    "zhCnPairCount": 89,
+    "notes": [
+      "map 为 89 对官方 en→zh-cn displaytitle;值等于英文或带 /zh-cn 后缀的 = 官方未翻译,需社区译名补位",
+      "卫星(Moons)官方 zh-cn 基本未翻译标题,中文社区习惯用编号叫法(如 220-Assurance),待社区采集确认",
+      "cats 来自 Category 成员,Items 含 Tools 部分重叠,合并时去重"
+    ]
+  },
+  "map": {
+    "Main Page": "主页", "Entities": "实体", "Moons": "星球", "Experimentation": "Experimentation",
+    "Interiors": "内部结构", "Coil-Head": "弹簧头", "Assurance": "Assurance", "Bracken": "蕨影",
+    "Ghost Girl": "幽灵小女孩", "Jester": "小丑盒子", "Forest Keeper": "森林守护者", "Bunker Spider": "地堡蜘蛛",
+    "Eyeless Dog": "无眼狗", "Gordion": "Gordion", "Masked": "覆面者", "Baboon Hawk": "狒狒鹰",
+    "Hygrodere": "湿滑胶体", "Flashlight": "手电筒", "Hoarding Bug": "囤积虫", "Lasso Man": "套索人",
+    "Earth Leviathan": "大地利维坦", "Circuit Bees": "电路蜂群", "Boombox": "音响", "Lockpicker": "开锁器",
+    "Apparatus": "发电装置", "Manticoil": "四翼鸟", "Dine": "Dine", "March": "March",
+    "Liquidation": "Liquidation", "Adamance": "Adamance", "Barber": "理发师", "Artifice": "Artifice/zh-cn",
+    "Embrion": "Embrion", "Landmine": "地雷", "Butler": "管家", "Mask Hornets": "Mask Hornets/zh-cn",
+    "Maneater": "食人魔", "Lethal Company": "致命公司", "Hive": "蜂巢", "Giant Sapsucker": "巨型啄木鸟",
+    "Clipboard": "剪贴板", "Extension ladder": "伸缩梯", "Dust pan": "簸箕", "HUD": "抬头显示系统",
+    "Key": "钥匙", "Easter egg": "复活节彩蛋", "Mechanics": "机制", "Kidnapper fox": "绑匪狐狸",
+    "Feiopar": "翡奥帕", "Backwater Gunkfish": "回水黏鱼", "Scrap": "废料", "Weather": "天气",
+    "Sigurd Logs": "Sigurd 的日志", "Traps": "陷阱", "Store": "商店", "Snare Flea": "缠缚蚤",
+    "Rend": "Rend", "Thumper": "打击者", "Tips and Tricks": "提示和技巧", "Spore Lizard": "孢子蜥蜴",
+    "Ship": "飞船", "Nutcracker": "胡桃夹子", "Shovel": "铲子", "Roaming Locusts": "漫游蝗虫",
+    "Shotgun": "霰弹枪", "Stun grenade": "眩晕手雷", "Zap gun": "电击枪", "Titan": "Titan",
+    "Tips and Tricks (Spoilers)": "提示与技巧（详细）", "Offense": "Offense", "Vow": "Vow",
+    "Tools Guide": "Tools Guide/zh-cn", "Radar-booster": "雷达增幅器", "Stop sign": "停止标志",
+    "Old Bird": "老鸟", "Pro-flashlight": "专业手电筒", "Zap Gun": "Zap Gun/zh-cn",
+    "Yield sign": "让行标志", "Zeekerss": "齐克斯", "Zed Dog": "泽德犬", "Weekly challenge": "每周挑战",
+    "Walkie-talkie": "Walkie-talkie/zh-cn", "TZP-Inhalant": "TZP吸入剂", "Turret": "炮塔",
+    "Toy robot": "机器人玩具", "The Company": "公司", "Quota": "配额", "Spike Trap": "尖刺陷阱",
+    "Tulip Snake": "郁金香蛇"
+  },
+  "cats": {
+    "Entities": ["Employee", "Baboon Hawk", "Backwater Gunkfish", "Barber", "Bracken", "Bunker Spider", "Butler", "Cadaver Bloom", "Cadaver Growth", "Circuit Bees", "Coil-Head", "Earth Leviathan", "Eyeless Dog", "Feiopar", "Forest Keeper", "Ghost Girl", "Giant Sapsucker", "Hoarding Bug", "Hygrodere", "Jester", "Kidnapper fox", "Lasso Man", "Maneater", "Manticoil", "Mask Hornets", "Masked", "Nutcracker", "Old Bird", "Red Pill", "Roaming Locusts", "Snare Flea", "Spore Lizard", "Thumper", "Tulip Snake"],
+    "Moons": ["Adamance", "Artifice", "Assurance", "Dine", "Embrion", "Experimentation", "Gordion", "Liquidation", "March", "Offense", "Rend", "Titan", "Vow"],
+    "Tools": ["Airhorn", "Homemade flashbang", "Key", "Kitchen knife", "Laser pointer", "Remote", "Shotgun", "Stop sign", "Yield sign"],
+    "Items": ["Airhorn", "Ammo", "Apparatus", "Bell", "Belt bag", "Big bolt", "Binoculars", "Body", "Bone", "Boombox", "Bottles", "Brush", "Candy", "Cash register", "Chemical jug", "Clipboard", "Clock", "Clown horn", "Control pad", "Cookie mold pan", "Dust pan", "Ear", "Easter egg", "Egg", "Egg beater", "Extension ladder", "Fancy lamp", "Flashlight", "Flask", "Foot", "Garbage lid", "Gift", "Gold bar", "Golden cup", "Hairdryer", "Hand", "Heart", "Hive", "Homemade flashbang", "Jar of pickles", "Jetpack", "Key", "Kitchen knife", "Knee", "Large axle", "Laser pointer", "Lockpicker", "Magic 7 ball", "Magnifying glass", "Maneater", "Mapper", "Masks (Item)", "Metal sheet", "Mug", "Old phone", "Painting", "Perfume bottle", "Pill bottle", "Plastic cup", "Plastic fish", "Pro-flashlight", "Radar-booster", "Red soda", "Remote", "Ribcage", "Ring", "Rubber Ducky", "Shotgun", "Shovel", "Soccer ball", "Spray paint", "Steering wheel", "Sticky note", "Stop sign", "Stun grenade", "Tea kettle", "Teeth", "Toilet paper", "Tongue", "Toothpaste", "Toy cube", "Toy robot", "Toy train", "TZP-Inhalant", "V-type engine", "Walkie-talkie", "Weed killer", "Whoopie cushion", "Yield sign", "Zap gun", "Zed Dog"]
+  }
+}

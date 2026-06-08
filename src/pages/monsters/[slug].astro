@@ -1,0 +1,195 @@
+---
+import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { entities, categories, categoryName, entitiesByCategory, entityName, type Entity } from '../../data/entities';
+
+// 为每个怪物生成一个静态页面 /monsters/{slug}
+export function getStaticPaths() {
+  return entities.map((entity) => ({ params: { slug: entity.slug }, props: { entity } }));
+}
+
+const { entity } = Astro.props as { entity: Entity };
+const cat = categories[entity.category];
+const name = entityName(entity);
+const alias0 = entity.aliases[0];
+
+// 标题与 H1 同体:`${name}${alias0?`(${alias0})`:''}图鉴:打法与应对`
+const heading = `${name}${alias0 ? `(${alias0})` : ''}图鉴:打法与应对`;
+const title = `${heading} - 致命公司`;
+const description = `致命公司(Lethal Company)${cat.name}「${name}」(${entity.nameEn})图鉴:${
+  entity.powerLevel !== null ? `危险度 ${entity.powerLevel},` : ''
+}${entity.hp !== null ? `HP ${entity.hp},` : ''}含机制速查表与打法应对。`;
+
+// FAQ 答案只从 JSON 字段拼,不编造 ——
+// 「怎么打」:counter 优先;为空则用速查表字段拼简述;全空兜底「详见机制速查表」
+const howPieces: string[] = [];
+if (entity.immortal === true) howPieces.push('无法被击杀');
+if (entity.immortal === false && entity.hp !== null) howPieces.push(`HP 为 ${entity.hp}`);
+if (entity.stunnable === true) howPieces.push('可被眩晕');
+if (entity.stunnable === false) howPieces.push('不可被眩晕');
+if (entity.attackDamage !== null) howPieces.push(`攻击伤害 ${entity.attackDamage}`);
+const howAnswer = entity.counter.length
+  ? entity.counter.join(';')
+  : howPieces.length
+    ? `${name}${howPieces.join(',')}。详见机制速查表。`
+    : '详见机制速查表(关键数值待核)。';
+
+// 「在哪出现」:category + maxCount + powerLevel 字段拼
+const whereAnswer =
+  `${name}(${entity.nameEn})属于${cat.name}(${cat.nameEn})。` +
+  (entity.maxCount !== null ? `单局最大数量 ${entity.maxCount}。` : '') +
+  (entity.powerLevel !== null ? `危险度(Power Level)为 ${entity.powerLevel}。` : '');
+
+// FAQ + 面包屑结构化数据
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: `${name}怎么打?`, acceptedAnswer: { '@type': 'Answer', text: howAnswer } },
+        { '@type': 'Question', name: `${name}在哪出现?`, acceptedAnswer: { '@type': 'Answer', text: whereAnswer } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '首页', item: new URL('/', Astro.site).href },
+        { '@type': 'ListItem', position: 2, name: '怪物图鉴', item: new URL('/monsters', Astro.site).href },
+        { '@type': 'ListItem', position: 3, name },
+      ],
+    },
+  ],
+};
+
+// 机制速查表:null 显示「待核」,不伪装成事实
+const fmt = (v: number | string | null) => (v === null ? '待核' : String(v));
+const fmtBool = (v: boolean | null) => (v === null ? '待核' : v ? '是' : '否');
+const statRows: [string, string][] = [
+  ['危险度 Power Level', fmt(entity.powerLevel)],
+  ['最大数量 Max Count', fmt(entity.maxCount)],
+  ['HP', fmt(entity.hp)],
+  ['无法击杀', fmtBool(entity.immortal)],
+  ['可被眩晕', fmtBool(entity.stunnable)],
+  ['攻击伤害', fmt(entity.attackDamage)],
+  ['开门速度倍率', fmt(entity.doorSpeedMultiplier)],
+];
+
+const related = entitiesByCategory(entity.category).filter((e) => e.slug !== entity.slug).slice(0, 4);
+---
+<Base title={title} description={description} jsonLd={jsonLd} active="monsters">
+  <div class="wrap detail">
+    <div class="crumb"><a href="/">首页</a> / <a href="/monsters">怪物图鉴</a> / {name}</div>
+
+    <article class="role-head" data-category={entity.category}>
+      <div class="big-avatar">
+        <img src={`/monsters-art/${entity.slug}.svg`} loading="lazy" alt={`${name} ${entity.nameEn} 示意图`} width="96" height="96" />
+      </div>
+      <div class="head-info">
+        <span class={`badge ${entity.category}`}>{cat.icon} {cat.name}</span>
+        <h1>{heading}</h1>
+        <div class="role-en">{entity.nameEn}{entity.sciName && ` · ${entity.sciName}`}</div>
+        {entity.aliases.length > 0 && (
+          <div class="head-tags">
+            <span class="alias-label">社区俗称</span>
+            {entity.aliases.map((a) => <span class="tag">{a}</span>)}
+          </div>
+        )}
+      </div>
+    </article>
+
+    <AdSlot variant="top" label="广告位 · 内容顶部 728×90" />
+
+    <div class="detail-layout">
+      <main>
+        <section class="sec">
+          <h2>📋 机制速查表</h2>
+          <table class="stat-table">
+            <tbody>
+              {statRows.map(([k, v]) => (
+                <tr><th>{k}</th><td class={v === '待核' ? 'pending' : ''}>{v}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        {entity.behavior && (
+          <section class="sec"><h2>🧠 行为机制</h2><p>{entity.behavior}</p></section>
+        )}
+
+        <section class="sec">
+          <h2>⚔️ 打法与应对</h2>
+          {entity.counter.length > 0 ? (
+            <ul>{entity.counter.map((c) => <li>{c}</li>)}</ul>
+          ) : (
+            <p>{howAnswer}</p>
+          )}
+        </section>
+
+        {entity.tips.length > 0 && (
+          <section class="sec">
+            <h2>💡 玩法要点</h2>
+            <ul>{entity.tips.map((t) => <li>{t}</li>)}</ul>
+          </section>
+        )}
+
+        <section class="sec">
+          <h2>❓ 常见问题</h2>
+          <div class="faq"><h3>{name}怎么打?</h3><p>{howAnswer}</p></div>
+          <div class="faq"><h3>{name}在哪出现?</h3><p>{whereAnswer}</p></div>
+        </section>
+
+        <section class="sec">
+          <h2>🔗 同分类怪物</h2>
+          <div class="related">
+            {related.map((r) => (
+              <a class="rel-card" data-category={r.category} href={`/monsters/${r.slug}`}>
+                <span class="rel-icon">{categories[r.category].icon}</span>
+                <span>{entityName(r)}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <p class="meta-line">数据更新:{entity.updatedAt} · 「待核」表示该数值尚未完成事实校验</p>
+      </main>
+      <aside><AdSlot variant="side" /></aside>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .detail{padding-top:24px}
+  .role-head{display:flex;gap:20px;align-items:center;padding:24px 0}
+  .big-avatar{width:96px;height:96px;border-radius:22px;display:grid;place-items:center;flex-shrink:0;overflow:hidden}
+  .big-avatar img{width:100%;height:100%;object-fit:contain}
+  .role-head[data-category="indoor"] .big-avatar{background:rgba(255,84,112,.16)}
+  .role-head[data-category="outdoor"] .big-avatar{background:rgba(59,169,255,.16)}
+  .role-head[data-category="daytime"] .big-avatar{background:rgba(255,216,78,.12)}
+  .head-info h1{font-size:30px;font-weight:900;margin:8px 0 2px}
+  .head-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px;align-items:center}
+  .alias-label{font-size:12px;color:var(--txt-dim)}
+  .detail-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;margin-bottom:40px}
+  .sec{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:18px}
+  .sec h2{font-size:17px;color:var(--accent);margin-bottom:10px}
+  .sec p{font-size:15.5px}
+  .sec ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .sec li{font-size:15px;color:var(--txt-dim);padding-left:20px;position:relative}
+  .sec li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+  .stat-table{width:100%;border-collapse:collapse;font-size:14.5px}
+  .stat-table tr{border-bottom:1px solid var(--line)}
+  .stat-table tr:last-child{border-bottom:none}
+  .stat-table th{text-align:left;font-weight:600;color:var(--txt-dim);padding:10px 8px 10px 0;width:46%}
+  .stat-table td{padding:10px 0;color:var(--txt)}
+  .stat-table td.pending{color:var(--txt-dim);font-style:italic}
+  .faq{margin-bottom:14px}
+  .faq:last-child{margin-bottom:0}
+  .faq h3{font-size:15px;margin-bottom:6px}
+  .faq p{font-size:14.5px;color:var(--txt-dim)}
+  .related{display:flex;gap:12px;flex-wrap:wrap}
+  .rel-card{display:flex;align-items:center;gap:8px;background:var(--bg-elev);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px;transition:.15s}
+  .rel-card:hover{border-color:var(--txt-dim);transform:translateY(-2px)}
+  .rel-icon{font-size:22px}
+  .meta-line{font-size:12.5px;color:var(--txt-dim);margin-top:4px}
+  @media(max-width:920px){.detail-layout{grid-template-columns:1fr}.ad-side{display:none}.head-info h1{font-size:24px}}
+</style>
