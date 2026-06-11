@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import { moons, annotationTypes, moonTitle, type Moon } from '../../data/moons';
 import { weathers } from '../../data/weather';
+import { SITE } from '../../data/site';
 
 export function getStaticPaths() {
   return moons.map((moon) => ({ params: { slug: moon.slug }, props: { moon } }));
@@ -21,6 +22,11 @@ const h1 = moonTitle(moon);
 const scrapCountText = moon.scrapCount.min === null ? '待核' : `${moon.scrapCount.min}–${moon.scrapCount.max} 件`;
 const description = `致命公司(Lethal Company)卫星 ${h1} 攻略:风险等级 ${moon.tier},废料 ${scrapCountText} / 总价值 ${moon.scrapValue.min}–${moon.scrapValue.max},含天气池、室内类型权重与登陆/搜刮/撤离建议。`;
 
+// updatedAt 为 YYYY-MM-DD,补全为带时区的 ISO 8601(站点面向国内,用 +08:00)
+const isoDate = (d: string) => `${d}T00:00:00+08:00`;
+const ogImageAbs = new URL(SITE.defaultOgImage, Astro.site).href;
+const siteUrl = new URL('/', Astro.site).href;
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -28,7 +34,15 @@ const jsonLd = {
       '@type': 'Article',
       headline: title,
       description,
-      dateModified: moon.updatedAt,
+      image: [ogImageAbs],
+      datePublished: isoDate(moon.updatedAt),
+      dateModified: isoDate(moon.updatedAt),
+      author: { '@type': 'Organization', name: SITE.name, url: siteUrl },
+      publisher: {
+        '@type': 'Organization',
+        name: SITE.name,
+        logo: { '@type': 'ImageObject', url: ogImageAbs },
+      },
     },
     {
       '@type': 'BreadcrumbList',
